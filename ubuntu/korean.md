@@ -12,3 +12,5 @@
 - Remove English(US) input source (Korean can handle English input)
 
 ## i3
+
+- install `fcitx`
