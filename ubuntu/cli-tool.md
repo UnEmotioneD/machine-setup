@@ -10,7 +10,6 @@
 - eza
 - fzf
 - bat
-- cat
 - yazi
 - stow
 - lazygit
