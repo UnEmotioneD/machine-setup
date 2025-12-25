@@ -1,5 +1,9 @@
 # Grub
 
+- grub config file
+
 `/etc/default/grub`
 
-`/etc/grub.d/
+- grub menu items list
+
+`/etc/grub.d/`
