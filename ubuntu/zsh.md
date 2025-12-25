@@ -2,21 +2,26 @@
 
 - Larger ecosystem compare to BASH
 
-## Install ZSH
+## Prerequisite
+
+- install `git` and check
+
+```bash
+sudo apt install git
+git --version
+```
+
+## ZSH
 
 ```bash
 sudo apt install zsh
 ```
 
----
-
-## Change Shell
-
 ```bash
 chsh -s $(which zsh)
 ```
 
-- reboot
+Reboot your machine
 
 ## Plugins
 
@@ -50,7 +55,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 ```
 
-- fzf
+- FZF
+
+Download and install from source instead of using `apt`
 
 ```bash
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -59,9 +66,10 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 - fzf-git
 
+Used by `nvim` but sourced from `~/.zshrc`
+
 ```bash
-mkdir ~/repo
-cd ~/repo
+mkdir ~/repo && cd ~/repo
 git clone https://github.com/junegunn/fzf-git.sh.git
 ```
 
