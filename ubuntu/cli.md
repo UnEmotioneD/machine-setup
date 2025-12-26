@@ -15,6 +15,7 @@
 - stow
 - lazygit
 - flameshot: screen shot program
+- fastfetch
 
 ---
 
@@ -32,8 +33,35 @@ sudo apt install bat
 alias bat='batcat'
 ```
 
+---
+
 ## Tmux Plugin Manager
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+---
+
+## Fastfetch
+
+- install with `PPA`
+
+```bash
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt upgrade
+sudo apt install fastfetch
+```
+
+now you can run `fastfetch` from terminal
+
+```bash
+fastfetch
+```
+
+- uninstall
+
+```bash
+sudo apt remove fastfetch
+sudo add-apt-repository --remove ppa:zhangsongcui3371/fastfetch
 ```
