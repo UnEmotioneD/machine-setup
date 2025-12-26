@@ -3,6 +3,7 @@
 ## Packages
 
 - nerd fonts
+- ripgrep
 - nodejs
 - npm
 - yarn
