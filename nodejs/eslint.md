@@ -13,6 +13,7 @@
 - [Configure Rules](#configure-rules)
   - [No Unused Vars](#no-unused-vars)
   - [Arrow Body Function](#arrow-body-function)
+  - [jQuery](#jquery)
 
 ---
 
@@ -120,3 +121,33 @@ npx eslint --fix
   }
 ]
 ```
+
+### jQuery
+
+`'$' is not defined`
+
+change the following part from `eslint.config.mjs`:
+
+```js
+{
+  languageOptions: {
+    globals: globals.browser,
+  },
+}
+```
+
+to this:
+
+```js
+{
+  languageOptions: {
+    globals: {
+      ...globals.browser,
+      ...globals.jquery,
+    }
+  },
+}
+```
+
+- `...` (**spread operator**): copies all properties from one object into another,
+  merging them together
