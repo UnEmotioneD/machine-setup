@@ -8,7 +8,6 @@
 - [Create Project](#create-project)
 - [Install](#install)
 - [Initialize](#initialize)
-- [Add Scripts](#add-script)
 - [Lint it](#lint-it)
 - [Configure Rules](#configure-rules)
   - [No Unused Vars](#no-unused-vars)
@@ -54,9 +53,7 @@ npm init @eslint/config@latest
 npx eslint
 ```
 
----
-
-## Add Script
+### Lint Script
 
 inside `package.json` add `lint` inside `scripts` block
 
@@ -67,8 +64,6 @@ inside `package.json` add `lint` inside `scripts` block
   }
 }
 ```
-
-> Add ,(comma) at the end of line above.
 
 now you can use:
 
