@@ -45,6 +45,8 @@ indent_size = 2
 
 Formatter: Clang Format
 
+Inside `.clang-format`:
+
 ```yaml
 BasedOnStyle: LLVM
 IndentWidth: 4

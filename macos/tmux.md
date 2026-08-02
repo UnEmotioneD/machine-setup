@@ -1,6 +1,6 @@
 # TMUX
 
-Build tmux locally on apple silicon mac
+Build tmux locally on apple silicon mac from archive file.
 
 ---
 
@@ -23,7 +23,7 @@ go to directory where the `tmux-x.x.tar.gz` is at unzip and move into it
 - `-f`: specifies the file to operate on (next args is the archive name)
 
 ```sh
-tar -zxf tmux-x.x.tar.gz
+tar -zxf tmux-3.6b.tar.gz
 cd tmux-x.x
 ```
 
@@ -42,6 +42,5 @@ if you do `sudo make uninstall` at the unzipped archive directory it will prompt
 to do the following
 
 ```sh
-cd /usr/local/bin
-sudo rm -f tmux
+sudo rm /usr/local/bin/tmux
 ```

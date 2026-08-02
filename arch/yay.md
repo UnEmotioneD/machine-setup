@@ -5,7 +5,7 @@
 - `yay`(wrapper for pacman) packagemanager
 - Which supports `AUR`(Arch User Repository)
 
-## List of Content
+## Table of Content
 
 - [Prerequisite](#prerequisite)
 - [Download, Build and Install](#download-build-and-install)
@@ -31,13 +31,7 @@ Now clone the yay repository
 
 ```sh
 git clone https://aur.archlinux.org/yay.git
-```
-
-```sh
 cd yay
-```
-
-```sh
 makepkg -si
 ```
 
