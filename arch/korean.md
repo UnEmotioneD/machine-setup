@@ -2,6 +2,8 @@
 
 This guide covers the setup of Korean fonts and input methods on Arch Linux with Hyprland.
 
+---
+
 ## 1. Install Korean Fonts
 
 To ensure proper font rendering, install the following packages:
@@ -10,6 +12,8 @@ To ensure proper font rendering, install the following packages:
 sudo pacman -S adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
 ```
 
+---
+
 ## 2. Install Fcitx5 Input Method
 
 Fcitx5 is a modern input method framework supporting Hangul (Korean).
@@ -17,6 +21,8 @@ Fcitx5 is a modern input method framework supporting Hangul (Korean).
 ```sh
 yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
 ```
+
+---
 
 ## 3. Configure Environment Variables
 
@@ -36,6 +42,8 @@ To apply the changes immediately, run:
 source ~/.profile
 ```
 
+---
+
 ## 4. Autostart Fcitx5 in Hyprland
 
 Add the following line to your `~/.config/hypr/hyprland.conf` to start Fcitx5 automatically:
@@ -44,40 +52,19 @@ Add the following line to your `~/.config/hypr/hyprland.conf` to start Fcitx5 au
 exec-once = fcitx5 -d
 ```
 
+---
+
 ## 5. Configure Fcitx5
 
-Launch the configuration tool via terminal:
+Launch `fcitx5-configtool`.
 
-```sh
-fcitx5-configtool
-```
+### Input Method Tab
 
-Or use `wofi` (Hyprland's application launcher):
+- Add `Hangul` to the **Current Input Method** list.
 
-```sh
-wofi --show drun
-```
+### Global Options Tab
 
-### Input Method Setup
-
-1. Navigate to the **Input Method** tab.
-2. Add **Hangul** to the **Current Input Method** list.
-
-### Global Options Configuration
-
-1. Move to the **Global Options** tab.
-2. Set **Trigger Input Method** to **Right Alt (R_Alt)** for easy switching.
-
-- uncheck `Show Input Method Information when switch input method`
+- Set `Trigger Input Method` to **Right Alt (R_Alt)**
+- Disable `Show Input Method Information when switch input method`
 
 ![fcitx-config-global-options](../assets/fcitx-config-global-options.png)
-
-## 6. Verify Installation
-
-To confirm Fcitx5 is working correctly, restart your session or run:
-
-```sh
-fcitx5-diagnose
-```
-
-If everything is set up correctly, you should be able to type in Korean by pressing the **Right Alt** key to switch input methods.

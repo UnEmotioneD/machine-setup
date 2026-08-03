@@ -38,7 +38,7 @@ Disable `Alt` key from toggling menubar
 xdg-settings get default-web-browser
 ```
 
-output might be: `chromium.desktop`
+example output: `chromium.desktop`
 
 ```sh
 xdg-settings set default-web-browser firefox.desktop

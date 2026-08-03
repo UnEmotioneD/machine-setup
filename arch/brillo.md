@@ -1,11 +1,10 @@
-# Brillo
+# [Brillo](https://gitlab.com/cameronnemo/brillo)
 
-Human eye friendly brightness control
+Human eye friendly brightness control by changing brightness exponentially.
 
-Changes brightness exponentially
+## Reference
 
-- [cameronnemo/brillo](https://gitlab.com/cameronnemo/brillo)
-- [Eric Murphy - You're Probably Doing Screen Brightness in Arch Linux Wrong](https://www.youtube.com/watch?v=pGOaSS8nEQA&t=437s)
+[You're Probably Doing Screen Brightness in Arch Linux Wrong - Eric Murphy](https://www.youtube.com/watch?v=pGOaSS8nEQA)
 
 ---
 
@@ -14,15 +13,14 @@ Changes brightness exponentially
 ### 1. Dependency
 
 ```sh
-sudo pacman -Syu go-md2man
+sudo pacman -S go-md2man
 ```
 
 ### 2. Build
 
 ```sh
-mkdir ~/Repository
-cd ~/Repository
 git clone https://gitlab.com/cameronnemo/brillo.git
+cd brillo
 make
 ```
 
@@ -33,6 +31,8 @@ with `setgid` every users can use without extra permissions
 ```sh
 sudo make install.setgid
 ```
+
+and reboot
 
 ---
 
@@ -46,10 +46,6 @@ brillo -q -u 1000 -U 5  # brightness down
 ```
 
 - `-q` : change brightness experientially
-- `-u` : fade animation 1000ms == 0.1sec
+- `-u` : fade animation 1000ms (0.1sec)
 - `-A` : brightness up
 - `-U` : brightness down
-
-## Notes
-
-- since installed with `setgid` reboot for brillo to work

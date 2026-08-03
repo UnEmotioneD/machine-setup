@@ -1,21 +1,13 @@
 # Nodemon
 
-Watch files for change and execute a command
+Watch files for change and execute a command.
 
 ---
 
 ## Installation
 
-Install with npm
-
 ```sh
 sudo npm install --global nodemon
-```
-
-### Update
-
-```sh
-npm update nodemon
 ```
 
 ---
@@ -42,9 +34,12 @@ Create `nodemon.json` at where you will run `nodemon` command
 }
 ```
 
+> [!WARNING]
+> `JSONC` file extension will not work properly.
+
 ---
 
-## Use
+## Usage
 
 Just run:
 

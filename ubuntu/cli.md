@@ -1,8 +1,6 @@
-# CLI Tools
+# Command Line Interface
 
-- Command Line Interface
-
-## List of cli-tools
+## Table of Contents
 
 - [tmux](#tmux)
 - [bat](#bat)

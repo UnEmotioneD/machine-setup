@@ -2,7 +2,8 @@
 
 Edit images with [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 
-> `convert` is deprecated
+> [!NOTE]
+> `convert` has deprecated.
 
 ## Table of Contents
 

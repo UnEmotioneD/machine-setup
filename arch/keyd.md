@@ -1,11 +1,17 @@
 # Keyd
 
+Remap laptop's builtin keyboard and trackball's buttons with [keyd](https://github.com/rvaiya/keyd).
+
+---
+
 ## Install
 
 ```sh
 sudo pacman -S keyd
 systemctl enable --now keyd
 ```
+
+---
 
 ## Configure
 
@@ -15,9 +21,8 @@ get device id and input
 sudo keyd monitor
 ```
 
-> **_Important:_** Get the device ID from the same line as `device add:` not from the `keyd virtual keyboard` when you type the keys.
->
-> **_NOTE:_** The device ID might change after kernel update
+> [!Important]
+> Get the `device ID` from the same line as `device add:`, **_NOT_** from `keyd virtual keyboard` when you press the keys.
 
 keep each conf files per `[ids]`
 
@@ -50,7 +55,9 @@ rightmouse = mouse1
 mouse1 = rightmouse
 ```
 
-reload after changing
+---
+
+## Reload
 
 ```sh
 sudo keyd reload

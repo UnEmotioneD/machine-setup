@@ -1,4 +1,24 @@
-# Pacman fix GPGME error
+# GPGME Error
+
+pacman could not find or process valid GPG because of following possible reasons:
+
+- corrupted pacman keyring
+- corrupted package database
+- problematic mirror
+
+---
+
+## Symptom
+
+After running `sudo pacman -Syu` or similar commands:
+
+```sh
+...
+error: GPGME error: No data
+...
+```
+
+---
 
 ## 1. Back-up Mirrorlist
 
@@ -6,30 +26,23 @@
 sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 ```
 
-## 2. Generate Mirrorlist
-
-[Pacman Mirrorlist Generator](https://archlinux.org/mirrorlist/)
-
-On my case generating new mirrorlist caused error and the original list works
-just fine without it
-
-## 3. Re-generate Keys
-
-re-generate the keys for pacman by first getting rid of the stored secrets
+## 2. Remove stored secrets
 
 ```sh
 sudo rm -rf /etc/pacman.d/gnupg
 sudo rm -R /var/lib/pacman/sync
 ```
 
-can run pacman-key to initialize and re-generate the trust roots:
+## 3. Re-generate Keys
+
+initialize and re-generate the trust roots:
 
 ```sh
 sudo pacman-key --init
 sudo pacman-key --populate
 ```
 
-## 4. Update Pacman
+## 3. Update Pacman
 
 ```sh
 sudo pacman -Syyu

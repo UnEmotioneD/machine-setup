@@ -1,12 +1,12 @@
 # Advanced Package Tool
 
-## List of Content
+## Table of Content
 
 - [Before Use](#before-use)
 - [How to Use](#how-to-use)
-- [Info](#info)
-- [Flags](#flags)
+- [Search](#search)
 - [Cleanup](#cleanup)
+- [Flags](#flags)
 - [Fix Install](#fix-install)
 
 ---
@@ -19,31 +19,22 @@
   - managing services
   - changing user
 
-Update apt
-
 ```sh
+# update apt
 sudo apt update
-```
 
-Checkout outdated packages first
-
-```sh
+# check outdated package
 apt list --upgradeable
-```
 
-Update outdated pkg
-
-```sh
+# upgrade outdated pkg
 sudo apt upgrade
-```
 
-Keep pkg from automatically updated
-
-```sh
+# keep package from being upgraded
 sudo apt-mark hold openjdk-17-jdk
-```
 
-Use `unhold` to undo mark
+# undo hold
+sudo apt-mark unhold openjdk-17-jdk
+```
 
 ---
 
@@ -57,29 +48,30 @@ sudo apt install {pkg} {pkg} ...
 
 ---
 
-## Info
-
-### Search
-
-Update the APT local cache
+## Search
 
 ```sh
-sudo apt update
-```
+# update apt local cache
+apt update
 
-Search for package interactively
-
-```sh
+# pipe installed package list to fzf
 apt-cache search . | fzf
-```
 
-`List` out installed packages
-
-```sh
+# list installed packages
 apt list --installed
 ```
 
-Use `show` flag to show package details
+---
+
+## Cleanup
+
+```sh
+# remove unused dependencies
+sudo apt autoremove
+
+# clear download cache
+sudo apt clean
+```
 
 ---
 
@@ -94,18 +86,6 @@ Use `show` flag to show package details
 `--reinstall`
 
 `--purge`
-
----
-
-## Cleanup
-
-- `autoremove`: remove unused dependencies
-- `clean`: clear download cache
-
-```sh
-sudo apt autoremove
-sudo apt clean
-```
 
 ---
 

@@ -1,6 +1,10 @@
 # Brightness Control
 
+## Reference
+
 [fix brightness ubuntu](https://itsfoss.com/fix-brightness-ubuntu-1310/)
+
+---
 
 ## Find Graphics Card
 
@@ -14,6 +18,8 @@ Output:
 intel_backlight
 ```
 
+---
+
 ## Fix The Issue
 
 Create configuration file:
@@ -22,13 +28,9 @@ Create configuration file:
 sudo Touch /usr/share/X11/xorg.conf.d/20-intel.conf
 ```
 
-Open with preferred editor:
+open with sudo privilege
 
-```sh
-sudo nvim /usr/share/X11/xorg.conf.d/20-intel.conf
-```
-
-add the following lines:
+add the following content:
 
 ```conf
 Section "Device"
@@ -45,7 +47,7 @@ Logout and log back in for this to take effect
 
 ## i3 Brightness Config
 
-control brightness with [`Brillo`](../arch/brightness.md)
+control brightness with [`Brillo`](../arch/brillo.md)
 
 ```sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id brillo -q -u 1000 -A 1

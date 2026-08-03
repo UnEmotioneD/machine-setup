@@ -6,7 +6,7 @@
 
 ## pyrightconfig
 
-Too fix auto import issue, create `pyrightconfig.json` file at the project root:
+To fix auto import issue, create `pyrightconfig.json` file at the project root:
 
 ```jsonc
 {

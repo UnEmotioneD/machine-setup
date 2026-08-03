@@ -1,6 +1,8 @@
 # Alacritty
 
-Install latest version of alacritty on Ubuntu
+Install latest version of alacritty on Ubuntu.
+
+## Table of Contents
 
 - [Install](#install)
   - [Add PPA](#add-ppa)

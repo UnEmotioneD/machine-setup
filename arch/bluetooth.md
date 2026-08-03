@@ -1,113 +1,39 @@
 # Bluetooth
 
-[Eric Murphy](https://www.youtube.com/watch?v=rOL-T31l0lQ&list=WL&index=3)
+## Reference
 
-## Fix bluetooth
+[How to Use Bluetooth on Arch Linux - Eric Murphy](https://www.youtube.com/watch?v=rOL-T31l0lQ)
 
-Install `bluez`(bluetooth) and `bluez-utils`(command line utilities ...)
+---
+
+## Prerequisite
+
+- `bluez`: bluetooth
 
 ```sh
-sudo pacman -S bluez bluez-utils
+sudo pacman -S bluez
 ```
 
-Check if the bluetooth module is running and `btusb` is loaded
+---
+
+## Enable Service
+
+check if bluetooth module is running:
+
+- `btusb`: allow bluetooth hardware connected via usb
 
 ```sh
 lsmod | grep btusb
 ```
 
-If the list shows up you're good else run this command
+start if not running:
 
 ```sh
-modprobe btusb
+sudo modprobe btusb
 ```
 
-Start it with ...
+enable service:
 
 ```sh
-sudo systemctl start bluetooth.service
+sudo systemctl enable --now bluetooth.service
 ```
-
-Enable it and start bluetooth every time when the computer is started
-
-```sh
-sudo systemctl enable bluetooth.service
-```
-
-You can setup bluetooth in GUI with `blueman` package if installed
-
-```sh
-blueman-manager
-```
-
-Enter bluetooth mode
-
-```sh
-bluetoothctl
-```
-
-Turn on the BT controller
-
-```sh
-power on
-```
-
-and the agent
-
-```sh
-agent on
-```
-
-Agent will connect to trusted BT device when PC is started
-
-```sh
-default-agent
-```
-
-list bluetooth devices with ...
-
-```sh
-scan on
-```
-
-or ...
-which will show the MAC address and name of the device
-
-```sh
-devices
-```
-
-connect it
-
-```sh
-turst {MAC address}
-```
-
-pair it
-
-```sh
-pair {Mac address}
-```
-
-for keyboards you will have to enter passkey
-
-and connect it for real
-
-```sh
-connect {Mac address}
-```
-
-now turn of the messages in terminal
-
-```sh
-scan off
-```
-
-To enable BT every time you start up your PC
-open BT conf file with sudo privileges
-
-```sh
-sudo nvim /etc/bluetooth/main.conf
-```
-
-Uncomment the `AutoEnable = true`

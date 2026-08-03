@@ -1,5 +1,16 @@
 # Settings
 
+Some Windows settings.
+
+## Table of Contents
+
+- [Bluetooth 및 시스템](#bluetooth-및-시스템)
+- [시스템](#시스템)
+- [개인설정](#개인설정)
+- [시간 및 언어](#시간-및-언어)
+
+---
+
 ## Bluetooth 및 시스템
 
 ### 마우스

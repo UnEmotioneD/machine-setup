@@ -1,5 +1,14 @@
 # Gnome Desktop Manager
 
+## Table of Contents
+
+- [Setting](#setting)
+- [Korean Input](#korean-input)
+- [Recommended Packages](#recommended-packages)
+- [Deb Packages](#deb-packages)
+
+---
+
 ## Setting
 
 - display
@@ -31,32 +40,6 @@
       - repeat keys
         - speed: fast
         - delay: short
-
----
-
-## Update
-
-From `gnome-terminal`
-
-```sh
-sudo apt update && sudo apt upgrade -y
-```
-
-Do not enable `ufw` to connect to `pinky` later
-
-```sh
-sudo ufw disable
-```
-
-### Install Recommended Packages
-
-- git
-- curl
-- build-essential
-
-```sh
-sudo apt install git curl build-essential
-```
 
 ---
 
@@ -94,7 +77,19 @@ In debian/ubuntu windows key is called `super`
 
 ---
 
-## Download and Install
+## Recommended Packages
+
+- git
+- curl
+- build-essential
+
+```sh
+sudo apt install git curl build-essential
+```
+
+---
+
+## Deb Packages
 
 - google chrome
 - visual studio code
@@ -122,13 +117,4 @@ You can pass multiple file names as arguments for `dpkg` command
 
 ```sh
 sudo apt install python3-pip python3-ipykernel
-```
-
----
-
-## Fix Bluetooth
-
-```sh
-sudo systemctl enable bluetooth  # turn bt on
-sudo systemctl start bluetooth   # start bt every login
 ```

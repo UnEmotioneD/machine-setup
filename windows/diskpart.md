@@ -8,11 +8,12 @@
 
 ## Format USB
 
-```cmd
+```powershell
 list disk
 
 select disk <disk-no>
 
+# remove every partitions
 clean
 
 create partition primary

@@ -1,23 +1,27 @@
 # Audio
 
+Setup [PipeWire](https://pipewire.org/) audio stack.
+
+---
+
 ## Install
 
-`pipewire-audio` includes pipewire, pipewire-pulse and wireplumber
+- **pipewire-audio**: PipeWire audio stack
+  - `pipewire`: core audio server
+  - `pipewire-pulse`: PulseAudio compatibility
+  - `wireplumber`: audio session manager
+
+- **pavucontrol**: audio control GUI
+- **bolt**: Thunderbolt device manager
 
 ```sh
-sudo pacman -Syu pipewire-audio pavucontrol
-```
-
-audio output via thunderbolt:
-
-```sh
-sudo pacman -Syu bolt
+sudo pacman -S pipewire-audio pavucontrol bolt
 ```
 
 ---
 
-## Enable Service
+## Enable Services
 
 ```sh
-systemctl --user enable pipewire pipewire-pulse wireplumber
+systemctl --user enable --now pipewire pipewire-pulse wireplumber
 ```

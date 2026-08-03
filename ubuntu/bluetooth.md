@@ -1,18 +1,23 @@
 # Bluetooth
 
-## Start Bluetooth
+From `gnome-desktop` if the bluetooth does not toggle on.
 
-From `gnome-desktop` if the bluetooth does not toggle enable
+---
 
-```sh
-systemctl start bluetooth  # start bt service
-systemctl enable bluetooth # start on every log in
-```
+## Install
 
-- bluetooth: systemd integration
-- bluez: tool + daemon
-- blueman: gui manager
+- `bluetooth`: systemd integration
+- `bluez`: tool + daemon
+- `blueman`: GUI manager
 
 ```sh
 sudo apt install bluetooth bluez blueman
+```
+
+---
+
+## Start Service
+
+```sh
+systemctl enable --now bluetooth
 ```

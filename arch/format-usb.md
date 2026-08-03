@@ -1,12 +1,26 @@
-# Formatting USB
+# Format USB
 
-from iso usb to normal usb stick
+USB with `ISO` back to normal.
+
+---
+
+## Prerequisite
+
+- `exfatprogs`: **exFAT** utility
+
+```sh
+sudo pacman -S exfatprogs
+```
+
+---
+
+## Check USB Partition
 
 ```sh
 lsblk
 ```
 
-Example of USB:
+Example output:
 
 ```sh
 NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
@@ -17,30 +31,32 @@ sda           8:0    1 114.6G  0 disk
 └─sda4        8:4    1 108.4G  0 part
 ```
 
-Unmount all partitions
+---
+
+## Unmount Partitions
+
+Unmount all partitions inside the USB:
 
 ```sh
 sudo umount /dev/sda*
 ```
 
-Wipe and create new partition table
+---
+
+## New Partition Table
 
 ```sh
 sudo fdisk /dev/sda
 ```
 
-1. press `g` ==> new GPT partition
-2. press `n` ==> new partition
-3. Enter 3 times ==> usb into one partition
-4. press `w` ==> write and exit
+1. Press `g`: new **GPT** partition
+2. Press `n`: new partition
+3. Press `Enter` x 3: usb into one partition
+4. Press `w`: write and exit
 
-Install `exfatprogs` if not already installed:
+---
 
-```sh
-sudo pacman -S exfatprogs
-```
-
-Format the partition:
+## Format Partition
 
 ```sh
 sudo mkfs.exfat /dev/sda1

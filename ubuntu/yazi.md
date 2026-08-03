@@ -1,8 +1,10 @@
 # Yazi
 
-- [yazi install ubuntu](https://yazi-rs.github.io/docs/installation#debian)
+Terminal file explorer written in rust.
 
-terminal file explorer
+## Reference
+
+[yazi install debian](https://yazi-rs.github.io/docs/installation#debian)
 
 ## Table of Contents
 
@@ -24,7 +26,7 @@ sudo apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep zoxide imagemagick
 
 ### Cargo
 
-[Install Rust](https://rust-lang.org/tools/install/)
+[Rust-lang tools install](https://rust-lang.org/tools/install/)
 
 ```sh
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -41,7 +43,7 @@ cd yazi
 cargo build --release --locked
 ```
 
-and move `yazi`, `ya` files to `$PATH`
+move `yazi` and `ya` files to `$PATH`
 
 ```sh
 sudo mv target/release/yazi target/release/ya /usr/local/bin/

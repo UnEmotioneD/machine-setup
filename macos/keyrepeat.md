@@ -1,9 +1,10 @@
-# macOS Key Repeat Configuration
+# Key Repeat Speed
 
-Override the default keyboard repeat behavior in macOS to achieve faster,
-more responsive key repetition.
+Key `repeat` and `delay` times shorter then that can be set from **Settings**.
 
-## Quick Start
+---
+
+## Commands
 
 ```sh
 # Set delay before repeat starts (lower = faster)
@@ -13,13 +14,33 @@ defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 ```
 
-**Important:** Log out and back in for changes to take effect.
+> [!Important]
+> Log out and back in for changes to take effect.
 
 ---
 
-## Understanding the Values
+## Checking Current Values
 
-### InitialKeyRepeat (Delay Before Repeat Starts)
+```sh
+defaults read -g InitialKeyRepeat
+
+defaults read -g KeyRepeat
+```
+
+---
+
+## Revert to Defaults
+
+```sh
+defaults delete -g InitialKeyRepeat
+defaults delete -g KeyRepeat
+```
+
+---
+
+## Values
+
+### InitialKeyRepeat
 
 **Formula:** `time (ms) = (value + 1) × 16.67 ms`
 
@@ -30,7 +51,7 @@ defaults write -g KeyRepeat -int 1
 | 30    | ~517 ms  |
 | 120   | ~2017 ms |
 
-### KeyRepeat (Delay Between Each Repeat)
+### KeyRepeat
 
 **Formula:** `time (ms) = value × 15 ms`
 
@@ -40,28 +61,3 @@ defaults write -g KeyRepeat -int 1
 | 2     | 30 ms   |
 | 6     | 90 ms   |
 | 120   | 1800 ms |
-
----
-
-## Reverting to Defaults
-
-To restore macOS defaults:
-
-```sh
-defaults delete -g InitialKeyRepeat
-defaults delete -g KeyRepeat
-```
-
-Then log out and back in.
-
----
-
-## Checking Current Values
-
-```sh
-# Check current InitialKeyRepeat
-defaults read -g InitialKeyRepeat
-
-# Check current KeyRepeat
-defaults read -g KeyRepeat
-```

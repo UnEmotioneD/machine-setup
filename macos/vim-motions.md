@@ -1,11 +1,11 @@
 # Vim Motions
 
-some mesmerizing vim commands worth memorizing
+Mesmerizing vim commands worth memorizing.
 
 ## Table of Contents
 
 - [Substitute](#substitute)
-- [Global command](#global-command)
+- [Global](#global)
 - [Refactoring](#refactoring)
 
 ---
@@ -49,7 +49,7 @@ the command:
 
 ---
 
-## Global Command
+## Global
 
 ```vim
 :g/<pattern>/<cmd>
@@ -78,9 +78,9 @@ you can use `normal` command with `global`
 :g/neovim/norm A is awesome
 ```
 
-> add `A is Awesome` string at the end of line contains "neovim"
+- add `A is Awesome` string at the end of line contains "neovim"
 
-### V reVerse of Global
+### Reverse
 
 delete every line that does not contain string "vim"
 
@@ -92,7 +92,7 @@ delete every line that does not contain string "vim"
 
 ## Refactoring
 
-- [typecraft - 3 Levels of Vim Refactoring](https://www.youtube.com/watch?v=oQB8lYUZtrY)
+- [3 Levels of Vim Refactoring - typecraft](https://www.youtube.com/watch?v=oQB8lYUZtrY)
 
 ### Find RegEx from File Types
 

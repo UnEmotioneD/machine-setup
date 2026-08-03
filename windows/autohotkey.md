@@ -1,18 +1,23 @@
-# AutoHotkey
+# [AutoHotkey](https://www.autohotkey.com/)
 
-[autohotkey.com](https://www.autohotkey.com/)
+Software level keyboard remapping program
 
-Software level keyboard remapping
+## Table of Contents
+
+- [Capslock](#capslock)
+- [ESC](#esc)
+- [Run on Startup](#run-on-startup)
+
+> [!NOTE]
+> Version 2 syntax
 
 ---
 
-## Remap CapsLock
+## CapsLock
 
 `CapsLock` to `ESC` when tapped and `Ctrl` when held
 
 Tap timeout is 0.2 seconds
-
-> Version 2 syntax
 
 ```ahk
 *CapsLock::
@@ -32,10 +37,44 @@ Tap timeout is 0.2 seconds
 
 ---
 
+## ESC
+
+ESC to also change input source to English
+
+```ahk
+$Esc::
+{
+    if (IME_CHECK("A"))
+        Send "{vk15}"
+    Send "{Escape}"
+}
+
+IME_CHECK(WinTitle) {
+    hWnd := WinGetID(WinTitle)
+    return Send_ImeControl(ImmGetDefaultIMEWnd(hWnd), 0x001, "")
+}
+
+Send_ImeControl(DefaultIMEWnd, wParam, lParam) {
+    DetectSave := A_DetectHiddenWindows
+    DetectHiddenWindows true
+
+    result := SendMessage(0x283, wParam, lParam,, "ahk_id " DefaultIMEWnd)
+
+    if (DetectSave != A_DetectHiddenWindows)
+        DetectHiddenWindows DetectSave
+
+    return result
+}
+
+ImmGetDefaultIMEWnd(hWnd) {
+    return DllCall("imm32\ImmGetDefaultIMEWnd", "Uint", hWnd, "Uint")
+}
+```
+
+---
+
 ## Run On Startup
 
-Open Run dialog with `Win + R`
-
-Type `shell:startup` and Enter to open Startup folder
-
-Put the script in this folder
+1. Open Run dialog with `Win + R`
+2. Enter `shell:startup`
+3. Put the scripts in this folder

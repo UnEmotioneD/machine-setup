@@ -1,6 +1,8 @@
-# Python Linter Remote Control
+# Pylintrc
 
-Pylint configuration
+Python linter remote control
+
+---
 
 ## Suppress Warnings
 
@@ -12,8 +14,7 @@ disable =
     wrong-import-order,
 ```
 
-`missing-docstring` includes
-
-- `missing-module-docstring`
-- `missing-class-docstring`
-- `missing-function-docstring`
+- **missing-docstring** includes:
+  - `missing-module-docstring`
+  - `missing-class-docstring`
+  - `missing-function-docstring`

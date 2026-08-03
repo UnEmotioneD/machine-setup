@@ -11,15 +11,12 @@
 
 ## Install
 
-From AUR repository with yay:
+From AUR:
 
 ```sh
 yay -S github-cli
-```
 
-Check install:
-
-```sh
+# check installed
 gh --version
 ```
 
@@ -39,7 +36,7 @@ gh auth login
 gh repo clone <owner>/<repo>
 ```
 
-From your repository
+From your repository without user name:
 
 ```sh
 gh repo clone <repo>
@@ -49,22 +46,12 @@ gh repo clone <repo>
 
 ## Create Repository
 
-Initialize and create at least commit first
-
-From existing local git repo:
+Create GitHub repository from local Git repository with at least one commit history.
 
 ```sh
 gh repo create <repo-name> --source=. --public --push
 ```
 
-Flags:
-
-- `--source=.` - current directory
-- `--private` or `--public` - visibility
-- `--push` - push local code immediately
-
-For more:
-
-```sh
-gh repo create -h
-```
+- `--source=.`: current directory
+- `--private` or `--public`
+- `--push`: push local code immediately

@@ -1,15 +1,10 @@
 # Arch Install
 
-## Install Environment
+## Reference
 
-- Thinkpad T14 Gen4, Intel CPU & integrated GPU
-- Running Windows 11
+[How to Dual Boot Arch Linux and Windows 11 - Ksk Royal](https://www.youtube.com/watch?v=BB_SnWBQ6xw)
 
-## Referenced YouTube
-
-- [Ksk Royal - How to Dual Boot Arch Linux and Windows 11](https://www.youtube.com/watch?v=BB_SnWBQ6xw)
-
-## List of Contents
+## Table of Contents
 
 - [Before Install](#before-install)
   - [Create Disk Space](#create-disk-space)

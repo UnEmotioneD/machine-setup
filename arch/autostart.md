@@ -1,18 +1,18 @@
 # Autostart
 
-## NM-Applet
+Stop programs from starting automatically.
 
-Stop `nm-applet` from automatically starting
+---
 
-check if it's in here
+check if the program is under the `autostart` directory
+
+`nm-applet` for example:
 
 ```sh
-ls /etc/xdg/autostart
+ls /etc/xdg/autostart | grep nm-applet
 ```
 
 add `Hidden=true` to the `nm-applet.desktop` file
-
-### Shell Command
 
 ```sh
 sudo sh -c 'echo "Hidden=true" >> /etc/xdg/autostart/nm-applet.desktop'

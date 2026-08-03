@@ -2,14 +2,13 @@
 
 A modern application launcher
 
-- [GitHub Repository](https://github.com/abenz1267/walker)
-- [Official Website](https://walkerlauncher.com/)
+- [abenz1267/walker](https://github.com/abenz1267/walker)
+- [walkerlauncher.com](https://walkerlauncher.com/)
 
 ## Table of Contents
 
 - [Install](#install)
-- [Providers](#providers)
-- [Auto Start](#auto-start)
+
 - [Launch](#launch)
 
 ---
@@ -20,13 +19,10 @@ A modern application launcher
 yay -S walker-bin
 ```
 
-> Do not install `elephant-bin` separately which will cause version mismatch
+> [!WARNING]
+> Do not install `elephant-bin` separately which will cause version mismatch.
 
----
-
-## Providers
-
-[Providers](https://walkerlauncher.com/docs/providers)
+### [Providers](https://walkerlauncher.com/docs/providers)
 
 - Arch Linux (AUR)
 - Bluetooth
@@ -89,4 +85,4 @@ bind = $mainMod, D, exec, walker
 bind = $mainMod, V, exec, walker -m clipboard
 ```
 
-> `-m`: `--provider`
+- `-m`: `--provider` alias

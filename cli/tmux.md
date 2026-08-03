@@ -1,20 +1,24 @@
-# TMUX
+# [TMUX](https://github.com/tmux/tmux)
 
-Build tmux locally on apple silicon mac from archive file.
+Build tmux locally from archive file.
+
+---
+
+## Prerequisite
+
+```sh
+brew install pkgconf libevent ncurses autoconf
+```
 
 ---
 
 ## Download
 
-download `tar.gz` from [github tmux release](https://github.com/tmux/tmux/releases)
+download `tar.gz` from [github release](https://github.com/tmux/tmux/releases)
 
-## Prerequisite
+---
 
-```sh
-brew install pkgconf libevent ncurses
-```
-
-## Install
+## Unzip Archive
 
 go to directory where the `tmux-x.x.tar.gz` is at unzip and move into it
 
@@ -24,10 +28,12 @@ go to directory where the `tmux-x.x.tar.gz` is at unzip and move into it
 
 ```sh
 tar -zxf tmux-3.6b.tar.gz
-cd tmux-x.x
+cd tmux-3.6b
 ```
 
-build and install
+---
+
+## Install
 
 ```sh
 ./configure CPPFLAGS="-I/opt/homebrew/include" LDFLAGS="-L/opt/homebrew/lib" --enable-utf8proc
@@ -35,6 +41,8 @@ make && sudo make install
 ```
 
 you can remove the archive and unzipped files after this
+
+---
 
 ## Uninstall
 

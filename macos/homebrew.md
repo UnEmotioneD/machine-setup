@@ -1,16 +1,18 @@
-# Homebrew
+# [Homebrew](https://brew.sh/)
 
-- macOS package manager
+Package manager for macOS.
 
-## List of Content
+## Table of Contents
 
-- [Install Homebrew](#install-homebrew)
-- [Use Homebrew](#use-homebrew)
-  - [Pin Package Version](#pin-package-version)
+- [Install](#install)
+- [Usage](#usage)
+- [Pin Package Version](#pin-package-version)
   - [Unpin Package](#unpin-package)
 - [Save Installed Packages](#save-installed-packages)
 
-## Install Homebrew
+---
+
+## Install
 
 execute following command in terminal
 
@@ -33,84 +35,44 @@ check if installed
 brew --version
 ```
 
-## Use Homebrew
+---
 
-search for packages
+## Usage
 
 ```sh
+# search
 brew search {pkg}
-```
 
-list installed
-
-```sh
+# list installed
 brew list
-```
-
-you can pipe with grep
-
-```sh
 brew list | grep {pkg}
-```
 
-install cli package
-
-```sh
+# install package
 brew install {pkg}
-```
 
-install desktop application
-
-```sh
-brew install --cask {pkg}
-```
-
-remove packages
-
-or with `--cask` to remove desktop app
-
-```sh
+# remove packages
 brew uninstall {pkg}
-```
 
-update homebrew itself
-
-```sh
+# update homebrew itself
 brew update
-```
 
-update homebrew installed outdated packages installed
-
-```sh
+# update outdated packages
 brew upgrade
-brew upgrade --cask
-```
 
-remove orphaned packages
-
-```sh
+# remove orphaned packages
 brew autoremove
-```
 
-show orphaned packages before actually removing
-
-```sh
+# show orphaned packages before actually removing
 brew autoremove --dry-run
-```
 
-clear cache
-
-```sh
+# clear cache
 brew clean
-```
 
-check homebrew health
-
-```sh
+# check homebrew health
 brew doctor
 ```
 
-### Pin Package Version
+## Pin Package Version
 
 keep the `brew upgrade` from updating the package
 
@@ -140,16 +102,14 @@ brew unpin openjdk@17
 
 ## Save Installed Packages
 
+create `Brewfile` where the cmd was executed
+
 ```sh
 brew bundle dump
 ```
 
-this will create `Brewfile` where the cmd was executed
-
-install from `Brewfile`:
+to install with `Brewfile`, run from `Brewfile` file path
 
 ```sh
 brew bundle install
 ```
-
-> from the directory where the `Brewfile` is at

@@ -1,8 +1,6 @@
 # Karabiner
 
-Karabiner Complex Rules
-
----
+Complex rules `Karabiner-elements`.
 
 ## Table of Contents
 
@@ -14,6 +12,9 @@ Karabiner Complex Rules
 ---
 
 ## Caps Lock
+
+- **ESC** on tap
+- **Ctrl** on hold
 
 ```json
 {
@@ -72,6 +73,10 @@ Karabiner Complex Rules
 
 ## Right Command
 
+**Right command** to `F16` to use for switching input source.
+
+`F16` because [F-16](https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon) is cool.
+
 ```json
 {
   "description": "right_command to fn / f16 if pressed alone",
@@ -92,6 +97,13 @@ Karabiner Complex Rules
 ---
 
 ## Media Control
+
+- `fn + space`: play / pause
+- `fn + left`: prev
+- `fn + right`: next
+- `fn + up`: volume up
+- `fn + down`: volume down
+- `fn + M`: mute
 
 ```json
 {

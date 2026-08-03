@@ -1,18 +1,17 @@
-# Shell Keybindings
+# Shell Keybind
 
-`Bash` keybindings on Linux.
-Most of them will work with `ZSH` or `FISH`.
-Some of them will not work on `macOS`.
+`BASH` keybinds on Linux. Same as `Emacs` since they're both `GNU` programs.
 
-Keybindings are same as `emacs` keybindings since they're both `GNU` program.
+## Reference
+
+[Essential Keybindings For Bash, Fish and Zsh - DistroTube](https://www.youtube.com/watch?v=XY5qCQcrHns)
 
 ## Table of Contents
 
-- [Keybindings](#keybindings)
-  - [Navigation](#navigation)
-  - [Edit](#edit)
-  - [History](#history)
-  - [ETC](#etc)
+- [Navigation](#navigation)
+- [Edit](#edit)
+- [History](#history)
+- [ETC](#etc)
 
 - [VI Motions](#vi-motions)
   - [BASH](#bash)
@@ -20,53 +19,40 @@ Keybindings are same as `emacs` keybindings since they're both `GNU` program.
 
 ---
 
-## Keybindings
+## Navigation
 
-### Navigation
+- `ctrl + a`: beginning of the line
+- `ctrl + e`: end of the line
 
-- `ctrl + a` : beginning of the line
-- `ctrl + e` : end of the line
+- `ctrl + b`: move cursor backward
+- `ctrl + f`: move cursor forward
 
-- `ctrl + b` : move cursor backward
-- `ctrl + f` : move cursor forward
+- `alt + b`: move cursor backward by word
+- `alt + f`: move cursor forward by word
 
-- `alt + b` : move cursor backward by word
-- `alt + f` : move cursor forward by word
-  > `command` for macOS
+> [!TIP]
+> Try `command` instead of `alt` for **macOS**.
 
-### Edit
+## Edit
 
-- `ctrl + u` : delete from cursor to start of the line
-- `ctrl + k` : delete from cursor to end of the line
-- `ctrl + y` : undo
+- `ctrl + u`: delete from cursor to start of the line
+- `ctrl + k`: delete from cursor to end of the line
+- `ctrl + y`: undo
 
-- `ctrl + w` : delete word backward
-- `alt + d` : delete word forward
+- `ctrl + w`: delete word backward
+- `alt + d`: delete word forward
 
-### History
+## History
 
-- `ctrl + n` : same as arrow down
-- `ctrl + p` : same as arrow up
+- `ctrl + n`: same as arrow down
+- `ctrl + p`: same as arrow up
+- `!!`: use last command
 
-> Or `!!` to use the last cmd.
-> For example:
+## ETC
 
-```sh
-sudo !! # last cmd with sudo
-```
-
-### ETC
-
-- `alt + period` : use the last argument
-
-> or use `!$` to use the last args
-
-```sh
-print !$
-```
-
-- `ctrl + l` : same as clear
-- `ctrl + d` : same as exit
+- `alt + period` / `!$`: use last argument
+- `ctrl + l`: same as clear
+- `ctrl + d`: same as exit
 
 ---
 

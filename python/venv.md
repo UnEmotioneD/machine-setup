@@ -4,16 +4,15 @@
 
 - [Install PIP](#install-pip)
 - [Create venv](#create-venv)
-- [Activate venv](#activate-venv)
+- [Activate](#activate)
 - [Install Modules](#install-modules)
-- [Deactivate](#deactivate)
 - [Freeze](#freeze)
 
 ---
 
 ## Install PIP
 
-The python3 package manager
+Python package manager
 
 ```sh
 sudo apt install python3-pip
@@ -31,42 +30,34 @@ python3 -m venv <dir/venv-name>
 
 ---
 
-## Activate venv
-
-For `bash` and `zsh`
+## Activate
 
 ```sh
+# BASH and ZSH
 source ~/venv/bin/activate
-```
 
-For `fish`
-
-```sh
+# FISH
 source ~/venv/bin/activate.fish
 ```
 
-Update `pip` from inside the `venv`
+### Deactivate
 
 ```sh
-sudo pip3 install --upgrade pip
+deactivate
 ```
 
 ---
 
 ## Install Modules
 
-For example
-
 ```sh
 pip3 install numpy
 ```
 
----
-
-## Deactivate
+### Update PIP
 
 ```sh
-deactivate
+sudo pip3 install --upgrade pip
 ```
 
 ---
@@ -79,13 +70,13 @@ Save environment exactly
 pip freeze > requirements.txt
 ```
 
-Recreate env
+Recreate environment
 
 ```sh
 pip install -r requirements.txt
 ```
 
-Refreeze after upgrades for safety
+Refreeze after upgrades
 
 ```sh
 pip install --upgrade requests

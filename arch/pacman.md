@@ -1,10 +1,10 @@
 # Pacman
 
-How to use pacman
+how to use pacman
 
 ---
 
-## List of Contents
+## Table of Contents
 
 - [Install](#install)
 - [Update](#update)
@@ -12,8 +12,8 @@ How to use pacman
   - [Remove orphaned](#remove-orphaned)
   - [Remove Dependencies](#remove-dependencies)
 - [Search](#search)
-  - [From Installed](#from-installed)
   - [From Online](#from-online)
+  - [From Installed](#from-installed)
 - [Clear](#cleanup)
 
 ---
@@ -21,46 +21,40 @@ How to use pacman
 ## Install
 
 ```sh
-sudo pacman -S vim # normal install
-sudo pacman -S --noconfirm neovim # without confirm
-sudo pacman -S emacs --needed # reinstall
+# normal install
+sudo pacman -S vim
+
+# without confirmation
+sudo pacman -S --noconfirm neovim
+
+# if not installed already
+sudo pacman -S --needed emacs
 ```
 
 ---
 
 ## Update
 
-full upgrade(recommended):
-
 ```sh
-sudo pacman -Syu
-```
-
-refersh package database only
-
-```sh
+# refresh package database only
 sudo pacman -Sy
+
+# full upgrade (recommended)
+sudo pacman -Syu
 ```
 
 ---
 
 ## Remove
 
-just the specified package
-
 ```sh
+# just the specified package
 sudo pacman -R nano
-```
 
-with dependencies
-
-```sh
+# with dependencies
 sudo pacman -Rs nano
-```
 
-with dependencies and config files
-
-```sh
+# with dependencies and config files
 sudo pacman -Rns code
 ```
 
@@ -77,7 +71,7 @@ list orphaned
 pacman -Qtdq
 ```
 
-remove every orphaned
+remove orphaned with queried results
 
 ```sh
 sudo pacman -Rns $(pacman -Qtdq)
@@ -85,19 +79,19 @@ sudo pacman -Rns $(pacman -Qtdq)
 
 ### Remove Dependencies
 
-See what package depends on it
+see what package depends on it
 
 ```sh
 pacman -Qi {pkg-name}
 ```
 
-More cleaner way:
+more cleaner way
 
 ```sh
 pacman -r {pkg-name}
 ```
 
-Skip dependency check
+skip dependency check
 
 `-d`: Skip dependency check
 `-dd`: Skip all dependency check
@@ -110,33 +104,22 @@ sudo pacman -Rdd {pkg-name}
 
 ## Search
 
-### From Installed
-
-search from database
-
-```sh
-pacman -Ss ttf-jetbrains
-```
-
 ### From Online
 
-list all every packages installed
+```sh
+pacman -Ss <pkg-name>
+```
 
-`-Q` for Query
+### From Installed
 
 ```sh
+# query every installed packages
 pacman -Q
-```
 
-list only installed explicitly(no dependencies)
-
-```sh
+# installed explicitly (not as dependency)
 pacman -Qe
-```
 
-dependencies only
-
-```sh
+# dependencies only
 pacman -Qd
 ```
 
@@ -145,25 +128,9 @@ pacman -Qd
 ## Cleanup
 
 ```sh
+# remove outdated
 sudo pacman -Sc
-```
 
-```sh
+# remove all cached packages
 sudo pacman -Scc
-```
-
-### With Tools
-
-install `pacman-contrib` use `paccache` command
-
-remove all cached
-
-```sh
-paccache -r
-```
-
-keep last 2 versions
-
-```sh
-paccahce -rk2
 ```

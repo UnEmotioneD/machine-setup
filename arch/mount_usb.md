@@ -1,6 +1,8 @@
-# How to Mount External Drives
+# Mount USB
 
-Mount and unmount external drives from terminal
+Mount and unmount external drives from terminal.
+
+## Table of Contents
 
 - [Find External Drive](#find-external-drive)
 - [Create Mount Directory](#create-mount-directory)
@@ -11,7 +13,7 @@ Mount and unmount external drives from terminal
 
 ## Find External Drive
 
-Use `lsblk` to list block devices:
+List block devices:
 
 ```sh
 lsblk
@@ -24,8 +26,8 @@ sdb      # entire disk
 └─sdb1   # partition on the external drive
 ```
 
-> **Note:** Device names like `sdb` / `sdb1` are examples.
-> Always confirm the correct device on your system.
+> [!IMPORTANT]
+> Device names `sdb` / `sdb1` are for example. Confirm the correct device on your system.
 
 ---
 
@@ -57,13 +59,13 @@ sudo mount /dev/sdb /mnt/usb
 
 ## Unmount
 
-You can unmount by mount point:
+by `mount point`:
 
 ```sh
 sudo umount /mnt/usb
 ```
 
-Or by device name:
+with `device name`:
 
 ```sh
 sudo umount /dev/sdb1

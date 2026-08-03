@@ -1,8 +1,9 @@
 # Chromium
 
-A web browser built for speed, simplicity and security
+A web browser built for speed, simplicity and security.
 
-> You cannot even login to `chromium`
+> [!NOTE]
+> You cannot even login to `Chromium`.
 
 ## Chromium VS Firefox
 
@@ -12,6 +13,9 @@ A web browser built for speed, simplicity and security
 2. Chromium renders image faster then firefox.
 
 3. Chromium has better GitHub markdown inline code fonts. (Thicker then firefox)
+
+> [!IMPORTANT]
+> Swipe to go back history dose not work on `Chromium`.
 
 ## Table of Contents
 

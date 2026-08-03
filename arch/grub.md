@@ -6,8 +6,8 @@ Customize grub menu to have bigger text and just the items you need
 - [Reorder Items](#reorder-items)
 - [Cleaner Menu](#cleaner-menu)
 - [Menu Resolution](#menu-resolution)
-- [Update Config](#update-config)
 - [Reboot to Last OS](#reboot-to-last-os)
+- [Update Config](#update-config)
 
 ---
 
@@ -20,20 +20,22 @@ cd /etc/grub.d
 ls -a
 ```
 
-Output is something like this
+example outputs:
 
-```console
+```sh
 00_header
 05_debian_theme
 10_linux        # Linux
 30_os-prober    # Windows
 ```
 
-Remove execute permission from scripts to hide
+Remove execute permission from scripts to hide:
 
 ```sh
 sudo chmod -x {name of script}
 ```
+
+---
 
 ## Reorder Items
 
@@ -43,7 +45,8 @@ Change index from `30_` to `09_` to put it above `10_linux`
 sudo mv 30_os-prober 09_os-prober
 ```
 
-> `os-prober` is `Windows Boot Manager` in grub boot menu
+> [!NOTE]
+> `os-prober` is `Windows Boot Manager` in grub boot menu.
 
 ---
 
@@ -73,7 +76,7 @@ GRUB_DISABLE_RECOVERY="true"
 
 ## Menu Resolution
 
-from grub menu press c to go into terminal
+from grub menu press `c` to go into terminal
 
 - Newer BIOS
 
@@ -106,7 +109,7 @@ GRUB_FGXMODE=640x480
 ```conf
 GRUB_DEFAULT=saved
 
-
+# add if needed
 GRUB_SAVEDEFAULT=true
 ```
 
@@ -114,13 +117,13 @@ GRUB_SAVEDEFAULT=true
 
 ## Update Config
 
-### Arch / Fedora
+### Arch
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Debian / Ubuntu
+### Ubuntu
 
 ```sh
 sudo update-grub
