@@ -37,8 +37,8 @@ A web browser built for speed, simplicity and security.
   - [AdGuard AdBlocker](#adguard-adblocker)
   - [Unhook](#unhook)
   - [Vimium](#vimium)
-  - [YouTube Auto HD + FPS](#youtube-auto-hd-fps)
-  - [YouTube Auto Liker](#youtbue-auto-liker)
+  - [YouTube Auto HD + FPS](#youtube-auto-hd--fps)
+  - [YouTube Auto Liker](#youtube-auto-liker)
 
 - [Remove Firefox](#remove-firefox)
 
