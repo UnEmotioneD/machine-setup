@@ -4,7 +4,7 @@ Application launcher
 
 ## Install
 
-`rofimoji`: nerfonts and emojis
+`rofimoji`: nerdfonts and emojis
 
 ```sh
 sudo apt install rofi rofi-calc rofimoji

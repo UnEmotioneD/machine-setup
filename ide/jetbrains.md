@@ -7,6 +7,14 @@
   - [windows](#windows)
 - [Plugins](#plugins)
 - [Settings](#settings)
+  - [Tree Indent Guides](#tree-indent-guides)
+  - [Inlay Usage & Code Author](#inlay-usage--code-author)
+  - [Fold One-line Methods](#fold-one-line-methods)
+  - [Caret Blink](#caret-blink)
+  - [Scroll Pass BOF](#scroll-pass-bof)
+  - [Smooth Scrolling](#smooth-scrolling)
+  - [Sticky Lines](#sticky-lines)
+  - [Palantir Java Format](#palantir-java-format)
 
 ---
 
@@ -48,7 +56,7 @@
 
 - [IdeaVim](https://github.com/jetbrains/ideavim)
 - [IdeaVim-Quickscope](https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope)
-- [IdeavVim-EasyMotion](https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion/versions)
+- [IdeaVim-EasyMotion](https://plugins.jetbrains.com/plugin/13360-ideavim-easymotion/versions)
 - [AceJump](https://github.com/acejump/AceJump)
 - [Catppuccin Theme](https://plugins.jetbrains.com/plugin/18682-catppuccin-theme)
 - [Atom Material Icons](https://plugins.jetbrains.com/plugin/10044-atom-material-icons)
