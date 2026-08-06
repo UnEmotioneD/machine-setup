@@ -2,29 +2,11 @@
 
 Notes while developing across machines.
 
-| OS      | Window Manager                                        |
-| ------- | ----------------------------------------------------- |
-| macOS   | [Aerospace](https://github.com/nikitabobko/AeroSpace) |
-| Arch    | [Hypr](https://hypr.land/)                            |
-| Ubuntu  | [i3](https://i3wm.org/)                               |
-| Windows | [GlazeWM](https://glazewm.com/)                       |
-
 ---
 
 ## Git
 
 Good to know `git` commands.
-
-### Merge
-
-Update current branch without creating new merge commits, If possible.
-For cleaner commit history.
-
-```sh
-git merge --ff-only {branch-name}
-```
-
-> `--ff-only`: --fast-forward-only
 
 ### Reset Commit History
 
@@ -55,6 +37,6 @@ After adding files to `.gitignore` which is already being tracked.
 ```sh
 git rm -r --cached .
 git add -A
-git commit -m "Untrack ignored"
+git commit -m "untrack ignored"
 git push
 ```
