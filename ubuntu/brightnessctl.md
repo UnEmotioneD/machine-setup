@@ -2,7 +2,7 @@
 
 ## Reference
 
-[fix brightness ubuntu](https://itsfoss.com/fix-brightness-ubuntu-1310/)
+[fix brightness ubuntu - itsfoss.com](https://itsfoss.com/fix-brightness-ubuntu-1310/)
 
 ---
 
@@ -12,7 +12,7 @@
 ls /sys/class/backlight/
 ```
 
-Output:
+Example output:
 
 ```text
 intel_backlight
@@ -25,7 +25,7 @@ intel_backlight
 Create configuration file:
 
 ```sh
-sudo Touch /usr/share/X11/xorg.conf.d/20-intel.conf
+sudo touch /usr/share/X11/xorg.conf.d/20-intel.conf
 ```
 
 open with sudo privilege
@@ -41,7 +41,7 @@ Section "Device"
 EndSection
 ```
 
-Logout and log back in for this to take effect
+logout and back in for this to work
 
 ---
 

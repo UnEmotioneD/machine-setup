@@ -1,6 +1,6 @@
 # Advanced Package Tool
 
-## Table of Content
+## Table of Contents
 
 - [Before Use](#before-use)
 - [How to Use](#how-to-use)

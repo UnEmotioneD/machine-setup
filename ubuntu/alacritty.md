@@ -2,42 +2,21 @@
 
 Install latest version of alacritty on Ubuntu.
 
-## Table of Contents
-
-- [Install](#install)
-  - [Add PPA](#add-ppa)
-  - [Update APT](#update-apt)
-  - [Install Alacritty](#install-alacritty)
-  - [Check Version](#check-version)
-- [Uninstall](#uninstall)
-  - [Remove Alacritty](#remove-alacritty)
-  - [Remove PPA](#remove-ppa)
-
 ---
 
 ## Install
 
-### Add PPA
-
 ```sh
+# add PPA
 sudo add-apt-repository ppa:aslatter/ppa
-```
 
-### Update APT
-
-```sh
+# update APT
 sudo apt update
-```
 
-### Install Alacritty
-
-```sh
+# install
 sudo apt install alacritty
-```
 
-### Check Version
-
-```sh
+# check installed
 alacritty --version
 ```
 
@@ -45,22 +24,15 @@ alacritty --version
 
 ## Uninstall
 
-### Remove Alacritty
-
 ```sh
+# remove alacritty package
 sudo apt remove alacritty
 sudo apt purge alacritty
-```
 
-### Remove PPA
-
-```sh
+# remove PPA
 sudo add-apt-repository --remove ppa:aslatter/ppa
 sudo apt update
-```
 
-Check uninstalled
-
-```sh
+# check uninstalled
 which alacritty
 ```

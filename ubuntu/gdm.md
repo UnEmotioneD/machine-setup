@@ -1,5 +1,7 @@
 # Gnome Desktop Manager
 
+Settings for GDM environment.
+
 ## Table of Contents
 
 - [Setting](#setting)

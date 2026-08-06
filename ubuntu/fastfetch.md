@@ -8,7 +8,7 @@ System info fetch program
 
 ```sh
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-sudo apt upgrade
+sudo apt update
 sudo apt install fastfetch
 ```
 
