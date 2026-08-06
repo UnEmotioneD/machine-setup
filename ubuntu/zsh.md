@@ -31,7 +31,7 @@ chsh -s $(which zsh)
 
 ## Install Oh My ZSH
 
-- [Oh My ZSH](https://ohmyz.sh/#install): framework
+- [Oh My ZSH](https://ohmyz.sh/): framework
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -41,7 +41,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Plugins
 
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#manual): prompt theme
+- [Powerlevel10k](https://github.com/romkatv/powerlevel10k): prompt theme
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): fish like suggestions
 - [fast syntax highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting): faster then zsh-syntax-highlighting
 
