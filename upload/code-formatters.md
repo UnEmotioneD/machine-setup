@@ -1,25 +1,27 @@
-# Formatters
+# Code Formatters
 
-Formatters to use `Space` instead of `Tab` for indentation, and the size to `4 spaces`.
-And prefer `single quotes` to `double quotes` if possible.
+My formatter style:
+
+- `Spaces` for indentation instead of **Tabs**.
+- `4-space` indentation width.
+- Prefer `single quotes` when supported.
 
 ## Table of Contents
 
 - [Editorconfig](#editorconfig)
-- [C, CPP](#c-cpp)
-- [Java](#java)
+- [C / C++](#c--c)
 - [Python](#python)
 - [JavaScript](#javascript)
 - [Lua](#lua)
-- [SH, BASH](#sh-bash)
+- [Shell](#shell)
 
 ---
 
 ## Editorconfig
 
-[editorconfig.org](https://editorconfig.org/)
+Reference: [editorconfig.org](https://editorconfig.org/)
 
-Create `.editorconfig` file at project root.
+`.editorconfig`:
 
 ```editorconfig
 root = true
@@ -32,20 +34,17 @@ charset = utf-8
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{js,cjs,mjs}]
-indent_size = 4
-
 [*.{html,css,md}]
 indent_size = 2
 ```
 
 ---
 
-## C, CPP
+## C / C++
 
-Formatter: Clang Format
+Formatter: [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
 
-Inside `.clang-format`:
+`.clang-format`:
 
 ```yaml
 BasedOnStyle: LLVM
@@ -55,28 +54,11 @@ UseTab: Never
 
 ---
 
-## Java
-
-Formatter: [google-java-format](https://github.com/google/google-java-format)
-
-- Format every `Java` with 4 space indent with `--aosp` flag
-
-```sh
-google-java-format --aosp -i $(find . -name '*.java')
-
-# for directories
-google-java-format --aosp -r --replace .
-```
-
----
-
 ## Python
 
-Formatter: [Ruff](https://docs.astral.sh/ruff/formatter/)
+Formatter: [Black](https://github.com/psf/black), [Blue](https://blue.readthedocs.io/en/latest/), [Ruff](https://docs.astral.sh/ruff/formatter/)
 
-Since [Black](https://github.com/psf/black) formatter is not configurable.
-
-By `ruff.toml`
+- `ruff.toml`:
 
 ```toml
 line-length = 100
@@ -87,7 +69,7 @@ indent-style = "space"
 docstring-code-format = true
 ```
 
-By `pyproject.toml`
+- `pyproject.toml`:
 
 ```toml
 [tool.ruff]
@@ -115,38 +97,34 @@ ruff format .
 
 Formatter: [Prettier](https://prettier.io/)
 
-Check out the [nodejs/prettier](../nodejs/prettier.md)
+`.prettierrc`:
 
-Create `.prettierrc` file at project root
+- every files:
 
-- For every files
-
-```jsonc
+```json
 {
-  "tabWidth": 4, // default: 2
-  "singleQuote": true, // default: false
+  "tabWidth": 4,
+  "singleQuote": true
 }
 ```
 
-- Just the specified files
+- specific files only:
 
-```jsonc
+```json
 {
   "overrides": [
     {
       "files": ["*.js", "*.mjs", "*.cjs"],
       "options": {
         "tabWidth": 4,
-        "singleQuote": true,
-      },
-    },
-  ],
+        "singleQuote": true
+      }
+    }
+  ]
 }
 ```
 
 ### Prettier Command
-
-Format all supported files from current directory including every sub directories
 
 ```sh
 npx prettier --write .
@@ -157,6 +135,8 @@ npx prettier --write .
 ## Lua
 
 Formatter: [StyLua](https://github.com/JohnnyMorganz/StyLua)
+
+`.stylua.toml`:
 
 ```toml
 indent_type = "Spaces"
@@ -171,6 +151,16 @@ stylua .
 
 ---
 
-## SH, BASH
+## Shell
 
 Formatter: [shfmt](https://github.com/patrickvane/shfmt)
+
+### Shfmt Command
+
+```sh
+# follow .editorconfig
+shfmt -w .
+
+# 4-space indent
+shfmt -w -i 4 .
+```
