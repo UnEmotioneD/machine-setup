@@ -1,22 +1,25 @@
-# Korean Localization on Arch Linux (Hyprland)
+# Korean
 
-This guide covers the setup of Korean fonts and input methods on Arch Linux with Hyprland.
+Korean input with Fcitx5 on Arch Linux and Hyprland.
+
+## Table of Contents
+
+- [Prerequisite](#prerequisite)
+- [Environment Variables](#environment-variables)
+- [Autostart](#autostart)
+- [Configure](#configure)
 
 ---
 
-## 1. Install Korean Fonts
+## Prerequisite
 
-To ensure proper font rendering, install the following packages:
+- `Adobe fonts`: For proper font rendering on browsers.
 
 ```sh
 sudo pacman -S adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
 ```
 
----
-
-## 2. Install Fcitx5 Input Method
-
-Fcitx5 is a modern input method framework supporting Hangul (Korean).
+- `Fcitx5`: A modern input method framework.
 
 ```sh
 yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
@@ -24,37 +27,35 @@ yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
 
 ---
 
-## 3. Configure Environment Variables
+## Environment Variables
 
-Add the following lines to `~/.profile` and ensure `.bashrc` sources it:
+inside `.profile` or `.zprofile`:
 
 ```sh
-export GLFW_IM_MODULE=fcitx # Needed for some Wayland applications
+export GLFW_IM_MODULE=fcitx
 export GTK_IM_MODULE=wayland
-export QT_IM_MODULE=fcitx
+export QT_IM_MODULE=wayland
 export SDL_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 ```
 
-To apply the changes immediately, run:
+---
 
-```sh
-source ~/.profile
+## Autostart
+
+Inside **Autostart** module of `~/.config/hyprland`.
+
+```lua
+hl.on('hyprland.start', function()
+    -- ...
+    hl.exec_cmd('fcitx5 -d')
+    -- ...
+end)
 ```
 
 ---
 
-## 4. Autostart Fcitx5 in Hyprland
-
-Add the following line to your `~/.config/hypr/hyprland.conf` to start Fcitx5 automatically:
-
-```ini
-exec-once = fcitx5 -d
-```
-
----
-
-## 5. Configure Fcitx5
+## Configure
 
 Launch `fcitx5-configtool`.
 
