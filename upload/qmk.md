@@ -1,5 +1,9 @@
 # QMK
 
+## Reference
+
+[Setting Up Your QMK Environment](https://docs.qmk.fm/newbs_getting_started)
+
 ## Table of Contents
 
 - [1. Install](#1-install)
@@ -13,8 +17,6 @@
 ---
 
 ## 1. Install
-
-[Setting Up Your QMK Environment](https://docs.qmk.fm/newbs_getting_started)
 
 ```sh
 curl -fsSL https://install.qmk.fm | sh
@@ -32,9 +34,9 @@ qmk setup
 
 ## 3. Find Keyboard
 
-[MODE Sonnet](https://modedesigns.com/products/sonnet)
+Example: [MODE Sonnet](https://modedesigns.com/products/sonnet)
 
-`H` for hotswap PCB
+`mode/m75h` for hotswap
 
 ```sh
 qmk list-keyboards | grep -i "mode/m75h"
