@@ -1,33 +1,37 @@
 # Windows Recovery Partition
 
-How to remove `recovery` and "recover" the recovery partition
+How to remove and recover the `recovery partition`.
 
-[Fix "Can't Extend C Drive with Unallocated Space" in Windows 10/11 - Techy Druid](https://www.youtube.com/watch?v=K76z0gQm9oA&list=WL&index=3)
+## Reference
 
----
+[Fix "Can't Extend C Drive with Unallocated Space" in Windows 10/11 - Techy Druid](https://www.youtube.com/watch?v=K76z0gQm9oA)
 
 ## Table of Contents
 
+- [Preparation](#preparation)
 - [Delete](#delete)
 - [Recover](#recover)
+- [Remove Partition Letter](#remove-partition-letter)
 
 ---
 
-## Delete
+## Preparation
 
 open `cmd prompt` with admin privilege
 
-```cmd
+```powershell
 reagentc /disable
 
 diskpart
 
 list disk
 
+# disk with windows installed
 sel disk 0
 
 list part
 
+# select the recovery partition
 sel part 4
 
 detail part
@@ -35,35 +39,44 @@ detail part
 
 copy the value of `Type` and `Attrib`
 
-```cmd
+---
+
+## Delete
+
+> [!WARNING]
+> `reagentc` must have been disabled before deleting recovery partition.
+
+```powershell
 del part override
 ```
+
+now you can expand the empty space next to `C:` partition
 
 ---
 
 ## Recover
 
-create 1GB of partition
+create 1GB of partition from disk manager
 
-from disk part select the create partition
+from diskpart select the created partition
 
-### Set ID
+and then:
 
-```cmd
+```powershell
+# set id
 set id={copied-id-value}
-```
 
-### Set Attrib
-
-```cmd
+# set attrib
 gpt attributes={copied-attirb-value}
 ```
 
-### Remove Partition Letter
+---
+
+## Remove Partition Letter
 
 new recovery partition is visible from the file explorer
 
-```cmd
+```powershell
 list volume
 
 sel volume D
@@ -74,12 +87,3 @@ exit
 
 reagentc /enable
 ```
-
----
-
-## Trouble Shooting
-
-copy past not working in cmd prompt
-
-right click the title bar
-check the use ctrl shift c/v for copy past
