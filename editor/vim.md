@@ -1,16 +1,56 @@
-# Vim Motions
-
-Mesmerizing vim commands worth memorizing.
+# Vim
 
 ## Table of Contents
 
-- [Substitute](#substitute)
-- [Global](#global)
-- [Refactoring](#refactoring)
+- [Vim Plug](#vim-plug)
+- [Motions](#motions)
+  - [Substitute](#substitute)
+  - [Global](#global)
+  - [Refactoring](#refactoring)
 
 ---
 
-## Substitute
+## Vim Plug
+
+built-in plugin manager
+
+### Install
+
+install vim-plug at `~/.vim/autoload/plug.vim`
+
+```sh
+curl -fLo \
+  ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+### Usage
+
+add it to `~/.vimrc`
+
+```vim
+call plug#begin('~/.vim/plugged')
+
+" for example
+Plug 'christoomey/vim-tmux-navigator'
+
+call plug#end()
+```
+
+shout out the .`vimrc` and install it
+
+```sh
+:source ~/.vimrc # or :so
+:PlugInstall
+```
+
+---
+
+## Motions
+
+Mesmerizing commands worth memorizing.
+
+### Substitute
 
 original:
 
@@ -49,7 +89,7 @@ the command:
 
 ---
 
-## Global
+### Global
 
 ```vim
 :g/<pattern>/<cmd>
@@ -90,7 +130,7 @@ delete every line that does not contain string "vim"
 
 ---
 
-## Refactoring
+### Refactoring
 
 - [3 Levels of Vim Refactoring - typecraft](https://www.youtube.com/watch?v=oQB8lYUZtrY)
 

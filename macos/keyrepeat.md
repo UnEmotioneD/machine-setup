@@ -19,7 +19,7 @@ defaults write -g KeyRepeat -int 1
 
 ---
 
-## Checking Current Values
+## Check Current Values
 
 ```sh
 defaults read -g InitialKeyRepeat
