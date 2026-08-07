@@ -1,9 +1,6 @@
-# Image Magick
+# ImageMagick
 
-Edit images with [ImageMagick](https://github.com/ImageMagick/ImageMagick)
-
-> [!NOTE]
-> `convert` has deprecated.
+Edit images with [ImageMagick](https://github.com/ImageMagick/ImageMagick).
 
 ## Table of Contents
 
@@ -16,11 +13,14 @@ Edit images with [ImageMagick](https://github.com/ImageMagick/ImageMagick)
 
 ## Convert
 
-Just change the extension
+Changing file format.
 
 ```sh
 magick input.jpg output.png
 ```
+
+> [!NOTE]
+> `convert` command has deprecated.
 
 ---
 
