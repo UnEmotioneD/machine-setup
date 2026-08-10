@@ -78,13 +78,13 @@ Ambient mode: off
 
 ### Coupang
 
-## Aliexpress
+### Aliexpress
 
-## Joongna
+### Joongna
 
-## Google Drive
+### Google Drive
 
-## Google Photos
+### Google Photos
 
 ---
 
@@ -97,7 +97,7 @@ Ambient mode: off
 
 ### Material Icons for GitHub
 
-## No CC: Hide YouTube Captions & Subtitles
+### No CC: Hide YouTube Captions & Subtitles
 
 ### Unhook
 
