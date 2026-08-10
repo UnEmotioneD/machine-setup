@@ -20,33 +20,21 @@ A web browser built for speed, simplicity and security.
 ## Table of Contents
 
 - [Install](#install)
-
 - [Settings](#settings)
-
 - [Favorites](#favorites)
-  - [iCloud](#icloud)
   - [Naver](#naver)
   - [YouTube](#youtube)
-  - [Claude](#claude)
-  - [GitHub](#github)
-  - [Monkeytype](#monkeytype)
-  - [NSU](#nsu)
-  - [LMS](#lms)
-
 - [Extensions](#extensions)
   - [AdGuard AdBlocker](#adguard-adblocker)
   - [Unhook](#unhook)
   - [Vimium](#vimium)
   - [YouTube Auto HD + FPS](#youtube-auto-hd--fps)
   - [YouTube Auto Liker](#youtube-auto-liker)
-
 - [Remove Firefox](#remove-firefox)
 
 ---
 
 ## Install
-
-Install from `extra` repository with `pacman`:
 
 ```sh
 sudo pacman -S chromium
@@ -57,10 +45,8 @@ sudo pacman -S chromium
 ## Settings
 
 - Appearance > Theme > `Dark`
-
 - Show tab groups: off
 - Show bookmarks bar: on
-
 - Never translate Korean
 
 ---
@@ -92,9 +78,13 @@ Ambient mode: off
 
 ### Coupang
 
-### NSU
+## Aliexpress
 
-### LMS
+## Joongna
+
+## Google Drive
+
+## Google Photos
 
 ---
 
@@ -105,19 +95,20 @@ Ambient mode: off
 - Allowlist
   - youtube.com
 
+### Material Icons for GitHub
+
+## No CC: Hide YouTube Captions & Subtitles
+
 ### Unhook
 
 - Hide Home Feed: off
-
 - Hide Video Side bar: off
   - Hide Live Chat: on
   - Hide Fundraiser: on
-
 - Hide Shorts: on
 - Hide Comments: on
 - Hide Mixes: on
 - Hide Explore, Trending: off
-
 - Disable Autoplay: off
 - Disable Annotations: off
 
@@ -126,22 +117,18 @@ Ambient mode: off
 - Advanced Options
   - Scroll stop size: `1000px`
   - Use smooth scrolling: `off`
-
 - Characters used for link hints
   - Ignore keyboard layout: `on` (to make it compatible with other input source
     then English on macOS)
-
 - CSS for Vimium UI
   - Copy one of the theme to it [tokyonight.nvim - vimium](https://github.com/folke/tokyonight.nvim/tree/main/extras/vimium)
 
 ### YouTube Auto HD + FPS
 
 - Extension is on: on
-
 - Use the same quality for all frame rates: on
 - Use enhanced bitrate when it's the highest quality: on
 - Use super resolution when available: on
-
 - Run on YouTube Music: off
 
 ### YouTube Auto Liker
@@ -149,7 +136,7 @@ Ambient mode: off
 - Enabled: on
 - Subscribed Only: on
 - Wait for Ads: off
-- Delay (in seconds): 5
+- Delay (in seconds): 10
 
 ---
 
@@ -157,9 +144,8 @@ Ambient mode: off
 
 ```sh
 sudo pacman -Rns firefox
-```
 
-```sh
+# No mercy!
 rm -rf ~/.cache/mozilla
 rm -rf ~/.config/mozilla
 ```
