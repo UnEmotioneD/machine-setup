@@ -61,7 +61,15 @@ Save this directory at somewhere.
 /Users/unemotioned/qmk_firmware/keyboards/mode/m75h/keymaps/sonnet
 ```
 
-### Compile Command
+### JSON to C
+
+More features available in **C** file.
+
+```sh
+qmk json2c -o keymap.c keymap.json
+```
+
+### Compile
 
 Save this command somewhere.
 
@@ -69,17 +77,11 @@ Save this command somewhere.
 qmk compile -kb mode/m75h -km sonnet
 ```
 
-### JSON to C
-
-```sh
-qmk json2c -o keymap.c keymap.json
-```
-
 ---
 
 ## 5. Flash
 
-Compiles and flash if the keyboard is in or goes into the bootloader mode.
+Compile and flash if the keyboard is in bootloader mode.
 
 ```sh
 qmk flash -kb mode/m75h -km sonnet
@@ -91,25 +93,21 @@ qmk flash -kb mode/m75h -km sonnet
 
 ### MODE Sonnet
 
-The mode sonnet does not shows up on finder like other keyboards on bootloader
-mode when reset button is pressed.
+The mode sonnet does not shows up on finder like other keyboards when reset
+button is pressed.
 
-#### VIA
+#### [VIA](https://www.usevia.app/)
 
-[VIA](https://www.usevia.app/)
-
-1. Map `Reset` key to layout
-2. Compile the keymap into `.bin` file at `~/qmk_firmware`
-
-- Enable QMK for VIA. So you can use both QMK and VIA for mapping keyboard
+Enable QMK for VIA. So you can use both QMK and VIA for mapping keyboard
 
 ```make
 VIA_ENABLE = yes
 ```
 
-#### QMK Toolbox
+1. Map `Reset` key to layout
+2. Compile the keymap into `.bin` file at `~/qmk_firmware`
 
-[QMK Toolbox](https://qmk.fm/toolbox)
+#### [QMK Toolbox](https://qmk.fm/toolbox)
 
 1. Select compiled `.bin` file at `~/qmk_firmware`
 2. Select `ATmega32U2` for the `Sonnet`
