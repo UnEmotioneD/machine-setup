@@ -1,10 +1,10 @@
-# fprintd
+# Fprint
 
-How to register finger prints on Linux with `fprintd`.
+How to register finger prints on Linux with [fprint](https://fprint.freedesktop.org/).
 
 ---
 
-## Install
+## Install Packages
 
 ```sh
 sudo pacman -S fprintd libfprint
@@ -12,7 +12,7 @@ sudo pacman -S fprintd libfprint
 
 ---
 
-## Enable
+## Enable Service
 
 ```sh
 sudo systemctl enable --now fprintd
@@ -22,18 +22,18 @@ sudo systemctl enable --now fprintd
 
 ## Enroll
 
-- Available fingers:
-  - `left-little-finger`
-  - `left-ring-finger`
-  - `left-middle-finger`
-  - `left-index-finger`
-  - `left-thumb`
+Available fingers:
 
-  - `right-thumb`
-  - `right-index-finger`
-  - `right-middle-finger`
-  - `right-ring-finger`
-  - `right-little-finger`
+- `left-little-finger`
+- `left-ring-finger`
+- `left-middle-finger`
+- `left-index-finger`
+- `left-thumb`
+- `right-thumb`
+- `right-index-finger`
+- `right-middle-finger`
+- `right-ring-finger`
+- `right-little-finger`
 
 ```sh
 sudo fprintd-enroll -f right-index-finger
