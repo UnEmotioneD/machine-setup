@@ -1,14 +1,8 @@
 # TeleTypeWriter
 
-What it is:
-
 - Originally physical typewriter terminals connected to computers
 - Now virtual consoles built into Linux that provide a basic text interface
 - Completely separate from your graphical desktop
-
----
-
-When/Why to use it:
 
 | When                              | Why                                  |
 | --------------------------------- | ------------------------------------ |
@@ -19,22 +13,26 @@ When/Why to use it:
 | System maintenance                | pacman updates, editing config files |
 | No GUI available                  | Servers, minimal installs            |
 
+---
+
 ## Keyboard Shortcut
 
-Ctrl + Alt + F1 ~ F7
+`Ctrl + Alt` + **F1 ~ F7**
+
+---
 
 ## Terminal Command
 
-switch to TTY2:
+Switch to `TTY2`:
 
 ```sh
 chvt 2
 ```
 
+---
+
 ## TTY 1 through 7
 
-In hyprland:
-
-1. Default
-2. Show SDDM login screen and no input is working
-3. 3 through 7 works fine
+- `tty1`: Default. Used for hyprland.
+- `tty2`: Used for display managers such as **SDDM** and may not work properly.
+- `tty3 ~ 7`: Available as normal TTY.

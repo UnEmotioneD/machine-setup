@@ -12,7 +12,6 @@
 - [Edit](#edit)
 - [History](#history)
 - [ETC](#etc)
-
 - [VI Motions](#vi-motions)
   - [BASH](#bash)
   - [ZSH](#zsh)
@@ -23,10 +22,8 @@
 
 - `ctrl + a`: beginning of the line
 - `ctrl + e`: end of the line
-
 - `ctrl + b`: move cursor backward
 - `ctrl + f`: move cursor forward
-
 - `alt + b`: move cursor backward by word
 - `alt + f`: move cursor forward by word
 
@@ -38,7 +35,6 @@
 - `ctrl + u`: delete from cursor to start of the line
 - `ctrl + k`: delete from cursor to end of the line
 - `ctrl + y`: undo
-
 - `ctrl + w`: delete word backward
 - `alt + d`: delete word forward
 
