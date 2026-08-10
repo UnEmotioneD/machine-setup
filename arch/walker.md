@@ -1,14 +1,15 @@
 # Walker
 
-A modern application launcher
+A modern application launcher for wayland.
 
-- [abenz1267/walker](https://github.com/abenz1267/walker)
-- [walkerlauncher.com](https://walkerlauncher.com/)
+## References
+
+- [GitHub](https://github.com/abenz1267/walker)
+- [Official Website](https://walkerlauncher.com/)
 
 ## Table of Contents
 
 - [Install](#install)
-
 - [Launch](#launch)
 
 ---
@@ -47,7 +48,7 @@ yay -S\
 
 ### Restart
 
-Restart `elephant` elephant after installing providers
+Restart `elephant` after installing providers
 
 ```sh
 pkill elephant
@@ -58,14 +59,22 @@ elephant & disown
 
 ## Auto Start
 
-```hyprlang
-exec-once = walker --gapplication-service
-exec-once = elephant
+Inside `~/.config/hyprland/modules/autostart.lua`:
+
+```lua
+hl.on('hyprland.start', function()
+  -- ...
+  hl.exec_cmd('walker --gapplication-service')
+  hl.exec_cmd('elephant')
+  -- ...
+end)
 ```
 
 ---
 
 ## Launch
+
+By terminal commands or with hyprland keybinds.
 
 ### Module Name
 
@@ -77,12 +86,17 @@ elephant listproviders
 
 ### Keybindings
 
-```hyprlang
-bind = $mainMod, D, exec, walker
+Inside `~/.config/hyprland/modules/keybindings.lua`:
+
+```lua
+-- default walker
+hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd('walker'))
+
+-- clipboard
+hl.bind(mainMod .. ' + V', hl.dsp.exec_cmd('walker -m clipboard'))
+
+-- calculator
+hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd('walker -m calc'))
 ```
 
-```hyprlang
-bind = $mainMod, V, exec, walker -m clipboard
-```
-
-- `-m`: `--provider` alias
+`-m` is alias of `--providers`
