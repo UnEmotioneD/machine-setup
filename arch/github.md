@@ -1,11 +1,14 @@
 # GitHub CLI
 
+How to use the `gh` commands.
+
 ## Table of Contents
 
 - [Install](#install)
 - [Authenticate](#authenticate)
 - [Clone](#clone)
 - [Create Repository](#create-repository)
+- [Open Remote](#open-remote)
 
 ---
 
@@ -55,3 +58,13 @@ gh repo create <repo-name> --source=. --public --push
 - `--source=.`: current directory
 - `--private` or `--public`
 - `--push`: push local code immediately
+
+---
+
+## Open Remote
+
+Open repository page on GitHub.
+
+```sh
+gh browse
+```
