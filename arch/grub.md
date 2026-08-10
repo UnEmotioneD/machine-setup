@@ -1,6 +1,8 @@
 # Grub
 
-Customize grub menu to have bigger text and just the items you need
+Customize grub menu to have bigger text and just the items you need.
+
+## Table of Contents
 
 - [Hide Unnecessary Items](#hide-unnecessary-items)
 - [Reorder Items](#reorder-items)
@@ -32,7 +34,7 @@ example outputs:
 Remove execute permission from scripts to hide:
 
 ```sh
-sudo chmod -x {name of script}
+sudo chmod -x <file-name>
 ```
 
 ---
@@ -58,13 +60,13 @@ Grub config file: `/etc/default/grub`
 sudo nvim /etc/default/grub
 ```
 
-For cleaner menu add line
+For cleaner menu add line:
 
 ```conf
 GRUB_DISABLE_SUBMENU=y
 ```
 
-Uncomment following lines
+Uncomment following lines:
 
 ```conf
 GRUB_DISABLE_LINUX_UUID=true
@@ -92,7 +94,8 @@ vbeinfo
 
 from the supported resolutions select one
 
-- lower resolution have lower input delay and bigger texts
+> [!TIP]
+> Lower resolutions have lower input delay and bigger texts.
 
 back into the grub config file `/etc/default/grub`
 
@@ -106,6 +109,8 @@ GRUB_FGXMODE=640x480
 
 ## Reboot to Last OS
 
+Automatically have the last boot method selected on GRUB menu.
+
 ```conf
 GRUB_DEFAULT=saved
 
@@ -117,13 +122,13 @@ GRUB_SAVEDEFAULT=true
 
 ## Update Config
 
-### Arch
+- Arch
 
 ```sh
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-### Ubuntu
+- Ubuntu
 
 ```sh
 sudo update-grub
