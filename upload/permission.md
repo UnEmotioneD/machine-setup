@@ -1,6 +1,6 @@
 # Permission
 
-What is `chmod` with numbers.
+> "The numbers, Mason! What do they mean. Where are they broadcast from?"[^1]
 
 ```sh
 sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
@@ -8,14 +8,20 @@ sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
 
 ---
 
+## Numbers
+
 | Permission | Value |
 | ---------- | ----- |
 | Read       | 4     |
 | Write      | 2     |
 | Execute    | 1     |
 
-> [!TIP]
+> [!NOTE]
 > `0`: No permission at all.
+
+---
+
+## By Digits
 
 | Digit | Applies to |
 | ----- | ---------- |
@@ -23,9 +29,13 @@ sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
 | 2nd   | Group      |
 | 3rd   | Others     |
 
-`6` = 4(read) + 2(write) = owner can **read and write**.
-`4` = group can only **read**.
-`4` = others can only **read**.
+- `6`: 4(read) + 2(write) = owner can **read and write**.
+- `4`: group can only **read**.
+- `4`: others can only **read**.
+
+---
+
+## Check Privileges
 
 Do `ls -l` to see permission for each files:
 
@@ -39,9 +49,7 @@ Do `ls -l` to see permission for each files:
 -rwx-rw-rw-
 ```
 
----
-
-## First Character
+### First Character
 
 The very first character indicates files types.
 
@@ -52,3 +60,5 @@ The very first character indicates files types.
 - `b`: block device - **storage device**
 - `s`: socket - communication between processes
 - `p`: named pipe (FIFO) - methods for processes to send data to each other
+
+[^1]: Reference to **Grigori Weaver** from _Call of Duty: Black Ops_.
