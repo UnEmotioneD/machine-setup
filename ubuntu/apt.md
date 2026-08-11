@@ -1,64 +1,63 @@
 # Advanced Package Tool
 
+package manager for debian based linux distros
+
 ## Table of Contents
 
-- [Before Use](#before-use)
-- [How to Use](#how-to-use)
+- [General Usage](#general-usage)
+  - [Flags](#flags)
 - [Search](#search)
 - [Cleanup](#cleanup)
-- [Flags](#flags)
-- [Fix Install](#fix-install)
+- [Pin Version](#pin-version)
+- [Fix Package](#fix-package)
 
 ---
 
-## Before Use
-
-- `sudo`: Super User Do
-  - install, remove, update
-  - modifying sys files(/etc, /usr, /bin, ...)
-  - managing services
-  - changing user
+## General Usage
 
 ```sh
-# update apt
-sudo apt update
+# update local package index
+sudo apt update <pkg-name>
 
-# check outdated package
+# list outdated packages
 apt list --upgradeable
 
-# upgrade outdated pkg
-sudo apt upgrade
+# upgrade outdated packages
+sudo apt upgrade <pkg-name>
 
-# keep package from being upgraded
-sudo apt-mark hold openjdk-17-jdk
+# search packages from database
+apt search <pkg-name>
 
-# undo hold
-sudo apt-mark unhold openjdk-17-jdk
+sudo apt install <pkg-name>
+
+sudo apt remove <pkg-name>
+
+# also removes package managed configuration files
+sudo apt purge <pkg-name>
 ```
 
----
+> [!TIP]
+> You can pass multiple arguments to commands such as `install` and `remove`.
 
-## How To Use
+### Flags
 
-You can pass more then one argument
-
-```sh
-sudo apt install {pkg} {pkg} ...
-```
+- `--yes` / `-y`: automatic yes to prompts
+- `--quiet` / `-q`: quieter output
+- `--no-install-recommends` / `--no-install-reco`
+- `--reinstall`
 
 ---
 
 ## Search
 
 ```sh
-# update apt local cache
-apt update
+sudo apt update
 
-# pipe installed package list to fzf
+# search from cache for faster search
 apt-cache search . | fzf
 
-# list installed packages
-apt list --installed
+# search from installed packages
+sudo apt list --installed | fzf
 ```
 
 ---
@@ -75,38 +74,28 @@ sudo apt clean
 
 ---
 
-## Flags
+## Pin Version
 
-`--yes` or `-y`: automatic yes
+keep package from being upgraded
 
-`--quiet` or `-q`: quieter output
+```sh
+sudo apt-mark hold <pkg-name>
 
-`--no-install-recommends` or `--no-install-reco`
+# undo
+sudo apt-mark unhold <pkg-name>
 
-`--reinstall`
-
-`--purge`
+# list held packages
+apt-mark showhold
+```
 
 ---
 
-## Fix Install
-
-### Fix Broken Dependencies
+## Fix Package
 
 ```sh
+# fix broken dependencies
 sudo apt install -f
-```
 
-### Check not being upgraded
-
-```sh
-sudo apt dist-upgrade -a
-```
-
-You may install the package separated
-
-### Run Final Upgrade
-
-```sh
+# install or remove packages when necessary
 sudo apt full-upgrade -y
 ```
