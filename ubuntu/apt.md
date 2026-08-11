@@ -1,12 +1,11 @@
 # Advanced Package Tool
 
-package manager for debian based linux distros
+Package manager for debian based linux distros.
 
 ## Table of Contents
 
 - [General Usage](#general-usage)
   - [Flags](#flags)
-- [Search](#search)
 - [Cleanup](#cleanup)
 - [Pin Version](#pin-version)
 - [Fix Package](#fix-package)
@@ -15,21 +14,43 @@ package manager for debian based linux distros
 
 ## General Usage
 
-```sh
-# update local package index
-sudo apt update <pkg-name>
+- Update local package index:
 
+```sh
+sudo apt update <pkg-name>
+```
+
+- Upgrade packages:
+
+```sh
 # list outdated packages
 apt list --upgradeable
 
 # upgrade outdated packages
 sudo apt upgrade <pkg-name>
+```
 
-# search packages from database
+- Search:
+
+```sh
 apt search <pkg-name>
 
-sudo apt install <pkg-name>
+# search from cache for faster search
+apt-cache search . | fzf
 
+# search from installed packages
+sudo apt list --installed | fzf
+```
+
+- Install:
+
+```sh
+sudo apt install <pkg-name>
+```
+
+- Remove:
+
+```sh
 sudo apt remove <pkg-name>
 
 # also removes package managed configuration files
@@ -48,27 +69,17 @@ sudo apt purge <pkg-name>
 
 ---
 
-## Search
-
-```sh
-sudo apt update
-
-# search from cache for faster search
-apt-cache search . | fzf
-
-# search from installed packages
-sudo apt list --installed | fzf
-```
-
----
-
 ## Cleanup
 
-```sh
-# remove unused dependencies
-sudo apt autoremove
+- Remove unused dependencies:
 
-# clear download cache
+```sh
+sudo apt autoremove
+```
+
+- Clear download cache:
+
+```sh
 sudo apt clean
 ```
 
@@ -76,15 +87,21 @@ sudo apt clean
 
 ## Pin Version
 
-keep package from being upgraded
+Keep package from being upgraded.
 
 ```sh
 sudo apt-mark hold <pkg-name>
+```
 
-# undo
+- Undo hold:
+
+```sh
 sudo apt-mark unhold <pkg-name>
+```
 
-# list held packages
+- List held packages:
+
+```sh
 apt-mark showhold
 ```
 
