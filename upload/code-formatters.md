@@ -10,7 +10,6 @@ My formatter style:
 
 - [Editorconfig](#editorconfig)
 - [C / C++](#c--c)
-- [Python](#python)
 - [Lua](#lua)
 - [Shell](#shell)
 
@@ -52,43 +51,6 @@ UseTab: Never
 ```
 
 ---
-
-## Python
-
-Formatter: [Black](https://github.com/psf/black), [Blue](https://blue.readthedocs.io/en/latest/), [Ruff](https://docs.astral.sh/ruff/formatter/)
-
-- `ruff.toml`:
-
-```toml
-line-length = 100
-
-[format]
-quote-style = "single"
-indent-style = "space"
-docstring-code-format = true
-```
-
-- `pyproject.toml`:
-
-```toml
-[tool.ruff]
-line-length = 100
-
-[tool.ruff.format]
-quote-style = "single"
-indent-style = "space"
-docstring-code-format = true
-```
-
-### Black, Blue, Ruff Command
-
-```sh
-black .
-
-blue .
-
-ruff format .
-```
 
 ---
 
