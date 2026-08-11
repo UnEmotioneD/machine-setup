@@ -1,14 +1,19 @@
-# Pyright config
+# Pyright
 
-[pyright docs](https://github.com/microsoft/pyright/blob/main/docs/configuration.md)
+Fix import autocompletion by LSP not getting correct path when .git directory
+and actual project root does not match.
+
+## Reference
+
+[pyright configuration](https://github.com/microsoft/pyright/blob/main/docs/configuration.md)
 
 ---
 
-## pyrightconfig
+## Configuration
 
-To fix auto import issue, create `pyrightconfig.json` file at the project root:
+Inside `pyrightconfig.json`:
 
-```jsonc
+```json
 {
   // Virtual environment configuration
   "venvPath": ".", // Look for virtual environments in current directory
@@ -21,8 +26,8 @@ To fix auto import issue, create `pyrightconfig.json` file at the project root:
   // Execution environment
   "executionEnvironments": [
     {
-      "root": ".", // Set project root to current directory for import resolution
-    },
+      "root": "." // Set project root to current directory for import resolution
+    }
   ],
 
   // Type checking rules
@@ -31,13 +36,13 @@ To fix auto import issue, create `pyrightconfig.json` file at the project root:
 
   // Python configuration
   "pythonVersion": "3.12", // Target Python version
-  "typeCheckingMode": "basic", // Options: "off" | "basic" | "strict"
+  "typeCheckingMode": "basic" // Options: "off" | "basic" | "strict"
 }
 ```
 
 ---
 
-## pyproject
+## Pyproject
 
 `pyproject.toml` for unified configuration file
 
