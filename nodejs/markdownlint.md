@@ -30,9 +30,9 @@ Inside `.markdownlint.json` or `.markdownlint.jsonc`
 
 Inside `.prettierrc`:
 
-```json
+```jsonc
 {
-  "proseWrap": "never" // "always" | "never" | "preserve"
+  "proseWrap": "never", // "always" | "never" | "preserve"
 }
 ```
 
