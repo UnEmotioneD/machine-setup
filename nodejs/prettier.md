@@ -1,45 +1,49 @@
 # Prettier
 
-[prettier.io](https://prettier.io/)
+Formatter for HTML, CSS, JavaScript, Markdown, JSON ETC.
 
-HTML, CSS, JavaScripts, Markdown, JSON etc formatter
+## Reference
 
-## Table of Contents
-
-- [Prettierrc](#prettierrc)
-- [Configuration](#configuration)
+- [prettier.io](https://prettier.io/)
 
 ---
 
-## Prettierrc
+## Configuration
 
-create `.prettierrc` file at project root directory
+- 4-space indent
+- prefer single quote
 
-minimal useful configs:
+Inside `.prettierrc`:
 
-```jsonc
+```json
 {
-  "tabWidth": 4, // default: 2
-  "singleQuote": true, // default: false
+  "tabWidth": 4,
+  "singleQuote": true
 }
 ```
 
-## Configuration
+[Overrides](https://prettier.io/docs/configuration#configuration-overrides) for specific files:
 
-[Overrides](https://prettier.io/docs/configuration#configuration-overrides)
-
-just for javascript files
-
-```jsonc
+```json
 {
   "overrides": [
     {
       "files": ["*.js", "*.mjs", "*.cjs"],
       "options": {
         "tabWidth": 4,
-        "singleQuote": true,
-      },
-    },
-  ],
+        "singleQuote": true
+      }
+    }
+  ]
 }
+```
+
+---
+
+### Command
+
+Recursively format every files. Follow `.prettierrc` if exists.
+
+```sh
+npx prettier --write .
 ```

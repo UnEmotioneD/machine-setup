@@ -11,7 +11,6 @@ My formatter style:
 - [Editorconfig](#editorconfig)
 - [C / C++](#c--c)
 - [Python](#python)
-- [JavaScript](#javascript)
 - [Lua](#lua)
 - [Shell](#shell)
 
@@ -89,45 +88,6 @@ black .
 blue .
 
 ruff format .
-```
-
----
-
-## JavaScript
-
-Formatter: [Prettier](https://prettier.io/)
-
-`.prettierrc`:
-
-- every files:
-
-```json
-{
-  "tabWidth": 4,
-  "singleQuote": true
-}
-```
-
-- specific files only:
-
-```json
-{
-  "overrides": [
-    {
-      "files": ["*.js", "*.mjs", "*.cjs"],
-      "options": {
-        "tabWidth": 4,
-        "singleQuote": true
-      }
-    }
-  ]
-}
-```
-
-### Prettier Command
-
-```sh
-npx prettier --write .
 ```
 
 ---
