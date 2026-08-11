@@ -13,9 +13,9 @@ install g++ and mingw32-make to build and run cpp projects
 
 ---
 
-## Install [MSYS2](https://www.msys2.org/)
+## Install
 
-download and install
+download and install [MSYS2](https://www.msys2.org/)
 
 ---
 
@@ -48,9 +48,11 @@ C:\msys64\ucrt64\bin
 
 ## Build
 
+build with `make` command using `Makefile`
+
 ### Powershell
 
-change following commands from:
+inside `Makefile` change following commands from:
 
 ```Makefile
 @mkdir -p $(BUILD_DIR)

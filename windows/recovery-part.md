@@ -44,7 +44,7 @@ copy the value of `Type` and `Attrib`
 ## Delete
 
 > [!WARNING]
-> `reagentc` must have been disabled before deleting recovery partition.
+> `reagentc` must be disabled before deleting recovery partition.
 
 ```powershell
 del part override
@@ -56,25 +56,30 @@ now you can expand the empty space next to `C:` partition
 
 ## Recover
 
-create 1GB of partition from disk manager
+Create 1GB of partition from `Disk Manager`.
 
-from diskpart select the created partition
+> [!TIP]
+> Do not assign letter to skip the **Remove Partition Letter** step.
 
-and then:
+From diskpart select the created partition.
+
+Then assign previously used `ID` and `Attributes` values:
 
 ```powershell
-# set id
 set id={copied-id-value}
 
-# set attrib
 gpt attributes={copied-attirb-value}
+
+reagentc /enable
 ```
 
 ---
 
 ## Remove Partition Letter
 
-new recovery partition is visible from the file explorer
+New recovery partition is visible from the file explorer.
+
+Remove letter from the recovery volume:
 
 ```powershell
 list volume
@@ -84,6 +89,4 @@ sel volume D
 remove letter=D
 
 exit
-
-reagentc /enable
 ```

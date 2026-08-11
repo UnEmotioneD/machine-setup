@@ -1,15 +1,15 @@
 # [AutoHotkey](https://www.autohotkey.com/)
 
-Software level keyboard remapping program
+Software level keyboard remapping program.
+
+> [!NOTE]
+> Version 2 syntax
 
 ## Table of Contents
 
 - [Capslock](#capslock)
 - [ESC](#esc)
 - [Run on Startup](#run-on-startup)
-
-> [!NOTE]
-> Version 2 syntax
 
 ---
 
