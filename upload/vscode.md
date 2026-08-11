@@ -1,8 +1,8 @@
 # Visual Studio Code
 
-Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 텍스트 편집기
+Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 텍스트 편집기.
 
-[GitHub](https://github.com/) 계정을 연동해서 설정, 확장프로그램 등을 연동할 수 있음
+[GitHub](https://github.com/) 계정을 연동해서 설정, 확장프로그램 등을 연동할 수 있음.
 
 ## Table of Contents
 
@@ -15,6 +15,7 @@ Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 �
   - [커서](#커서)
   - [심볼](#심볼)
   - [좋은거](#좋은거)
+- [검색](#검색)
 - [확장 프로그램](#확장-프로그램)
   - [ESLint](#eslint)
   - [Prettier](#prettier)
@@ -26,23 +27,21 @@ Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 �
 
 ## 터미널 명령어
 
-VSCode 터미널에서 폴더/파일 만들고 열기
+VSCode 터미널 또는 **PowerShell**에서 폴더/파일 만들고 열기.
 
 ### 폴더 아이템 보기
 
 List
 
-```sh
+```powershell
 ls
 ```
 
-### 폴더로 이동
+### 폴더 이동
 
-Change Directory
+Change Directory (경로)
 
-> Directory: 경로
-
-```sh
+```powershell
 cd <폴더이름>
 
 # 예시)
@@ -53,13 +52,13 @@ cd basic/ch01
 
 Make Directory
 
-```sh
+```powershell
 mkdir <폴더이름>
 ```
 
 ### 파일 생성
 
-```sh
+```powershell
 New-Item -Path "<파일이름>" -ItemType File
 
 # 또는
@@ -68,23 +67,19 @@ ni <파일이름>
 
 ### VSCode로 열기
 
-#### 현재 폴더
+- 현재 경로에 대하여 새로운 창을 연다:
 
-현재 폴더에 대하여 새로운 VSCode 창을 연다
-
-```sh
+```powershell
 code .
 ```
 
-#### 파일
+- 이미 열려 있는 창에서 파일을 연다:
 
-VSCode 터미널에서 입력하면 현재 창에서 파일을 연다
-
-```sh
+```powershell
 code -r hello.js
 ```
 
-> `-r`: `--reuse-window` (option)flag 약어
+> `-r`: `--reuse-window`
 
 ---
 
@@ -186,6 +181,19 @@ code -r hello.js
 
 ---
 
+## 검색
+
+`Command Palette`를 이용해서 프로젝트 내에서 검색하기.
+
+| Shortcut       | Action                               |
+| -------------- | ------------------------------------ |
+| Ctrl + P       | 파일 검색                            |
+| Ctrl + P, `@`  | 심볼(변수/함수) 검색                 |
+| Ctrl + P, `@:` | 현재 파일의 심볼을 그룹화해서 보여줌 |
+| Ctrl + P, `#`  | 프로젝트 전체 심볼                   |
+
+---
+
 ## 확장 프로그램
 
 확장프로그램 사이드바 단축키: `ctrl + shift + x`
@@ -218,17 +226,13 @@ code -r hello.js
 
 프로젝트 root 경로(VSCode를 여는 위치)에서
 
-```sh
+```powershell
 # 노드 프로젝트 생성
 npm init -y
-```
 
-```sh
 # ESLinst 설치
 npm install --save-dev eslint
-```
 
-```sh
 # ESLinst 기본 설정 생성
 npm init @eslint/config@latest
 ```
@@ -244,12 +248,10 @@ npm init @eslint/config@latest
 - Would you like to install them now? `Yes`
 - Which package manager do you want to use? `npm`
 
-> `Where des your code run?`에서 `node`를 선택해야
-> `console.log`를 에러라고 하지 않음
+> [!TIP]
+> `Where des your code run?`에서 `node`를 선택해야 `console.log`를 에러라고 하지 않음
 
-더 자세한거는
-[nodejs/eslint.md](https://github.com/unemotioned/tistory/blob/main/nodejs/eslint.md)
-참고
+더 자세한거는 [nodejs/eslint.md](https://github.com/unemotioned/tistory/blob/main/nodejs/eslint.md) 참고.
 
 ### JavaScript(ES6) code snippets
 
@@ -265,34 +267,30 @@ npm init @eslint/config@latest
 
 ### Prettier
 
-- HTML, CSS, JavaScript, MD, JSON ... 파일 포멧
+HTML, CSS, JavaScript, MD, JSON ... 파일 포멧
 
-기본 들여쓰기 크기: `2 스페이스`
+프로젝트 루트에 `.prettierrc` 파일 생성
 
-#### .prettierrc
+`JavaScript`에만 적용:
 
-프로젝트 root 경로에 `.prettierrc` 파일을 생성
-
-`JavaScript` 파일들만
-
-- 4 스페이스 들여쓰기
-- 쌍따옴표 대신 작은 따옴표
-
-포멧하기
-
-```jsonc
+```json
 {
   "overrides": [
     {
       "files": ["*.js", "*.mjs", "*.cjs"],
       "options": {
         "tabWidth": 4,
-        "singleQuote": true,
-      },
-    },
-  ],
+        "singleQuote": true
+      }
+    }
+  ]
 }
 ```
+
+- 4 스페이스 들여쓰기
+- 쌍따옴표 대신 작은 따옴표
+
+더 자세한거는 [nodejs/prettier.md](https://github.com/unemotioned/tistory/blob/main/nodejs/prettier.md) 참고.
 
 ### Quokka.js
 
@@ -357,13 +355,18 @@ Nerd font icons, Ligature 지원
 
 ## 유용한 설정
 
-Command palette에서 설정 이름을 검색해서 설정하거나
+**Command palette**에서 설정 이름을 검색해서 설정하거나
 `Preference: Open User Settings (Json)`을 검색, `settings.json`에서 직접 편집 할 수 있다
 
 ```jsonc
 {
   // HTML, CSS, JS 파일에서의 기본 들여쓰기 크기
   "editor.tabSize": 2,
+  // 특정 파일의 포메터, 들여쓰기
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 4,
+  },
 
   /* Tab키 만으로 자동완성 */
   // .(온점) 자동완성 선택 비활성화
