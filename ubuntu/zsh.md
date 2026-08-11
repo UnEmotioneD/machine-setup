@@ -1,17 +1,6 @@
 # Z-Shell
 
-Larger ecosystem and better customizability then BASH.
-
----
-
-## Prerequisite
-
-- git
-- [curl](https://curl.se/): Data transfer by URL
-
-```sh
-sudo apt install git curl
-```
+Larger ecosystem and better customizability then **BASH**.
 
 ---
 
@@ -31,7 +20,7 @@ chsh -s $(which zsh)
 
 ## Install Oh My ZSH
 
-- [Oh My ZSH](https://ohmyz.sh/): framework
+[Oh My ZSH](https://ohmyz.sh/): A ZSH framework.
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -1,6 +1,8 @@
-# Rofi
+# [Rofi](https://github.com/davatorium/rofi)
 
-Application launcher
+Application launcher.
+
+---
 
 ## Install
 
@@ -10,19 +12,20 @@ Application launcher
 sudo apt install rofi rofi-calc rofimoji
 ```
 
+---
+
 ## Usage
 
-Execute the following with keybindings in i3 config
+Configure to use the followings with keybinds from `~/.config/i3/config`
 
-### Default Rofi
+### Minimal
 
 ```sh
 rofi -show drun -sort -theme ~/.config/rofi/theme.rasi
 ```
 
-### Rofi Calculator
+### Calculator
 
 ```sh
-rofi -show calc -modi calc -no-show-match -calc-command "wl-copy {result}"\
-  -theme ~/.config/rofi/theme.rasi
+rofi -show calc -modi calc -no-show-match -calc-command "wl-copy {result}" -theme ~/.config/rofi/theme.rasi
 ```

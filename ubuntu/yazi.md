@@ -4,7 +4,7 @@ Terminal file explorer written in rust.
 
 ## Reference
 
-[yazi install debian](https://yazi-rs.github.io/docs/installation#debian)
+- [yazi install debian](https://yazi-rs.github.io/docs/installation#debian)
 
 ## Table of Contents
 

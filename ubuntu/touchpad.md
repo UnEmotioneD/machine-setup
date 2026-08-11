@@ -1,41 +1,34 @@
 # Touchpad
 
-Enable tap to touch
+Enable tap to touch.
 
 ---
 
-## Find Touchpad
+## Find Product
 
-Find device name with `grep`
+Get the device name:
 
 ```sh
 grep -i touchpad /proc/bus/input/devices
 ```
 
-The output will be like following:
+Example output:
 
 ```sh
-N: Name="{device-name}"
-
-# example
 N: Name="MSNB0001:00 06CB:7E7E Touchpad"
 ```
 
 ---
 
-## Create Libinput Config
+## Config
+
+Create config file:
 
 ```sh
-sudo -E nvim /etc/X11/xorg.conf.d/30-touchpad.conf
+sudo touch /etc/X11/xorg.conf.d/30-touchpad.conf
 ```
 
----
-
-## Touchpad Config
-
-- `1 finger tap` &rarr; `left click`
-- `2 finger tap` &rarr; `right click`
-- `3 finger tap` &rarr; `middle click`
+Add following content to the file.
 
 ```conf
 Section "InputClass"
@@ -52,4 +45,8 @@ Section "InputClass"
 EndSection
 ```
 
-Restart the laptop for the config to take effect
+- `1 finger tap` &rarr; **left click**
+- `2 finger tap` &rarr; **right click**
+- `3 finger tap` &rarr; **middle click**
+
+Restart for changes to take effect.
