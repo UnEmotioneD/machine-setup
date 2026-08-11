@@ -52,8 +52,6 @@ UseTab: Never
 
 ---
 
----
-
 ## Lua
 
 Formatter: [StyLua](https://github.com/JohnnyMorganz/StyLua)

@@ -5,7 +5,7 @@ and actual project root does not match.
 
 ## Reference
 
-[pyright configuration](https://github.com/microsoft/pyright/blob/main/docs/configuration.md)
+- [pyright configuration](https://github.com/microsoft/pyright/blob/main/docs/configuration.md)
 
 ---
 
@@ -13,7 +13,7 @@ and actual project root does not match.
 
 Inside `pyrightconfig.json`:
 
-```json
+```jsonc
 {
   // Virtual environment configuration
   "venvPath": ".", // Look for virtual environments in current directory
@@ -26,8 +26,8 @@ Inside `pyrightconfig.json`:
   // Execution environment
   "executionEnvironments": [
     {
-      "root": "." // Set project root to current directory for import resolution
-    }
+      "root": ".", // Set project root to current directory for import resolution
+    },
   ],
 
   // Type checking rules
@@ -36,7 +36,7 @@ Inside `pyrightconfig.json`:
 
   // Python configuration
   "pythonVersion": "3.12", // Target Python version
-  "typeCheckingMode": "basic" // Options: "off" | "basic" | "strict"
+  "typeCheckingMode": "basic", // Options: "off" | "basic" | "strict"
 }
 ```
 
