@@ -1,8 +1,6 @@
 # Pacman
 
-how to use pacman
-
----
+How to use package manager for Arch.
 
 ## Table of Contents
 
@@ -12,9 +10,9 @@ how to use pacman
   - [Remove orphaned](#remove-orphaned)
   - [Remove Dependencies](#remove-dependencies)
 - [Search](#search)
-  - [From Online](#from-online)
+  - [From Database](#from-database)
   - [From Installed](#from-installed)
-- [Clear](#cleanup)
+- [Clear Cache](#clear-cache)
 
 ---
 
@@ -27,7 +25,7 @@ sudo pacman -S vim
 # without confirmation
 sudo pacman -S --noconfirm neovim
 
-# if not installed already
+# if not already installed
 sudo pacman -S --needed emacs
 ```
 
@@ -41,6 +39,15 @@ sudo pacman -Sy
 
 # full upgrade (recommended)
 sudo pacman -Syu
+
+# force fresh pkg db download
+sudo pacman -Syyu
+```
+
+- Recommended way to install packages:
+
+```sh
+sudo pacman -Syu <pkg-name>
 ```
 
 ---
@@ -48,7 +55,7 @@ sudo pacman -Syu
 ## Remove
 
 ```sh
-# just the specified package
+# specified package
 sudo pacman -R nano
 
 # with dependencies
@@ -60,18 +67,18 @@ sudo pacman -Rns code
 
 ### Remove Orphaned
 
-list orphaned
+List orphaned:
 
 - `Q`: query
-- `t`: unrequired packages
-- `d`: dependencies only
+- `t`: orphaned packages
+- `d`: dependency only
 - `q`: quiet output
 
 ```sh
 pacman -Qtdq
 ```
 
-remove orphaned with queried results
+- Remove orphaned with queried results:
 
 ```sh
 sudo pacman -Rns $(pacman -Qtdq)
@@ -79,32 +86,28 @@ sudo pacman -Rns $(pacman -Qtdq)
 
 ### Remove Dependencies
 
-see what package depends on it
+- List dependent packages:
 
 ```sh
-pacman -Qi {pkg-name}
+pacman -Qi <pkg-name>
+
+# more cleaner way
+pacman -r <pkg-name>
 ```
 
-more cleaner way
+- Remove without dependency check.
+  - `-d`: Skip dependency check
+  - `-dd`: Skip all dependency check
 
 ```sh
-pacman -r {pkg-name}
-```
-
-skip dependency check
-
-`-d`: Skip dependency check
-`-dd`: Skip all dependency check
-
-```sh
-sudo pacman -Rdd {pkg-name}
+sudo pacman -Rdd <pkg-name>
 ```
 
 ---
 
 ## Search
 
-### From Online
+### From Database
 
 ```sh
 pacman -Ss <pkg-name>
@@ -116,16 +119,16 @@ pacman -Ss <pkg-name>
 # query every installed packages
 pacman -Q
 
-# installed explicitly (not as dependency)
+# explicitly installed
 pacman -Qe
 
-# dependencies only
+# dependency only
 pacman -Qd
 ```
 
 ---
 
-## Cleanup
+## Clear Cache
 
 ```sh
 # remove outdated
