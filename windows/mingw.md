@@ -4,8 +4,7 @@ install g++ and mingw32-make to build and run cpp projects
 
 ## Table of Contents
 
-- [Install MSYS2](#install-msys2)
-- [Install gcc, make](install-gcc-make)
+- [Install](#install)
 - [Add to PATH](#add-to-path)
 - [Build](#build)
   - [Powershell](#powershell)
@@ -17,9 +16,7 @@ install g++ and mingw32-make to build and run cpp projects
 
 download and install [MSYS2](https://www.msys2.org/)
 
----
-
-## Install gcc, make
+### GCC and Make
 
 from `MSYS2 UCRT64` terminal
 
