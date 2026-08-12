@@ -2,7 +2,7 @@
 
 ## Reference
 
-[Setting Up Your QMK Environment](https://docs.qmk.fm/newbs_getting_started)
+- [Setting Up Your QMK Environment](https://docs.qmk.fm/newbs_getting_started)
 
 ## Table of Contents
 

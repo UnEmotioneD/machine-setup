@@ -4,7 +4,7 @@
 
 ## Reference
 
-[How to install and use yay: The best AUR Helper for Arch Linux - DenshiVideo](https://www.youtube.com/watch?v=NzNuFN9hqjI)
+- [How to install and use yay: The best AUR Helper for Arch Linux - DenshiVideo](https://www.youtube.com/watch?v=NzNuFN9hqjI)
 
 ---
 

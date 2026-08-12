@@ -2,7 +2,7 @@
 
 Install [Arch Linux](https://archlinux.org/) with [archinstall](https://github.com/archlinux/archinstall) script.
 
-## References
+## Reference
 
 - [How to Dual Boot Arch Linux and Windows 11 - Ksk Royal](https://www.youtube.com/watch?v=BB_SnWBQ6xw)
 

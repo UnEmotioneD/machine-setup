@@ -2,7 +2,7 @@
 
 Git TUI wrapper.
 
-## References
+## Reference
 
 - [GitHub - Lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu)
 

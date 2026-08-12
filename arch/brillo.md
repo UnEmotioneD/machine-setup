@@ -4,7 +4,7 @@ Human eye friendly brightness control by changing brightness exponentially.
 
 ## Reference
 
-[You're Probably Doing Screen Brightness in Arch Linux Wrong - Eric Murphy](https://www.youtube.com/watch?v=pGOaSS8nEQA)
+- [You're Probably Doing Screen Brightness in Arch Linux Wrong - Eric Murphy](https://www.youtube.com/watch?v=pGOaSS8nEQA)
 
 ---
 

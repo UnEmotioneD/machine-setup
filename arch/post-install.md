@@ -1,6 +1,6 @@
 # Post Install
 
-## References
+## Reference
 
 - [10 things you must do after installing arch linux (2023) - Ksk Royal](https://www.youtube.com/watch?v=odgD_RdJjCU)
 

@@ -2,7 +2,7 @@
 
 ## Reference
 
-[How to Use Bluetooth on Arch Linux - Eric Murphy](https://www.youtube.com/watch?v=rOL-T31l0lQ)
+- [How to Use Bluetooth on Arch Linux - Eric Murphy](https://www.youtube.com/watch?v=rOL-T31l0lQ)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Reference
 
-[Essential Keybindings For Bash, Fish and Zsh - DistroTube](https://www.youtube.com/watch?v=XY5qCQcrHns)
+- [Essential Keybindings For Bash, Fish and Zsh - DistroTube](https://www.youtube.com/watch?v=XY5qCQcrHns)
 
 ## Table of Contents
 

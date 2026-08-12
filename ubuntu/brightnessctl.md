@@ -2,7 +2,7 @@
 
 ## Reference
 
-[fix brightness ubuntu - itsfoss.com](https://itsfoss.com/fix-brightness-ubuntu-1310/)
+- [fix brightness ubuntu - itsfoss.com](https://itsfoss.com/fix-brightness-ubuntu-1310/)
 
 ---
 

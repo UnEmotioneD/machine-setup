@@ -5,7 +5,7 @@ local time to UTC like in Linux.
 
 ## Reference
 
-[Fix time on dual boot - TroubleChute](https://www.youtube.com/watch?v=xO0lPxrtFCw)
+- [Fix time on dual boot - TroubleChute](https://www.youtube.com/watch?v=xO0lPxrtFCw)
 
 ---
 
