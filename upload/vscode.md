@@ -1,8 +1,10 @@
-# Visual Studio Code
+# [Visual Studio Code](https://code.visualstudio.com/)
 
 Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 텍스트 편집기.
-
 [GitHub](https://github.com/) 계정을 연동해서 설정, 확장프로그램 등을 연동할 수 있음.
+
+> [!TIP]
+> 보통 `VSCode`라고 하며 `Visual Studio`하고는 다른거임.
 
 ## Table of Contents
 
@@ -27,32 +29,29 @@ Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 �
 
 ## 터미널 명령어
 
-VSCode 터미널 또는 **PowerShell**에서 폴더/파일 만들고 열기.
+VSCode 터미널 또는 **PowerShell** 명령어.
 
-### 폴더 아이템 보기
-
-List
+### 폴더 보기
 
 ```powershell
+# list
 ls
 ```
 
 ### 폴더 이동
 
-Change Directory (경로)
-
 ```powershell
+# change directory(경로)
 cd <폴더이름>
 
-# 예시)
+# 예시
 cd basic/ch01
 ```
 
 ### 폴더 생성
 
-Make Directory
-
 ```powershell
+# make directory
 mkdir <폴더이름>
 ```
 
@@ -67,19 +66,15 @@ ni <파일이름>
 
 ### VSCode로 열기
 
-- 현재 경로에 대하여 새로운 창을 연다:
-
 ```powershell
+# 현재 경로에 대하여 새로운 창을 연다
 code .
-```
 
-- 이미 열려 있는 창에서 파일을 연다:
-
-```powershell
+# 이미 열려 있는 창에서 파일을 연다
 code -r hello.js
 ```
 
-> `-r`: `--reuse-window`
+**-r**: `--reuse-window`
 
 ---
 
@@ -118,7 +113,6 @@ code -r hello.js
 | ---------------- | --------------- |
 | Ctrl + `(grave)  | 터미널          |
 | Ctrl + ~(tilde)  | 새 터미널       |
-| Ctrl + P         | 파일 검색       |
 | Ctrl + Shift + P | Command Palette |
 | Ctrl + B         | 사이드바 토글   |
 | Ctrl + Shift + E | 파일 트리       |
@@ -188,7 +182,7 @@ code -r hello.js
 | Shortcut       | Action                               |
 | -------------- | ------------------------------------ |
 | Ctrl + P       | 파일 검색                            |
-| Ctrl + P, `@`  | 심볼(변수/함수) 검색                 |
+| Ctrl + P, `@`  | 현재 파일의 심볼(변수/함수) 검색     |
 | Ctrl + P, `@:` | 현재 파일의 심볼을 그룹화해서 보여줌 |
 | Ctrl + P, `#`  | 프로젝트 전체 심볼                   |
 
