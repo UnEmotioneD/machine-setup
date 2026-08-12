@@ -1,8 +1,8 @@
 # Zoxide
 
-[zoxide - github/installation](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation)
+[GitHub - Zoxide](https://github.com/ajeetdsouza/zoxide)
 
-더 괜찮은 `cd` 명령
+더 괜찮은 `cd` 명령어
 
 ---
 
@@ -43,10 +43,10 @@ source ~/.bashrc
 echo 'eval "$(zoxide init --cmd cd bash)"' >> ~/.bashrc && . ~/.bashrc
 ```
 
-`echo`: 따옴표 안에 있는 내용을 출력
-`>>`: 결과를 특정 파일에 추가
-`&&`: 앞 명령이 성공하면 다음 명령 실행
-`.`: `source`와 같은 POSIX 명령어
+- `echo`: 따옴표 안에 있는 내용을 출력
+- `>>`: 결과를 특정 파일에 추가
+- `&&`: 앞 명령이 성공하면 다음 명령 실행
+- `.`: `source`와 같은 POSIX 명령어
 
 ---
 
