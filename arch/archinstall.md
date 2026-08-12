@@ -8,139 +8,123 @@ Install [Arch Linux](https://archlinux.org/) with [archinstall](https://github.c
 
 ## Table of Contents
 
-- [Before Install](#before-install)
+- [Preparation](#preparation)
   - [Create Disk Space](#create-disk-space)
-  - [Enter BIOS](#enter-bios)
+  - [BIOS](#bios)
 - [Live Environment](#live-environment)
-  - [Set Font](#set-font)
-  - [Wi-Fi with iwctl](#wi-fi-with-iwctl)
-  - [Sync to DB](#sync-to-db)
-  - [Partition](#partition)
+  - [Set the Font](#set-the-font)
+  - [Wi-Fi with IWCTL](#wi-fi-with-iwctl)
+  - [Update and Install](#update-and-install)
+  - [Create Partitions](#create-partitions)
   - [Format Partitions](#format-partitions)
   - [Mount Partitions](#mount-partitions)
   - [Start Install](#start-install)
   - [GRUB](#grub)
-- [Login to Hyprland](#login-to-hyprland)
-  - [Wi-Fi with Nmcli](#wi-fi-with-nmcli)
+- [Hyprland](#hyprland)
+  - [Wi-Fi with NMCLI](#wi-fi-with-nmcli)
   - [OS Prober](#os-prober)
-- [Nuke](#nuke)
-  - [Delete Arch](#delete-arch)
-  - [Clear Installation USB](#clear-installation-usb)
 
 ---
 
-## Before Install
+## Preparation
 
 ### Create Disk Space
 
-use windows `disk manager` to create at least 40gb of free space
+Use Windows `disk manager` to create at least **40GB** of free space.
 
-### Enter Bios
+### BIOS
 
-thinkpad: from boot screen `enter` &rarr; `f1`
-
-```sh
-security > secure boot
-```
+For ThinkPad:
 
 - secure boot: off
 - clear all secure boot keys
 - allow microsoft 3rd party uefi ca: off
-- save and restart: `f10`
 
-press enter again then `f12` select the drive with arch iso
-
-select first boot option
+Boot into install media.
 
 ---
 
 ## Live Environment
 
-### Set Font
+### Set the Font
+
+For better readability.
 
 ```sh
 setfont ter-132n
 ```
 
----
-
-### Wi-Fi with iwctl
+### Wi-Fi with IWCTL
 
 ```sh
 iwctl
-```
 
-show machine's network interface
-
-```sh
+# show network interface
 device list
-```
 
-show list of wi-fi networks
-
-```sh
+# show list of wi-fi networks
 station wlan0 get-networks
+
+# connect to wi-fi
+station wlan0 connect "<wifi-name>"
+
+exit
+
+# check connection
+ping google.com
 ```
-
-connect to wi-fi
-
-```sh
-station wlan0 connect "{name of wi-fi}"
-```
-
-exit `iwd` check connection with `ping`
 
 ---
 
-### Sync to DB
+### Update and Install
 
-Install and update `archlinux-keyring` and `archinstall` script
+Update pacman and install packages:
 
 ```sh
 pacman -Sy archlinux-keyring archinstall
 ```
 
-To proceed type `y` or just press `enter`
+- `archlinux-keyring`: PGP keys for authenticating packages.
+- `archinstall`: The install script.
 
 ---
 
-### Partition
+### Create Partitions
+
+List disks and partitions:
 
 ```sh
 lsblk
 ```
 
-could be `nvme0` or `sda` depending on the hardware
+> [!IMPORTANT]
+> Disk names could be `nvme` or `sda` depending on the hardware.
 
-`cfdisk` into the drive
+`cfdisk` into the drive:
 
 ```sh
 cfdisk /dev/nvme0n1
 ```
 
-1. select `free space` then `new`
-
-2. allocate `1G` and change `type` to `efi`
-
-3. allocate every `free space` as `linux filesystem`
-
-4. select `write` and type `yes`
-
-5. Quit
+1. Select `free space` and then `new`.
+2. Allocate `1G` and change `type` to `efi`.
+3. Allocate every `free space` as `linux filesystem`.
+4. Select `write` and type `yes`.
+5. Quit.
 
 ---
 
 ### Format Partitions
 
-check created partitions with `lsblk`
+Check created partitions with `lsblk` command.
 
-`efi` partition to `fat`
+Format `efi` partition to `fat`:
 
 ```sh
 mkfs.fat -F32 /dev/nvme0n1p5
 ```
 
-`root` partition to `ext4`
+Format `root` partition to `ext4`:
 
 ```sh
 mkfs.ext4 /dev/nvme0n1p6
@@ -150,13 +134,20 @@ mkfs.ext4 /dev/nvme0n1p6
 
 ### Mount Partitions
 
+Mount `efi` partition to `/mnt/boot` directory:
+
 ```sh
-mount /dev/nvme0n1p6 /mnt
 mkdir /mnt/boot
 mount /dev/nvme0n1p5 /mnt/boot
 ```
 
-confirm with `lsblk`
+Mount `root` partition to `/mnt` directory:
+
+```sh
+mount /dev/nvme0n1p6 /mnt
+```
+
+Confirm with `lsblk`.
 
 | NAME      | MOUNTPOINTS |
 | --------- | ----------- |
@@ -167,112 +158,78 @@ confirm with `lsblk`
 
 ### Start Install
 
-execute:
+Execute:
 
 ```sh
 archinstall
 ```
 
-use arrow or `hjkl` to navigate
-
-- mirrors: `South Korea` (search with `/`)
-
-- disk configuration
+- Mirrors: `South Korea`
+- Disk configuration
   - partitioning
     - pre-mounted configuration
       - type `/mnt` which is where root partition is mounted to
-
-- bootloader: `Grub`
-
+- Bootloader: `Grub`
 - Authentication
-  - Root password
-
+  - root password
   - user account
     - Add a user and set it up as superuser then confirm and exit
-
-- profile &rarr; type &rarr; desktop
-  select `Hyprland`
-  - Seat access: `polkit`
+- Profile &rarr; type &rarr; desktop &rarr; select `Hyprland`
+  - seat access: `polkit`
   - select graphics driver
-
 - Applications
   - Bluetooth: Enabled
   - Audio: `pipewire`
   - Print service: Enabled
   - Power management: `power-profiles-daemon`
-
 - Network configuration: `Use Network Manager (default ...)`
-
 - Timezone: `Asia/Seoul`
 
-leave other options as is and select `Install`
+Leave other options as is and select `Install`.
 
-After installation is complete choose the following option:
-`chroot into installation for post-installation configurations`
+After installation is complete choose: `chroot into installation for post-installation configurations`.
 
 ---
 
 ### GRUB
 
-Because the install script may have not installed grub properly
+Explicitly install GRUB since the script may have not properly installed them.
 
 ```sh
 pacman -Syu grub efibootmgr dosfstools mtools
-```
 
-install grub into /boot partition
-
-```sh
+# install grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-```
 
-generate and update grub config file
-
-```sh
+# update grub config
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# exit chroot
+exit
 ```
 
-`exit` the chroot environment
-
-now you can exit root session shutdown with `shutdown now` and remove the usb drive
+Now you can shutdown with `shutdown now` command and remove the usb drive.
+Or reboot with `reboot`.
 
 ---
 
-## Login to Hyprland
+## Hyprland
 
-from the login window change the session from `Hyprland(uwsm-managed)` which is
-selected by default to just
-`Hyprland`
+From the login window change session from `Hyprland(uwsm-managed)` to just `Hyprland`.
 
-### Wi-Fi with nmcli
-
-install `networkmanager`
+### Wi-Fi with NMCLI
 
 ```sh
-sudo pacman -S networkmanager
-```
-
-start and enable to start it every time
-
-```sh
+# enable service now
 sudo systemctl enable --now NetworkManager
-```
 
-check searched wi-fi
-
-```sh
+# check searched wi-fi
 nmcli device wifi list
-```
 
-connect to wi-fi
+# connect
+nmcli device wifi connect "<wifi-name>" password "<pw>"
 
-```sh
-nmcli device wifi connect "{wifi-name}" password "{password}"
-```
-
-check connection
-
-```sh
+# check connection
 nmcli connection show
 ```
 
@@ -280,115 +237,38 @@ nmcli connection show
 
 ### OS Prober
 
-noticed that there was no option to boot into windows in grub menu
-
-enter into root mode
+Detect Windows with OS-Prober to add to GRUB menu option.
 
 ```sh
-sudo -s
+sudo -E nvim /etc/default/grub
 ```
+
+- Uncomment the following line:
+
+```conf
+GRUB_DISABLE_OS_PROBER=false
+```
+
+- Install:
 
 ```sh
-nvim /etc/default/grub
+sudo pacman -Sy os-prober
 ```
 
-`GRUB_TIMEOUT=30`
-
-at the bottom uncomment the `GRUB_DISABLE_OS_PROBER=false`
-
-```sh
-pacman -Sy os-prober
-```
-
-update the grub configurations
+- Update GRUB config:
 
 ```sh
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-you should see:
+You should see:
 
 ```bash
 found windows boot manager on /dev/nvme0n1p1@/efi/microsoft/boot/bootmgfw.efi
 ```
 
-now you can choose to boot into windows
-
 ---
 
-## Nuke
+Checkout [post-install](./post-install.md) for more.
 
-### Delete Arch
-
-you can't remove efi partition from `disk management`
-
-to delete the boot efi partition open cmd as admin
-
-```sh
-diskpart
-```
-
-show all the drives connected to pc
-
-```sh
-list disk
-```
-
-select disk
-
-```sh
-select disk 0
-```
-
-and list all the partitions
-
-```sh
-list partition
-```
-
-select and delete partition 5 which is efi for arch linux
-
-```sh
-delete partition override
-```
-
----
-
-### Clear Installation USB
-
-select usb with `diskpart`
-
-remove all partitions
-
-```sh
-clean
-```
-
-create new partition
-
-```sh
-create partition primary
-```
-
-format the partition
-
-```sh
-format fs=exfat quick
-```
-
-give the partition a letter
-
-```sh
-assign
-```
-
-exit out of `diskpart`
-
-```sh
-exit
-```
-
-- aliases
-  - select: `sel`
-  - delete: `del`
-  - partition: `part`
+To remove linux, follow instructions from [remove-linux](../windows/remove-linux.md).

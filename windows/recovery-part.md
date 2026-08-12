@@ -2,9 +2,9 @@
 
 How to remove and recover the `recovery partition`.
 
-## Reference
+## References
 
-[Fix "Can't Extend C Drive with Unallocated Space" in Windows 10/11 - Techy Druid](https://www.youtube.com/watch?v=K76z0gQm9oA)
+- [Fix "Can't Extend C Drive with Unallocated Space" in Windows 10/11 - Techy Druid](https://www.youtube.com/watch?v=K76z0gQm9oA)
 
 ## Table of Contents
 

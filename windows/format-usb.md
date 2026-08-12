@@ -22,7 +22,7 @@ create partition primary
 select part 1
 
 # quick format partitions
-format fs=fat32 quick
+format fs=exfat quick
 
 # assign letter
 assign
