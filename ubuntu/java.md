@@ -1,58 +1,55 @@
-# JAVA
+# Java
 
-How to change java version when you have multiple JDKs installed
-
----
-
-## Package Name
-
-### Arch / Pacman
-
-```sh
-jdk17-openjdk
-jdk21-openjdk
-```
-
-### Ubuntu / APT
-
-```sh
-openjdk-17-jdk
-openjdk-21-jdk
-```
+How to change java version when you have multiple JDKs installed.
 
 ---
 
-## 1. Check Installed JDKs
+## Package Names
 
-### Arch Only
+- Pacman
+  - `jdk17-openjdk`
+  - `jdk21-openjdk`
+
+- APT
+  - `openjdk-17-jdk`
+  - `openjdk-21-jdk`
+
+---
+
+## Check Installed
+
+- Arch
 
 ```sh
 archlinux-java status
 ```
 
+- Ubuntu
+
+```sh
+sudo apt list --installed | grep openjdk
+```
+
 ---
 
-## 2. Change JDK Version
+## Change Version
 
-### For Arch
+- Arch
 
 ```sh
 sudo archlinux-java set java-17-openjdk
 ```
 
-### For Ubuntu
+- Ubuntu
 
 ```sh
 sudo update-alternatives --config java
-```
 
-```sh
+# java compiler separately
 sudo update-alternatives --config javac
 ```
 
----
-
-## 3. Confirm Changes
+Confirm version change:
 
 ```sh
 java --version

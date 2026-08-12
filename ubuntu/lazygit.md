@@ -1,8 +1,10 @@
 # Lazygit
 
-Git TUI(Terminal User Interface) wrapper
+Git TUI wrapper.
 
-[lazygit github/install ubuntu](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu)
+## References
+
+- [GitHub - Lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu)
 
 ---
 
@@ -15,7 +17,7 @@ tar xf lazygit.tar.gz lazygit
 sudo install lazygit -D -t /usr/local/bin/
 ```
 
-Remove temp files after install:
+Remove temporary files after install:
 
 ```sh
 rm ~/lazygit ~/lazygit.tar.gz
@@ -25,7 +27,7 @@ rm ~/lazygit ~/lazygit.tar.gz
 
 ## Update
 
-To update remove lazygit at `/usr/local/bin` and run the install scripts again
+Remove lazygit at `/usr/local/bin` and run the install scripts again.
 
 ```sh
 sudo rm /usr/local/bin/lazygit
@@ -33,13 +35,14 @@ sudo rm /usr/local/bin/lazygit
 
 ---
 
-## Configure
+## Config
+
+[Configuration docs](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
 
 Config file path: `~/.config/lazygit/config.yml`
 
-Border corner 90 degree:
-
 ```yml
+# border corners to 90 degree
 gui:
   border: single
 ```

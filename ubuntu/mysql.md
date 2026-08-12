@@ -15,8 +15,6 @@
 
 ## Install
 
-Homebrew:
-
 ```sh
 sudo apt install mysql-server mysql-client mysql-common
 ```
@@ -29,32 +27,32 @@ sudo apt install mysql-server mysql-client mysql-common
 sudo mysql_secure_installation
 ```
 
-Say `n` to the first one which is password validation
-and all the others to `yes`
+- **password validation**: `n`
+- All the others: `y`
 
 ---
 
 ## Start Database
 
-Check services:
+- Check services:
 
 ```sh
 systemctl status mysql
 ```
 
-Start MySQL:
+- Start:
 
 ```sh
 systemctl start mysql
 ```
 
-Stop MySQL:
+- Stop:
 
 ```sh
 systemctl stop mysql
 ```
 
-Restart MySQL:
+- Restart:
 
 ```sh
 systemctl restart mysql
@@ -64,33 +62,30 @@ systemctl restart mysql
 
 ## Connect to Root
 
-```sh
-mysql -u root -p
-```
-
-Password in online
-
-No space between `-p` option and password
+User name and password in one line.
 
 ```sh
-mysql -u root -p{password}
+mysql -u root -p<password>
 ```
+
+> [!IMPORTANT]
+> No space between `-p` option and password.
 
 ---
 
 ## Create Database
 
 ```sql
-CREATE DATABASE {database-name};
+CREATE DATABASE <db_name>;
 ```
 
-### List Databases
+- List Databases:
 
 ```sql
 SHOW DATABASES;
 ```
 
-### Show Current Database
+- Show Current Database:
 
 ```sql
 SELECT DATABASE();
@@ -101,10 +96,10 @@ SELECT DATABASE();
 ## Create User
 
 ```sql
-CREATE USER '{username}'@'localhost' IDENTIFIED BY '{password}';
+CREATE USER '<user_name>'@'localhost' IDENTIFIED BY '<password>';
 ```
 
-### List Users
+- List Users:
 
 ```sql
 SELECT user, host FROM mysql.user;
@@ -114,10 +109,10 @@ SELECT user, host FROM mysql.user;
 
 ## Privilege
 
-Grant every privilege on a specific DB
+Grant every privilege on a specific DB:
 
 ```sql
-GRANT ALL PRIVILEGES ON {database_name}.* TO '{user_name}'@'localhost';
+GRANT ALL PRIVILEGES ON <db_name>.* TO '<user_name>'@'localhost';
 ```
 
 Apply Changes
@@ -129,9 +124,9 @@ FLUSH PRIVILEGES;
 ## Root User's PW
 
 After fresh install when there was no prompt to set root PW and now you can't
-use MySQL
+use MySQL.
 
-Start MySQL with sudo to access root
+Start MySQL with sudo:
 
 ```sh
 sudo mysql
@@ -140,7 +135,7 @@ sudo mysql
 Change root's PW:
 
 ```sh
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{new_password}';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<new_password>';
 ```
 
 Make the changes take effect:
@@ -153,24 +148,24 @@ FLUSH PRIVILEGES;
 
 ## Drop
 
-### Drop Database
+- Drop Database:
 
 ```sql
-drop database {database-name};
+drop database <db_name>;
 ```
 
-### Drop User
+- Drop User:
 
 ```sql
-drop user '{user-name}'@'localhost';
+drop user '<user_name>'@'localhost';
 ```
+
+---
 
 ## MySQL Workbench
 
-Install .deb file
-
-[mysql downloads](https://dev.mysql.com/downloads/workbench/)
+Install .deb file from [mysql downloads](https://dev.mysql.com/downloads/workbench/).
 
 - Select OS
 - Select version
-- Install `mysql-workbench-community` version(the one with smaller file size)
+- Install `mysql-workbench-community` version (one with smaller file size).

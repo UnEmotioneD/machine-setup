@@ -1,7 +1,6 @@
 # Neovim
 
-Build [neovim](https://github.com/neovim/neovim) from source to use the latest
-version on Debian/Ubuntu linux
+Build from source to get the latest versions on Ubuntu.
 
 ## Table of Contents
 
@@ -18,24 +17,18 @@ version on Debian/Ubuntu linux
 - ripgrep
 - nodejs
 - npm
-- yarn
-  - markdown-preview
+- bun
+  - github-preview
 - python3-full
   - clang-format
-  - pylint
-  - isort
-  - black
-- openjdk-17-jdk
+- openjdk-25-jdk
   - nvim-java
 
 ```sh
-sudo apt install ripgrep nodejs npm python3-full openjdk-17-jdk
-```
+sudo apt install ripgrep nodejs npm python3-full openjdk-25-jdk
 
-For the markdown-preview install `yarn` with `npm`
-
-```sh
-sudo npm i -g yarn
+# install bun
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ---
@@ -54,22 +47,20 @@ sudo apt remove neovim
 sudo apt install ninja-build gettext cmake curl build-essential git
 ```
 
-### Clone
-
-```sh
-git clone https://github.com/neovim/neovim
-cd neovim
-```
-
 ### Install
 
 ```sh
+# clone
+git clone https://github.com/neovim/neovim
+cd neovim
+
 git checkout stable # or nightly
 make CMAKE_BUILD_TYPE=RelWithDebInfo
 sudo make install
-```
 
-Gets installed to `/usr/local`
+# check
+nvim --version
+```
 
 ---
 
@@ -77,6 +68,7 @@ Gets installed to `/usr/local`
 
 ```sh
 cd neovim
+
 git pull
 make distclean  # recommended after major updates
 make CMAKE_BUILD_TYPE=Release
@@ -91,7 +83,7 @@ sudo make install
 cd neovim
 
 sudo rm -rf /usr/local/bin/nvim
+sudo rm -rf /usr/local/lib/cmake/nvim
 sudo rm -rf /usr/local/lib/nvim
 sudo rm -rf /usr/local/share/nvim
-sudo rm -rf /usr/local/lib/cmake/nvim
 ```
