@@ -1,7 +1,11 @@
-# ESLint
+# [ESLint](https://eslint.org/)
 
-- [ESLint Quickstart - find errors automatically](https://www.youtube.com/watch?v=qhuFviJn-es&list=TLPQMDcwNDIwMjaHVBBIOLl2CQ&index=2)
-- [The Common Coder - How to Setup ESLint in 2026! (Beginner's Guide)](https://www.youtube.com/watch?v=eieTlMwCwWU&list=TLPQMDcwNDIwMjaHVBBIOLl2CQ&index=3)
+Find and fix problems in your JavaScript code.
+
+## References
+
+- [ESLint Quickstart - find errors automatically](https://www.youtube.com/watch?v=qhuFviJn-es&t=2s)
+- [The Common Coder - How to Setup ESLint in 2026! (Beginner's Guide)](https://www.youtube.com/watch?v=eieTlMwCwWU)
 
 ## Table of Contents
 
