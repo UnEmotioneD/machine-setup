@@ -1,30 +1,26 @@
-# Nodemon
+# [Nodemon](https://nodemon.io/)
 
-Watch files for change and execute a command.
+Monitor changes in source code and automatically restarts your program.
 
 ---
 
 ## Installation
 
 ```sh
-sudo npm install --global nodemon
+npm i -g nodemon
+
+nodemon --version
 ```
 
 ---
 
 ## Configuration
 
-Create `nodemon.json` at where you will run `nodemon` command
-
-- `watch`: Files or directories to monitor
-- `ext`: File extensions to watch
-- `ignore`: Path to exclude
-- `exec`: Command to run on changes
-- `start`: Command to run on start before `exec`
+Inside `nodemon.json`:
 
 ```json
 {
-  "watch": ["*.py"],
+  "watch": ["chap08"],
   "ext": "py",
   "ignore": [],
   "exec": "python3 ./binary_tree.py",
@@ -34,15 +30,21 @@ Create `nodemon.json` at where you will run `nodemon` command
 }
 ```
 
-> [!WARNING]
-> `JSONC` file extension will not work properly.
+- `watch`: Files or directories to monitor.
+- `ext`: File extensions to watch.
+- `ignore`: Path to exclude.
+- `exec`: Command to run on changes.
+- `start`: Command to run on start before `exec`.
+
+> [!Note]
+> On Windows use `cls` instead of `clear` for `events.start`.
 
 ---
 
 ## Usage
 
-Just run:
-
 ```sh
 nodemon
 ```
+
+Enter `rs` to restart.
