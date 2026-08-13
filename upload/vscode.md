@@ -212,6 +212,10 @@ code -r hello.js
 }
 ```
 
+### Error Lense
+
+- 문제가 있는 코드의 줄에 뭐가 문제인지 보여줌
+
 ### ESLint
 
 - JavaScript, TypeScript 등 문법 검사
