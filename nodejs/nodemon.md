@@ -36,7 +36,7 @@ Inside `nodemon.json`:
 - `exec`: Command to run on changes.
 - `start`: Command to run on start before `exec`.
 
-> [!Note]
+> [!NOTE]
 > On Windows use `cls` instead of `clear` for `events.start`.
 
 ---

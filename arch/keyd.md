@@ -21,7 +21,7 @@ get device id and input
 sudo keyd monitor
 ```
 
-> [!Important]
+> [!IMPORTANT]
 > Get the `device ID` from the same line as `device add:`, **_NOT_** from `keyd virtual keyboard` when you press the keys.
 
 keep each conf files per `[ids]`

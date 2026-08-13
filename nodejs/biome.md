@@ -32,7 +32,7 @@ Creates `biome.json` file with defaults at project root.
 npx @biomejs/biome init
 ```
 
-> [!Tip]
+> [!TIP]
 > File name is also available in `JSONC` and can be prefixed with dot.
 
 ---
@@ -79,7 +79,7 @@ Inside `.biome.jsonc`:
 }
 ```
 
-> [!Note]
+> [!NOTE]
 > `javascript` in biome includes JSX, TS and TSX.
 
 ---

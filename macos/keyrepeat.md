@@ -14,7 +14,7 @@ defaults write -g InitialKeyRepeat -int 10
 defaults write -g KeyRepeat -int 1
 ```
 
-> [!Important]
+> [!IMPORTANT]
 > Log out and back in for changes to take effect.
 
 ---
