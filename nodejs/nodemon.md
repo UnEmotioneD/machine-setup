@@ -9,7 +9,7 @@ Monitor changes in source code and automatically restarts your program.
 ```sh
 npm i -g nodemon
 
-nodemon --version
+nodemon -v
 ```
 
 ---
@@ -23,7 +23,7 @@ Inside `nodemon.json`:
   "watch": ["chap08"],
   "ext": "py",
   "ignore": [],
-  "exec": "python3 ./binary_tree.py",
+  "exec": "python3 ./chap08/binary_tree.py",
   "events": {
     "start": "clear"
   }
