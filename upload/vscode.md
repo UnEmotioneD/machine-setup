@@ -24,6 +24,7 @@ Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 �
   - [테마](#테마)
   - [폰트](#폰트)
 - [유용한 설정](#유용한-설정)
+- [Keybindings](#keybindings)
 
 ---
 
@@ -390,4 +391,50 @@ Nerd font icons, Ligature 지원
   // 파일 트리 들여쓰기 크기
   "workbench.tree.indent": 16,
 }
+```
+
+---
+
+## Keybindings
+
+Command palette: `Preferences: Open Keyboard Shortcuts (JSON)`
+
+- Select suggestions with `ctrl + j, k` (down/up)
+- Accept with `ctrl + y`
+- Disable `up/down arrow` keys for selecting suggestions
+
+```jsonc
+// Place your key bindings in this file to override the defaults
+[
+  // select suggestions with ctrl + j and K
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+  },
+  // accept suggestion with ctrl + y
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  // disable arrow keys from selecting suggestions
+  {
+    "key": "down",
+    "command": "runCommands",
+    "args": { "commands": ["hideSuggestWidget", "cursorDown"] },
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "up",
+    "command": "runCommands",
+    "args": { "commands": ["hideSuggestWidget", "cursorUp"] },
+    "when": "suggestWidgetVisible && textInputFocus",
+  },
+]
 ```
