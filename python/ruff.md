@@ -13,7 +13,9 @@ An extremely fast Python linter and code formatter, written in Rust.
 
 ## Configuration
 
-- `ruff.toml`:
+### Ruff
+
+Inside `ruff.toml`:
 
 ```toml
 line-length = 100
@@ -22,10 +24,11 @@ indent-width = 4
 [format]
 quote-style = "single"
 indent-style = "space"
-docstring-code-format = true
 ```
 
-- `pyproject.toml`:
+### Pyproject
+
+Inside `pyproject.toml`:
 
 ```toml
 [tool.ruff]
@@ -35,12 +38,13 @@ indent-width = 4
 [tool.ruff.format]
 quote-style = "single"
 indent-style = "space"
-docstring-code-format = true
 ```
 
 ---
 
 ## Command
+
+Format every files recursively:
 
 ```sh
 ruff format

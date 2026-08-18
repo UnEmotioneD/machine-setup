@@ -53,7 +53,7 @@ brew install {pkg}
 # remove packages
 brew uninstall {pkg}
 
-# update homebrew itself
+# update package index
 brew update
 
 # update outdated packages

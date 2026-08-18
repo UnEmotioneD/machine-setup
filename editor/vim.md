@@ -1,5 +1,7 @@
 # Vim
 
+I use [Vim](https://www.vim.org/) by the way.
+
 ## Table of Contents
 
 - [Vim Plug](#vim-plug)

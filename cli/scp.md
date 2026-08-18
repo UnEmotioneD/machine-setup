@@ -1,11 +1,12 @@
 # SCP
 
-Move files between SSH machines
+Move files between local and SSH machine.
 
-from remote do `pwd` and use that output
+- Copy directory with `recursive` flag.
 
 ```sh
-scp -r ./myfolder user@remote:/path/to/destination/
+scp -r ./myfolder user@ip_addr:/path/to/destination/
+
 # example
 scp -r ~/pinky_lcd pinky@192.168.4.1:/home/pinky/
 ```
