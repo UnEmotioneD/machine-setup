@@ -7,31 +7,30 @@ Software level keyboard remapping program.
 
 ## Table of Contents
 
-- [Capslock](#capslock)
+- [Caps Lock](#caps-lock)
 - [ESC](#esc)
 - [Run on Startup](#run-on-startup)
 
 ---
 
-## CapsLock
+## Caps Lock
 
-`CapsLock` to `ESC` when tapped and `Ctrl` when held
+`Caps Lock` to `ESC` when tapped and `Control` when held
 
-Tap timeout is 0.2 seconds
+- Tap timeout `0.2 sec`.
+- Register as `Control` right away when pressed with other keys.
 
 ```ahk
 *CapsLock::
 {
-    if KeyWait("CapsLock", "T0.2")
-    {
+    Send "{Ctrl down}"
+
+    KeyWait "CapsLock"
+
+    Send "{Ctrl up}"
+
+    if A_TimeSinceThisHotkey < 200
         Send "{Esc}"
-    }
-    else
-    {
-        Send "{Ctrl down}"
-        KeyWait "CapsLock"
-        Send "{Ctrl up}"
-    }
 }
 ```
 
