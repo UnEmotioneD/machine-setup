@@ -159,8 +159,6 @@ code -r hello.js
 | Shortcut          | Action                        |
 | ----------------- | ----------------------------- |
 | F2                | 이름 변경                     |
-| Ctrl + Shift + O  | 현재 파일에서 검색            |
-| Ctrl + T          | Workspace에서 검색            |
 | F12               | 선언된 위치로 가기            |
 | Alt + F12         | 선언된 부분 훔쳐보기          |
 | Shift + F12       | 변수/함수 사용된 곳으로 이동  |
@@ -178,14 +176,14 @@ code -r hello.js
 
 ## 검색
 
-`Command Palette`를 이용해서 프로젝트 내에서 검색하기.
+`Command Palette`를 이용해서 파일/프로젝트 내에서 검색하기.
 
-| Shortcut       | Action                               |
-| -------------- | ------------------------------------ |
-| Ctrl + P       | 파일 검색                            |
-| Ctrl + P, `@`  | 현재 파일의 심볼(변수/함수) 검색     |
-| Ctrl + P, `@:` | 현재 파일의 심볼을 그룹화해서 보여줌 |
-| Ctrl + P, `#`  | 프로젝트 전체 심볼                   |
+| Shortcut                                | Action                               |
+| --------------------------------------- | ------------------------------------ |
+| Ctrl + P                                | 파일 검색                            |
+| Ctrl + P, `@` 또는 **Ctrl + Shift + O** | 현재 파일의 심볼(변수/함수) 검색     |
+| Ctrl + P, `@:`                          | 현재 파일의 심볼을 그룹화해서 보여줌 |
+| Ctrl + P, `#` 또는 **Ctrl + T**         | 프로젝트 전체 심볼                   |
 
 ---
 
@@ -401,7 +399,7 @@ Command palette: `Preferences: Open Keyboard Shortcuts (JSON)`
 
 - Select suggestions with `ctrl + j, k` (down/up)
 - Accept with `ctrl + y`
-- Disable `up/down arrow` keys for selecting suggestions
+- `Up/down arrow` to act normally
 
 ```jsonc
 // Place your key bindings in this file to override the defaults
@@ -423,7 +421,7 @@ Command palette: `Preferences: Open Keyboard Shortcuts (JSON)`
     "command": "acceptSelectedSuggestion",
     "when": "suggestWidgetVisible && textInputFocus",
   },
-  // disable arrow keys from selecting suggestions
+  // arrow keys close suggestions and act normally
   {
     "key": "down",
     "command": "runCommands",
