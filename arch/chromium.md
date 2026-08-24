@@ -25,7 +25,7 @@ A web browser built for speed, simplicity and security.
   - [Naver](#naver)
   - [YouTube](#youtube)
 - [Extensions](#extensions)
-  - [AdGuard AdBlocker](#adguard-adblocker)
+  - [uBlock Origin](#ublock-origin)
   - [Unhook](#unhook)
   - [Vimium](#vimium)
   - [YouTube Auto HD + FPS](#youtube-auto-hd--fps)
@@ -90,10 +90,7 @@ Ambient mode: off
 
 ## Extensions
 
-### AdGuard AdBlocker
-
-- Allowlist
-  - youtube.com
+### uBlock Origin
 
 ### Material Icons for GitHub
 
