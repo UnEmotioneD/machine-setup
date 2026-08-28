@@ -8,9 +8,27 @@ A [cat](https://www.man7.org/linux/man-pages/man1/cat.1.html) clone with wings.
 > [!NOTE]
 > `cat` is not just an file previewer though.
 
+## Table of Contents
+
+- [Install](#install)
+- [Theme](#theme)
+- [Preparation](#preparation)
+- [Usage](#usage)
+
 ---
 
 ## Install
+
+Pacman:
+
+```sh
+sudo pacman -Syu bat
+
+# check installed
+bat --version
+```
+
+APT:
 
 ```sh
 sudo apt install bat
@@ -44,7 +62,7 @@ curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/subl
 
 ---
 
-## Usage
+## Preparation
 
 Inside `.bashrc` or `.zshrc` set bat to use installed theme
 
@@ -52,17 +70,22 @@ Inside `.bashrc` or `.zshrc` set bat to use installed theme
 export BAT_THEME=tokyonight_storm
 ```
 
-Additionally set alias:
+Add alias on Debian/Ubuntu:
 
 ```sh
 alias bat='batcat'
 ```
 
-Create cache to use the theme:
+Build cache to use the theme:
 
 ```sh
 bat cache --build
+```
 
-# check functionality
-bat ~/.bashrc
+---
+
+## Usage
+
+```sh
+bat ~/.zshrc
 ```
