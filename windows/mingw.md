@@ -2,6 +2,10 @@
 
 install g++ and mingw32-make to build and run cpp projects
 
+## Reference
+
+- [VSCode - GCC on Windows](https://code.visualstudio.com/docs/cpp/config-mingw)
+
 ## Table of Contents
 
 - [Install](#install)
@@ -16,17 +20,20 @@ install g++ and mingw32-make to build and run cpp projects
 
 download and install [MSYS2](https://www.msys2.org/)
 
-### GCC and Make
+### Toolchain
 
 from `MSYS2 UCRT64` terminal
 
 ```sh
-pacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-make
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 ```
+
+`toolchain` includes the following packages: [packages.msys2.org](https://packages.msys2.org/groups/mingw-w64-ucrt-x86_64-toolchain)
 
 check installations:
 
 ```sh
+gcc --version # c compiler
 g++ --version # cpp compiler
 mingw32-make --version # make for windows
 ```
