@@ -11,7 +11,7 @@ install g++ and mingw32-make to build and run cpp projects
 - [Install](#install)
 - [Add to PATH](#add-to-path)
 - [Build](#build)
-  - [Powershell](#powershell)
+  - [Makefile](#makefile)
   - [BASH (MSYS2)](#bash-msys2)
 
 ---
@@ -42,7 +42,7 @@ mingw32-make --version # make for windows
 
 ## Add to PATH
 
-add the following directory to path of system environment variable
+Add the following directory to the `Path` of **system environment variable**.
 
 ```sh
 C:\msys64\ucrt64\bin
@@ -54,9 +54,9 @@ C:\msys64\ucrt64\bin
 
 build with `make` command using `Makefile`
 
-### Powershell
+### MakeFile
 
-inside `Makefile` change following commands from:
+inside `Makefile` change following commands from **BASH**:
 
 ```Makefile
 @mkdir -p $(BUILD_DIR)
@@ -64,7 +64,7 @@ inside `Makefile` change following commands from:
 @rm -rf $(BUILD_DIR)
 ```
 
-to these:
+to **powershell**:
 
 ```Makefile
 @if not exists $(BUILD_DIR) mkdir $(BUILD_DIR)
@@ -73,16 +73,19 @@ to these:
 ```
 
 > [!IMPORTANT]
-> Must use **TAB** for indentations.
+> Must use **Tabs** for indent in `makefile`.
 
 ### BASH (MSYS2)
 
-from **Select Default Profile** choose `bash (MSYS2)`
+**_Optionally_** to use msys bash terminal by default for current project on vscode.
 
-install package to use on bash terminal:
+1. From command prompt search **Select Default Profile** and choose `bash (MSYS2)`.
+2. Move settings `terminal.integrated.profiles.windows` and `terminal.integrated.defaultProfiles.windows`
+   from user settings to **.vscode/settings.json** to make it project specific.
+3. Install package to use on bash terminal:
 
 ```sh
 pacman -Syu gcc make
 ```
 
-you can use it as same as from unix system
+Now you can use it as same as from unix system.
