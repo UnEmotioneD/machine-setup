@@ -11,7 +11,7 @@ local time to UTC like in Linux.
 
 ## 자동 시간 설정 끄기
 
-설정 > 시간 및 언어 > `날짜 및 시간` > **자동으로 시간 설정** 비활성화
+설정 > `시간 및 언어` > `날짜 및 시간` > `자동으로 시간 설정` 비활성화
 
 ---
 
@@ -23,6 +23,6 @@ local time to UTC like in Linux.
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation
 ```
 
-우클릭 > 새로만들기 > `dword32비트` 선택 > `RealTimeIsUniversal`이라고 이름 지정
+우클릭 > `새로 만들기` > `DWORD(32비트)` 선택 > `RealTimeIsUniversal`이라고 이름 지정
 
-엔터 한번 더 누른후 값을 `1`로 변경
+엔터 한번 더 누른 후 값을 `1`로 변경
