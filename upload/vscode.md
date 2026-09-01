@@ -388,6 +388,21 @@ Nerd font icons, Ligature 지원
 
   // 파일 트리 들여쓰기 크기
   "workbench.tree.indent": 16,
+
+  // VSCode가 내는 모든 소리 끄기
+  "accessibility.signalOptions.volume": 0,
+
+  // 커서 위치를 보여주는 기능들 끄기
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": false,
+
+  // 마지막줄의 라인넘버는 흐리게
+  "editor.renderFinalNewline": "dimmed",
+  // 파일의 마지막에 항상 한 줄 추가
+  "files.insertFinalNewline": true,
+
+  // 개별 파일은 새로운 창에서 열기
+  "window.openFilesInNewWindow": "on",
 }
 ```
 
