@@ -1,28 +1,35 @@
 # Korean
 
-Korean input with Fcitx5 on Arch Linux and Hyprland.
+Korean input method on `Arch` and `Ubuntu` Linux with [fcitx5](https://github.com/fcitx/fcitx5).
 
 ## Table of Contents
 
-- [Prerequisite](#prerequisite)
+- [Install](#install)
 - [Environment Variables](#environment-variables)
+- [Config](#config)
 - [Autostart](#autostart)
-- [Configure](#configure)
+  - [Hyprland](#hyprland)
+  - [i3](#i3)
 
 ---
 
-## Prerequisite
+## Install
 
-- `Adobe fonts`: For proper font rendering on browsers.
-
-```sh
-sudo pacman -S adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
-```
-
-- `Fcitx5`: A modern input method framework.
+- `Arch`
 
 ```sh
 yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
+
+# recommended fonts for browser
+sudo pacman -S adobe-source-han-sans-kr-fonts adobe-source-han-serif-kr-fonts
+```
+
+- `Ubuntu`
+
+```sh
+sudo apt install fcitx5 fcitx5-hangul fcitx5-configtool
+
+sudo apt install fonts-noto-cjk
 ```
 
 ---
@@ -30,6 +37,8 @@ yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
 ## Environment Variables
 
 Inside `.profile` or `.zprofile`:
+
+- `Arch`
 
 ```sh
 export GLFW_IM_MODULE=fcitx
@@ -39,25 +48,23 @@ export SDL_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 ```
 
----
+- `Ubuntu`
 
-## Autostart
-
-Inside the `Autostart` module of `~/.config/hyprland`.
-
-```lua
-hl.on('hyprland.start', function()
-    -- ...
-    hl.exec_cmd('fcitx5 -d')
-    -- ...
-end)
+```sh
+export XMODIFIERS=@im=fcitx
+export INPUT_METHOD=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 ```
 
 ---
 
-## Configure
+## Config
 
-Launch `fcitx5-configtool`.
+### Launch
+
+- Arch: `fcitx5-configtool`
+- Ubuntu: `fcitx5-config-qt`
 
 ### Input Method Tab
 
@@ -68,4 +75,28 @@ Launch `fcitx5-configtool`.
 - Set `Trigger Input Method` to **Right Alt (R_Alt)**
 - Disable `Show Input Method Information when switch input method`.
 
-![fcitx-config-global-options](../assets/fcitx-config-global-options.png)
+![fcitx-config](../assets/fcitx-config.png)
+
+---
+
+## Autostart
+
+### Hyprland
+
+Inside `~/.config/hyprland` at `autostart` module:
+
+```lua
+hl.on('hyprland.start', function()
+    -- ...
+    hl.exec_cmd('fcitx5 -d')
+    -- ...
+end)
+```
+
+### i3
+
+Inside `~/.config/i3/config` file:
+
+```conf
+exec_always --no-startup-id fcitx5 -d
+```
