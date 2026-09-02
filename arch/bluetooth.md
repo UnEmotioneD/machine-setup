@@ -6,34 +6,24 @@
 
 ---
 
-## Prerequisite
+## Install
 
-- `bluez`: bluetooth
+- `Arch`
 
 ```sh
-sudo pacman -S bluez
+sudo pacman -S bluez bluez-utils blueman
+```
+
+- `Ubuntu`
+
+```sh
+sudo apt install bluetooth bluez blueman
 ```
 
 ---
 
 ## Enable Service
 
-Check if the bluetooth module is running:
-
-- `btusb`: allow bluetooth hardware connected via USB
-
 ```sh
-lsmod | grep btusb
-```
-
-Start if not running:
-
-```sh
-sudo modprobe btusb
-```
-
-Enable the service:
-
-```sh
-sudo systemctl enable --now bluetooth.service
+sudo systemctl enable --now bluetooth
 ```
