@@ -77,7 +77,7 @@ to **powershell**:
 
 ### BASH (MSYS2)
 
-**Optionally** use the MSYS `bash` terminal by default for the current project in VS Code.
+**Optionally** use the MSYS `bash` terminal by default for the current project in VSCode.
 
 1. From the command palette, search `Select Default Profile` and choose `bash (MSYS2)`.
 2. Move `terminal.integrated.profiles.windows` and `terminal.integrated.defaultProfile.windows`

@@ -42,8 +42,8 @@ sudo dpkg -i <deb-file>
 
 You can pass multiple file names as arguments to the `dpkg` command.
 
-- To run an `.ipynb` file from VS Code, install `pip3` and `ipykernel`.
-  - `ipykernel`: to run locally from VS Code
+- To run an `.ipynb` file from VSCode, install `pip3` and `ipykernel`.
+  - `ipykernel`: to run locally from VSCode
   - `jupyter`: to run from a venv
 
 ```sh
