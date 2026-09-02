@@ -45,7 +45,7 @@ brillo -q -u 1000 -A 5  # brightness up
 brillo -q -u 1000 -U 5  # brightness down
 ```
 
-- `-q`: quiet
+- `-q`: exponential
 - `-u`: fade duration in milliseconds (`1000` = 1s)
 - `-A`: brightness up
 - `-U`: brightness down
