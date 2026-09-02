@@ -10,6 +10,7 @@ A modern application launcher for Wayland.
 ## Table of Contents
 
 - [Install](#install)
+- [Autostart](#autostart)
 - [Launch](#launch)
 
 ---
@@ -57,7 +58,7 @@ elephant & disown
 
 ---
 
-## Auto Start
+## Autostart
 
 Inside `~/.config/hyprland/modules/autostart.lua`:
 

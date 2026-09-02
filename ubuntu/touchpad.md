@@ -49,4 +49,4 @@ EndSection
 - `2 finger tap` -> **right click**
 - `3 finger tap` -> **middle click**
 
-Restart for changes to take effect.
+Reboot for changes to take effect.

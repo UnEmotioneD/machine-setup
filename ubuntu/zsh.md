@@ -14,7 +14,7 @@ chsh -s $(which zsh)
 ```
 
 > [!NOTE]
-> Restart for change to take effect.
+> Reboot for change to take effect.
 
 ---
 
