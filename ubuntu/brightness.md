@@ -1,4 +1,4 @@
-# Brightness Control
+# Brightness
 
 ## Reference
 
@@ -47,7 +47,7 @@ Log out and back in for this to work.
 
 ## i3 Brightness Config
 
-Control brightness with [`brillo`](../arch/brillo.md):
+Control brightness with [brillo](../arch/brillo.md):
 
 ```sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id brillo -q -u 1000 -A 1
