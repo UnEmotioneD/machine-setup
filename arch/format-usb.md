@@ -1,6 +1,14 @@
 # Format USB
 
-USB with an `ISO` back to normal.
+From install media to normal storage USB on Arch.
+
+## Table of Contents
+
+- [Prerequisite](#prerequisite)
+- [1. Check USB Partition](#1-check-usb-partition)
+- [2. Unmount Partitions](#2-unmount-partitions)
+- [3. New Partition Table](#3-new-partition-table)
+- [4. Format Partition](#4-format-partition)
 
 ---
 
@@ -14,7 +22,7 @@ sudo pacman -S exfatprogs
 
 ---
 
-## Check USB Partition
+## 1. Check USB Partition
 
 ```sh
 lsblk
@@ -33,7 +41,7 @@ sda           8:0    1 114.6G  0 disk
 
 ---
 
-## Unmount Partitions
+## 2. Unmount Partitions
 
 Unmount all partitions inside the USB:
 
@@ -43,7 +51,7 @@ sudo umount /dev/sda*
 
 ---
 
-## New Partition Table
+## 3. New Partition Table
 
 ```sh
 sudo fdisk /dev/sda
@@ -56,7 +64,7 @@ sudo fdisk /dev/sda
 
 ---
 
-## Format Partition
+## 4. Format Partition
 
 ```sh
 sudo mkfs.exfat /dev/sda1

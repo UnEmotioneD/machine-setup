@@ -1,6 +1,10 @@
 # Format USB
 
-From install media to normal storage USB.
+From install media to normal storage USB on Windows.
+
+---
+
+## Disk Part
 
 > [!WARNING]
 > The `clean` command will permanently delete all data.
