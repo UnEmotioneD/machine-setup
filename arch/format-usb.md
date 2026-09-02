@@ -1,12 +1,12 @@
 # Format USB
 
-USB with `ISO` back to normal.
+USB with an `ISO` back to normal.
 
 ---
 
 ## Prerequisite
 
-- `exfatprogs`: **exFAT** utility
+- `exfatprogs`: exFAT utility
 
 ```sh
 sudo pacman -S exfatprogs
@@ -49,9 +49,9 @@ sudo umount /dev/sda*
 sudo fdisk /dev/sda
 ```
 
-1. Press `g`: new **GPT** partition
+1. Press `g`: new GPT partition
 2. Press `n`: new partition
-3. Press `Enter` x 3: usb into one partition
+3. Press `Enter` x3: USB into one partition
 4. Press `w`: write and exit
 
 ---

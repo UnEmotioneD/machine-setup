@@ -15,7 +15,7 @@ systemctl enable --now keyd
 
 ## Configure
 
-get device id and input
+Get device ID and input:
 
 ```sh
 sudo keyd monitor
@@ -24,7 +24,7 @@ sudo keyd monitor
 > [!IMPORTANT]
 > Get the `device ID` from the same line as `device add:`, **_NOT_** from `keyd virtual keyboard` when you press the keys.
 
-keep each conf files per `[ids]`
+Keep each conf file per `[ids]`.
 
 - `/etc/keyd/all.conf`
 

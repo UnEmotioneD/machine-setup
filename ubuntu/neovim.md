@@ -35,7 +35,7 @@ curl -fsSL https://bun.sh/install | bash
 
 ## Build
 
-If neovim is already installed with apt, remove before building it.
+If neovim is already installed with apt, remove it before build.
 
 ```sh
 sudo apt remove neovim

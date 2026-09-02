@@ -15,9 +15,9 @@ Software level keyboard remapping program.
 
 ## Caps Lock
 
-`Caps Lock` to `ESC` when tapped and `Control` when held
+`Caps Lock` to `Esc` when tapped and `Control` when held.
 
-- Tap timeout `0.2 sec`.
+- Tap timeout: `0.2 sec`.
 - Register as `Control` right away when pressed with other keys.
 
 ```ahk
@@ -38,7 +38,7 @@ Software level keyboard remapping program.
 
 ## ESC
 
-ESC to also change input source to English
+`Esc` to also change input source to English.
 
 ```ahk
 $Esc::
@@ -74,6 +74,6 @@ ImmGetDefaultIMEWnd(hWnd) {
 
 ## Run On Startup
 
-1. Open Run dialog with `Win + R`
-2. Enter `shell:startup`
-3. Put the scripts in this folder
+1. Open the Run dialog with `Win + R`.
+2. Enter `shell:startup`.
+3. Put the scripts in this folder.

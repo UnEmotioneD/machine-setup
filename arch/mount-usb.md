@@ -59,13 +59,13 @@ sudo mount /dev/sdb /mnt/usb
 
 ## Unmount
 
-by `mount point`:
+By `mount point`:
 
 ```sh
 sudo umount /mnt/usb
 ```
 
-with `device name`:
+With `device name`:
 
 ```sh
 sudo umount /dev/sdb1

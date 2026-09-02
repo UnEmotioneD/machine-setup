@@ -1,7 +1,7 @@
 # Pyright
 
-Fix import autocompletion by LSP not getting correct path when .git directory
-and actual project root does not match.
+Fix import autocompletion by the LSP not getting the correct path when the `.git` directory
+and the actual project root do not match.
 
 ## Reference
 
@@ -44,7 +44,7 @@ Inside `pyrightconfig.json`:
 
 ## Pyproject
 
-`pyproject.toml` for unified configuration file
+`pyproject.toml` for a unified configuration file:
 
 ```toml
 [tool.pyright]

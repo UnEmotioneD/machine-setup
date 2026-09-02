@@ -26,26 +26,26 @@ make
 
 ### 3. Install
 
-with `setgid` every users can use without extra permissions
+With `setgid`, every user can use it without extra permissions:
 
 ```sh
 sudo make install.setgid
 ```
 
-and reboot
+And reboot.
 
 ---
 
 ## Usage
 
-inside `~/.config/hypr/hyprland.conf` replace the `brightnessctl s 10%+` with `brillo`:
+Inside `~/.config/hypr/hyprland.conf`, replace `brightnessctl s 10%+` with `brillo`:
 
 ```sh
 brillo -q -u 1000 -A 5  # brightness up
 brillo -q -u 1000 -U 5  # brightness down
 ```
 
-- `-q` : change brightness experientially
-- `-u` : fade animation 1000ms (0.1sec)
-- `-A` : brightness up
-- `-U` : brightness down
+- `-q`: quiet
+- `-u`: fade duration in milliseconds (`1000` = 1s)
+- `-A`: brightness up
+- `-U`: brightness down

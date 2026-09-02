@@ -14,22 +14,22 @@ Package manager for macOS.
 
 ## Install
 
-execute following command in terminal
+Execute the following command in the terminal:
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-add homebrew to path (change the user name to yours)
+Add Homebrew to `PATH` (change the user name to yours):
 
 ```sh
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/unemotioned/.zprofile
 && eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-or copy it from the installation prompt
+Or copy it from the installation prompt.
 
-check if installed
+Check if installed:
 
 ```sh
 brew --version
@@ -66,7 +66,7 @@ brew autoremove
 brew autoremove --dry-run
 
 # clear cache
-brew clean
+brew cleanup
 
 # check homebrew health
 brew doctor
@@ -74,19 +74,19 @@ brew doctor
 
 ## Pin Package Version
 
-keep the `brew upgrade` from updating the package
+Keep `brew upgrade` from updating the package:
 
 ```sh
 brew pin openjdk@17
 ```
 
-show the pinned packages with `--pinned` flag
+Show the pinned packages with the `--pinned` flag:
 
 ```sh
 brew list --pinned
 ```
 
-or list outdated packages before `upgrade`
+Or list outdated packages before `upgrade`:
 
 ```sh
 brew outdated
@@ -102,13 +102,13 @@ brew unpin openjdk@17
 
 ## Save Installed Packages
 
-create `Brewfile` where the cmd was executed
+Create a `Brewfile` where the command was executed:
 
 ```sh
 brew bundle dump
 ```
 
-to install with `Brewfile`, run from `Brewfile` file path
+To install with a `Brewfile`, run from the `Brewfile` file path:
 
 ```sh
 brew bundle install

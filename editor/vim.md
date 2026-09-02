@@ -14,11 +14,11 @@ I use [Vim](https://www.vim.org/) by the way.
 
 ## Vim Plug
 
-built-in plugin manager
+Built-in plugin manager.
 
 ### Install
 
-install vim-plug at `~/.vim/autoload/plug.vim`
+Install vim-plug at `~/.vim/autoload/plug.vim`:
 
 ```sh
 curl -fLo \
@@ -28,7 +28,7 @@ curl -fLo \
 
 ### Usage
 
-add it to `~/.vimrc`
+Add it to `~/.vimrc`:
 
 ```vim
 call plug#begin('~/.vim/plugged')
@@ -39,7 +39,7 @@ Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 ```
 
-shout out the .`vimrc` and install it
+Source `.vimrc` and install:
 
 ```sh
 :source ~/.vimrc # or :so
@@ -54,7 +54,7 @@ Mesmerizing commands worth memorizing.
 
 ### Substitute
 
-original:
+Original:
 
 ```sh
 # i3wm config
@@ -63,7 +63,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-volume @DEFAULT_SINK@ toggle
 ```
 
-converted:
+Converted:
 
 ```hyprlang
 # hyprland config
@@ -72,7 +72,7 @@ bind = ,XF86AudioLowerVolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5%
 bind = ,XF86AudioMute, exec, pactl set-sink-volume @DEFAULT_SINK@ toggle
 ```
 
-the command:
+The command:
 
 ```vim
 :s/bindsym \(.*\) exec \(.*\)/bind = ,\1, exec,\2/
@@ -99,11 +99,11 @@ the command:
 
 ### Print
 
-`p` at cmd or nothing will print by default
+`p` at cmd, or nothing, will print by default.
 
 ### Delete
 
-delete every lines with matching pattern
+Delete every line with a matching pattern:
 
 ```vim
 :g/vscode/d
@@ -114,17 +114,17 @@ delete every lines with matching pattern
 
 ### Normal
 
-you can use `normal` command with `global`
+You can use the `normal` command with `global`:
 
 ```vim
 :g/neovim/norm A is awesome
 ```
 
-- add `A is Awesome` string at the end of line contains "neovim"
+- Add `A is Awesome` at the end of lines that contain `neovim`.
 
 ### Reverse
 
-delete every line that does not contain string "vim"
+Delete every line that does not contain the string `vim`:
 
 ```vim
 :v/vim/d

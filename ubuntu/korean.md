@@ -1,6 +1,6 @@
 # Korean
 
-How to setup korean(hangul) input on i3 with fcitx5.
+How to set up Korean (Hangul) input on i3 with `fcitx5`.
 
 ---
 
@@ -31,5 +31,5 @@ export QT_IM_MODULE=fcitx
 ## Fcitx5
 
 1. Launch `fcitx5-config-qt`.
-2. Search `hangul` from right side of window and move it to left.
-3. From `global option` tab set **Right Alt** to change input source.
+2. Search `hangul` from the right side of the window and move it to the left.
+3. From the `Global Options` tab, set `Right Alt` to change input source.

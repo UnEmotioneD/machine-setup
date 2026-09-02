@@ -2,7 +2,7 @@
 
 Move files between local and SSH machine.
 
-- Copy directory with `recursive` flag.
+- Copy a directory with the `recursive` flag.
 
 ```sh
 scp -r ./myfolder user@ip_addr:/path/to/destination/

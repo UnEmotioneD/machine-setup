@@ -20,7 +20,7 @@ magick input.jpg output.png
 ```
 
 > [!NOTE]
-> `convert` command has deprecated.
+> The `convert` command has been deprecated.
 
 ---
 
@@ -34,25 +34,25 @@ magick input.jpg -rotate 90 output.png
 
 ## Resize
 
-Fit inside the frame with no distortion
+Fit inside the frame with no distortion:
 
 ```sh
 magick input.png -resize 512x512 output.png
 ```
 
-Overwrite original by using same name
+Overwrite the original by using the same name:
 
 ```sh
 magick input.png -resize 512x512 input.png
 ```
 
-Force to exact size
+Force to exact size:
 
 ```sh
 magick input.png -resize 512x512 output.png
 ```
 
-Resize only if larger then target
+Resize only if larger than the target:
 
 ```sh
 magick input.png -resize 512x512\> output.png
@@ -62,7 +62,7 @@ magick input.png -resize 512x512\> output.png
 
 ## Quality
 
-Change image quality
+Change image quality:
 
 ```sh
 magick input.png -quality 85 input.png

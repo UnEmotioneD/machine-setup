@@ -1,12 +1,12 @@
 # PowerShell Execution Policy
 
-Fix `npm` command not working on **Windows PowerShell**.
+Fix the `npm` command not working on **Windows PowerShell**.
 
 ---
 
 ## Check Current Policy
 
-Open `PowerShell` or `Cmd` with **Admin Privilege**.
+Open `PowerShell` or `cmd` with **Admin Privilege**.
 
 ```sh
 Get-ExecutionPolicy

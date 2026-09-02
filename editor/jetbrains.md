@@ -97,5 +97,5 @@ while scrolling`
 
 ### Palantir Java Format
 
-1. Install `palantir-java-format` plugin
+1. Install the `palantir-java-format` plugin.
 2. Settings > **Other Settings** > `Enable palantir-java-format Settings`

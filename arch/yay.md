@@ -24,14 +24,14 @@ cd yay
 makepkg -si
 ```
 
-- `-s`: download all the dependencies
-- `-i`: automatically install it with pacman
+- `-s`: download all the dependencies.
+- `-i`: automatically install it with pacman.
 
 ---
 
 ## Check
 
-Also updates yay itself and upgrades other packages.
+Also updates `yay` itself and upgrades other packages.
 
 ```sh
 yay
@@ -46,8 +46,8 @@ Prevents issues by leftover files or outdated libraries.
 
 ### Diffs to Show
 
-Show changes in PKGBULID before building AUR packages.
-For `security` and `transparency`
+Show changes in `PKGBUILD` before building AUR packages.
+For `security` and `transparency`.
 
 You can review:
 

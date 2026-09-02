@@ -1,6 +1,6 @@
 # Z-Shell
 
-Larger ecosystem and better customizability then **BASH**.
+Larger ecosystem and better customizability than `bash`.
 
 ---
 

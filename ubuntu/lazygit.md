@@ -4,7 +4,7 @@ Git TUI wrapper.
 
 ## Reference
 
-- [GitHub - Lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu)
+- [GitHub - jesseduffield/lazygit](https://github.com/jesseduffield/lazygit?tab=readme-ov-file#debian-and-ubuntu)
 
 ---
 
@@ -27,7 +27,7 @@ rm ~/lazygit ~/lazygit.tar.gz
 
 ## Update
 
-Remove lazygit at `/usr/local/bin` and run the install scripts again.
+Remove `lazygit` at `/usr/local/bin` and run the install scripts again.
 
 ```sh
 sudo rm /usr/local/bin/lazygit
@@ -37,7 +37,7 @@ sudo rm /usr/local/bin/lazygit
 
 ## Config
 
-[Configuration docs](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
+[GitHub - lazygit/docs/Config.md](https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md)
 
 Config file path: `~/.config/lazygit/config.yml`
 

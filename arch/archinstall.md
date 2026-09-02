@@ -1,6 +1,6 @@
 # Arch Install
 
-Install [Arch Linux](https://archlinux.org/) with [archinstall](https://github.com/archlinux/archinstall) script.
+Install [Arch Linux](https://archlinux.org/) with the [archinstall](https://github.com/archlinux/archinstall) script.
 
 ## Reference
 
@@ -30,15 +30,15 @@ Install [Arch Linux](https://archlinux.org/) with [archinstall](https://github.c
 
 ### Create Disk Space
 
-Use Windows `disk manager` to create at least **40GB** of free space.
+Use Windows `Disk Management` to create at least **40GB** of free space.
 
 ### BIOS
 
 For ThinkPad:
 
-- secure boot: off
+- `secure boot`: `off`
 - clear all secure boot keys
-- allow microsoft 3rd party uefi ca: off
+- `allow microsoft 3rd party uefi ca`: `off`
 
 Boot into install media.
 
@@ -62,7 +62,7 @@ iwctl
 # show network interface
 device list
 
-# show list of wi-fi networks
+# show a list of wi-fi networks
 station wlan0 get-networks
 
 # connect to wi-fi
@@ -134,17 +134,20 @@ mkfs.ext4 /dev/nvme0n1p6
 
 ### Mount Partitions
 
-Mount `efi` partition to `/mnt/boot` directory:
-
-```sh
-mkdir /mnt/boot
-mount /dev/nvme0n1p5 /mnt/boot
-```
+> [!NOTE]
+> Mount `root` first, then `efi`. Mounting root on `/mnt` after EFI would hide `/mnt/boot`.
 
 Mount `root` partition to `/mnt` directory:
 
 ```sh
 mount /dev/nvme0n1p6 /mnt
+```
+
+Mount `efi` partition to `/mnt/boot` directory:
+
+```sh
+mkdir /mnt/boot
+mount /dev/nvme0n1p5 /mnt/boot
 ```
 
 Confirm with `lsblk`.
@@ -168,12 +171,12 @@ archinstall
 - Disk configuration
   - partitioning
     - pre-mounted configuration
-      - type `/mnt` which is where root partition is mounted to
+      - type `/mnt`, which is where the root partition is mounted
 - Bootloader: `Grub`
 - Authentication
   - root password
   - user account
-    - Add a user and set it up as superuser then confirm and exit
+    - Add a user and set it up as a superuser, then confirm and exit
 - Profile &rarr; type &rarr; desktop &rarr; select `Hyprland`
   - seat access: `polkit`
   - select graphics driver
@@ -193,7 +196,7 @@ After installation is complete choose: `chroot into installation for post-instal
 
 ### GRUB
 
-Explicitly install GRUB since the script may have not properly installed them.
+Explicitly install GRUB since the script may not have installed it properly.
 
 ```sh
 pacman -Syu grub efibootmgr dosfstools mtools
@@ -206,16 +209,15 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 # exit chroot
 exit
-```
 
-Now you can shutdown with `shutdown now` command and remove the usb drive.
-Or reboot with `reboot`.
+shutdown now # remove the install media
+```
 
 ---
 
 ## Hyprland
 
-From the login window change session from `Hyprland(uwsm-managed)` to just `Hyprland`.
+From the login window, change the session from `Hyprland (uwsm-managed)` to just `Hyprland`.
 
 ### Wi-Fi with NMCLI
 
@@ -223,7 +225,7 @@ From the login window change session from `Hyprland(uwsm-managed)` to just `Hypr
 # enable service now
 sudo systemctl enable --now NetworkManager
 
-# check searched wi-fi
+# list scanned wi-fi networks
 nmcli device wifi list
 
 # connect
@@ -237,7 +239,7 @@ nmcli connection show
 
 ### OS Prober
 
-Detect Windows with OS-Prober to add to GRUB menu option.
+Detect Windows with `os-prober` and add it to the GRUB menu.
 
 ```sh
 sudo -E nvim /etc/default/grub
@@ -269,6 +271,6 @@ found windows boot manager on /dev/nvme0n1p1@/efi/microsoft/boot/bootmgfw.efi
 
 ---
 
-Checkout [post-install](./post-install.md) for more.
+Check out [post-install](./post-install.md) for more.
 
-To remove linux, follow instructions from [remove-linux](../windows/remove-linux.md).
+To remove Linux, follow the instructions in [remove-linux](../windows/remove-linux.md).

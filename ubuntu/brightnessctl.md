@@ -28,9 +28,9 @@ Create configuration file:
 sudo touch /usr/share/X11/xorg.conf.d/20-intel.conf
 ```
 
-open with sudo privilege
+Open with sudo privilege.
 
-add the following content:
+Add the following content:
 
 ```conf
 Section "Device"
@@ -41,13 +41,13 @@ Section "Device"
 EndSection
 ```
 
-logout and back in for this to work
+Log out and back in for this to work.
 
 ---
 
 ## i3 Brightness Config
 
-control brightness with [`Brillo`](../arch/brillo.md)
+Control brightness with [`brillo`](../arch/brillo.md):
 
 ```sh
 bindsym XF86MonBrightnessUp   exec --no-startup-id brillo -q -u 1000 -A 1

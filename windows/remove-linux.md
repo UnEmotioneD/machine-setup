@@ -1,12 +1,12 @@
 # Remove Linux
 
-Boot into Windows and remove Linux partition with `disk management`.
+Boot into Windows and remove the Linux partition with Disk Management.
 
 ---
 
 ## Delete EFI
 
-To delete the Linux's EFI partition open `cmd` with admin privilege.
+To delete Linux's EFI partition, open `cmd` with admin privilege.
 
 ```powershell
 diskpart
@@ -27,5 +27,5 @@ del part override
 exit
 ```
 
-To format USB from install media back to storage device checkout
+To format the USB from install media back to a storage device, check out
 [windows/format-usb](../windows/format-usb.md).

@@ -63,7 +63,7 @@ Save this directory at somewhere.
 
 ### JSON to C
 
-More features available in **C** file.
+More features available in a `.c` file.
 
 ```sh
 qmk json2c -o keymap.c keymap.json
@@ -98,19 +98,19 @@ button is pressed.
 
 #### [VIA](https://www.usevia.app/)
 
-Enable QMK for VIA. So you can use both QMK and VIA for mapping keyboard
+Enable QMK for VIA so you can use both QMK and VIA for mapping the keyboard.
 
 ```make
 VIA_ENABLE = yes
 ```
 
-1. Map `Reset` key to layout
-2. Compile the keymap into `.bin` file at `~/qmk_firmware`
+1. Map a `Reset` key to the layout.
+2. Compile the keymap into a `.bin` file at `~/qmk_firmware`.
 
 #### [QMK Toolbox](https://qmk.fm/toolbox)
 
-1. Select compiled `.bin` file at `~/qmk_firmware`
-2. Select `ATmega32U2` for the `Sonnet`
-3. Go into bootloader mode by pressing the `reset` key
-4. Click the `Flash` button. (or check the `Auto-Flash` check box which will flash
-   automatically when the keyboard goes into bootloader mode)
+1. Select the compiled `.bin` file at `~/qmk_firmware`.
+2. Select `ATmega32U2` for the `Sonnet`.
+3. Go into bootloader mode by pressing the `reset` key.
+4. Click the `Flash` button (or check the `Auto-Flash` checkbox, which will flash
+   automatically when the keyboard goes into bootloader mode).

@@ -1,7 +1,7 @@
 # Secure Shell
 
 `SSH` keys provide a secure and convenient way to authenticate with remote
-servers and services like **GitHub**.
+servers and services like GitHub.
 
 ## Table of Contents
 
@@ -24,8 +24,8 @@ ssh-keygen -t ed25519 -C "<your@email.com>"
 
 When prompted:
 
-- **Enter a file location:** Press **Enter** to use the default path (`~/.ssh/id_ed25519`).
-- **Enter a passphrase (optional):** can be empty
+- `Enter a file in which to save the key`: press `Enter` to use the default path (`~/.ssh/id_ed25519`).
+- `Enter passphrase (empty for no passphrase)`: can be empty
 
 ---
 
@@ -77,7 +77,7 @@ bat ~/.ssh/id_ed25519.pub
 Copy the output and add it to your GitHub account:
 [GitHub SSH Key Settings](https://github.com/settings/keys)
 
-**New SSH Key** > Paste the copied key
+`New SSH Key` > paste the copied key
 
 > [!IMPORTANT]
 > Make sure there is no trailing spaces.
@@ -90,10 +90,10 @@ Copy the output and add it to your GitHub account:
 ssh -T git@github.com
 ```
 
-**_Type_** `yes`.
+Type `yes`.
 
 Output should be:
 
 ```text
-Hi {user-name}! You've successfully ...
+Hi <user-name>! You've successfully ...
 ```

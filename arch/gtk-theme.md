@@ -32,7 +32,7 @@ env = GTK_THEME, catppuccin-mocha-pink-standard+default
 
 ## Unset
 
-To revert to the default theme (Adwaita):
+To revert to the default theme (`Adwaita`):
 
 1. Comment out the `GTK_THEME` line in `hyprland.conf`
 2. Log out and log back in

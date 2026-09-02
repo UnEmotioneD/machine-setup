@@ -17,17 +17,15 @@
 
 ### I Love Candy
 
-Open `/etc/pacman.conf` with sudo privileges
+Open `/etc/pacman.conf` with sudo privileges:
 
 ```sh
 sudo nvim /etc/pacman.conf
 ```
 
-Under `[options]` and `# Misc options` uncomment `Color`
+Under `[options]` and `# Misc options`, uncomment `Color`.
 
-Add `ILoveCandy` to make the download progress bar to look like the pacman game
-
-and update the pacman
+Add `ILoveCandy` to make the download progress bar look like the Pac-Man game, then update pacman:
 
 ```sh
 sudo pacman -Sy
@@ -35,31 +33,31 @@ sudo pacman -Sy
 
 ### Mirror List
 
-Install `reflector` with pacman
+Install `reflector` with pacman:
 
 ```sh
 sudo pacman -S reflector
 ```
 
-Create backup of default mirror list
+Create a backup of the default mirror list:
 
 ```sh
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 ```
 
-then fetch the top 10 fastest servers
+Then fetch the top 10 fastest servers:
 
 ```sh
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-and update the pacman again
+and update pacman again.
 
 ---
 
 ## Additional Kernel
 
-Install LTS as backup:
+Install LTS as a backup:
 
 ```sh
 sudo pacman -S linux-lts linux-lts-headers

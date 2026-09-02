@@ -30,7 +30,7 @@ Microsoft에서 [Typescript](https://www.typescriptlang.org/)로 만든 무료 �
 
 ## 터미널 명령어
 
-VSCode 터미널 또는 **PowerShell** 명령어.
+VSCode 터미널 또는 `PowerShell` 명령어.
 
 ### 폴더 보기
 
@@ -75,7 +75,7 @@ code .
 code -r hello.js
 ```
 
-**-r**: `--reuse-window`
+`-r`: `--reuse-window`
 
 ---
 
@@ -189,7 +189,7 @@ code -r hello.js
 
 ## 확장 프로그램
 
-확장프로그램 사이드바 단축키: `ctrl + shift + x`
+확장프로그램 사이드바 단축키: `Ctrl + Shift + X`
 
 ### CSS Peek
 
@@ -197,7 +197,7 @@ code -r hello.js
 
 ### Code Runner
 
-- 파일 실행: `ctrl + alt + n`
+- 파일 실행: `Ctrl + Alt + N`
 
 ### Code Spell Checker
 
@@ -248,7 +248,7 @@ npm init @eslint/config@latest
 > [!TIP]
 > `Where des your code run?`에서 `node`를 선택해야 `console.log`를 에러라고 하지 않음
 
-더 자세한거는 [nodejs/eslint.md](https://github.com/unemotioned/tistory/blob/main/nodejs/eslint.md) 참고.
+더 자세한거는 [nodejs/eslint.md](../nodejs/eslint.md) 참고.
 
 ### JavaScript(ES6) code snippets
 
@@ -287,11 +287,11 @@ HTML, CSS, JavaScript, MD, JSON ... 파일 포멧
 - 4 스페이스 들여쓰기
 - 쌍따옴표 대신 작은 따옴표
 
-더 자세한거는 [nodejs/prettier.md](https://github.com/unemotioned/tistory/blob/main/nodejs/prettier.md) 참고.
+더 자세한거는 [nodejs/prettier.md](../nodejs/prettier.md) 참고.
 
 ### Quokka.js
 
-Command palette에서 `Quokka.js: Start on Current File`를 선택하면 editor창에서
+`Command Palette`에서 `Quokka.js: Start on Current File`를 선택하면 editor창에서
 inline으로 결과를 보여줌
 
 ### Tabout
@@ -352,8 +352,8 @@ Nerd font icons, Ligature 지원
 
 ## 유용한 설정
 
-**Command palette**에서 설정 이름을 검색해서 설정하거나
-`Preference: Open User Settings (Json)`을 검색, `settings.json`에서 직접 편집 할 수 있다
+**Command Palette**에서 설정 이름을 검색해서 설정하거나
+`Preference: Open User Settings (JSON)`을 검색, `settings.json`에서 직접 편집 할 수 있다
 
 ```jsonc
 {
@@ -410,11 +410,11 @@ Nerd font icons, Ligature 지원
 
 ## Keybindings
 
-Command palette: `Preferences: Open Keyboard Shortcuts (JSON)`
+`Command Palette`: `Preferences: Open Keyboard Shortcuts (JSON)`
 
-- Select suggestions with `ctrl + j, k` (down/up)
-- Accept with `ctrl + y`
-- `Up/down arrow` to act normally
+- Select suggestions with `Ctrl + J` / `Ctrl + K` (down/up)
+- Accept with `Ctrl + Y`
+- `Up` / `Down` arrows to act normally
 
 ```jsonc
 // Place your key bindings in this file to override the defaults

@@ -1,6 +1,6 @@
 # Shell Keybind
 
-`BASH` keybinds on Linux. Same as `Emacs` since they're both `GNU` programs.
+`bash` keybinds on Linux. Same as Emacs since they are both GNU programs.
 
 ## Reference
 
@@ -28,7 +28,7 @@
 - `alt + f`: move cursor forward by word
 
 > [!TIP]
-> Try `command` instead of `alt` for **macOS**.
+> Try `command` instead of **alt** for macOS.
 
 ## Edit
 
@@ -47,27 +47,27 @@
 ## ETC
 
 - `alt + period` / `!$`: use last argument
-- `ctrl + l`: same as clear
-- `ctrl + d`: same as exit
+- `ctrl + l`: same as `clear`
+- `ctrl + d`: same as `exit`
 
 ---
 
 ## VI Motions
 
-Use `VI` motions instead of emacs
+Use `vi` motions instead of Emacs.
 
 ### BASH
 
 In `~/.bashrc`:
 
 ```sh
-set -e vi
+set -o vi
 bind 'set keyseq-timeout 1' # ESC delay to 1ms
 ```
 
 Or in `~/.inputrc`:
 
-```sh
+```conf
 set keyseq-timeout 1
 ```
 

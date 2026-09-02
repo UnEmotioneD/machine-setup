@@ -6,9 +6,9 @@ Configure markdown linter.
 
 ## Line Length
 
-Inside `.markdownlint.json` or `.markdownlint.jsonc`
+Inside `.markdownlint.json` or `.markdownlint.jsonc`:
 
-- disable linting
+- Disable linting:
 
 ```json
 {
@@ -16,7 +16,7 @@ Inside `.markdownlint.json` or `.markdownlint.jsonc`
 }
 ```
 
-- or set it to different value
+- Or set it to a different value:
 
 ```json
 {

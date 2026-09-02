@@ -14,7 +14,7 @@ Configure advanced settings.
 
 ## Advanced Settings
 
-Enter the following in URL field.
+Enter the following in the URL field:
 
 ```txt
 about:config
@@ -48,7 +48,7 @@ Set it to `0`.
 
 ## Disable Menubar
 
-Disable `Alt` key from toggling menubar.
+Disable the `Alt` key from toggling the menubar.
 
 Search:
 
@@ -62,7 +62,7 @@ Set it to `false`.
 
 ## Set to Default
 
-Default browser in hyprland.
+Default browser in Hyprland.
 
 ```sh
 # get current default browser

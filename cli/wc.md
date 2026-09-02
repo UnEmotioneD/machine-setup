@@ -48,7 +48,7 @@ wc -l file.txt
 
 ## Files and Directories
 
-`Fd` handles file name with space better compare to `ls`.
+`fd` handles file names with spaces better compared to `ls`.
 
 ```sh
 fd | wc -l
@@ -59,7 +59,7 @@ This will sum up all the files and directories.
 ### Include Hidden
 
 - Hidden
-- No ignore (ex: .gitignore, .fdignore)
+- No ignore (ex: `.gitignore`, `.fdignore`)
 
 ```sh
 fd --hidden --no-ignore | wc -l

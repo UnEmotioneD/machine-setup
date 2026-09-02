@@ -1,6 +1,6 @@
 # Java
 
-How to change java version when you have multiple JDKs installed.
+How to change the Java version when you have multiple JDKs installed.
 
 ---
 
@@ -9,7 +9,6 @@ How to change java version when you have multiple JDKs installed.
 - Pacman
   - `jdk17-openjdk`
   - `jdk21-openjdk`
-
 - APT
   - `openjdk-17-jdk`
   - `openjdk-21-jdk`

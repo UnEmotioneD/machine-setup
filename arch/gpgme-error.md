@@ -1,6 +1,6 @@
 # GPGME Error
 
-pacman could not find or process valid GPG because of following possible reasons:
+Pacman could not find or process valid GPG because of the following possible reasons:
 
 - corrupted pacman keyring
 - corrupted package database
@@ -26,7 +26,7 @@ error: GPGME error: No data
 sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 ```
 
-## 2. Remove stored secrets
+## 2. Remove Stored Secrets
 
 ```sh
 sudo rm -rf /etc/pacman.d/gnupg
@@ -35,14 +35,14 @@ sudo rm -R /var/lib/pacman/sync
 
 ## 3. Re-generate Keys
 
-initialize and re-generate the trust roots:
+Initialize and re-generate the trust roots:
 
 ```sh
 sudo pacman-key --init
 sudo pacman-key --populate
 ```
 
-## 3. Update Pacman
+## 4. Update Pacman
 
 ```sh
 sudo pacman -Syyu

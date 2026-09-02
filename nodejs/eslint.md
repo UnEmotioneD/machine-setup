@@ -4,8 +4,8 @@ Find and fix problems in your JavaScript code.
 
 ## References
 
-- [ESLint Quickstart - find errors automatically](https://www.youtube.com/watch?v=qhuFviJn-es&t=2s)
-- [The Common Coder - How to Setup ESLint in 2026! (Beginner's Guide)](https://www.youtube.com/watch?v=eieTlMwCwWU)
+- [ESLint Quickstart - find errors automatically - freeCodeCamp.org](https://www.youtube.com/watch?v=qhuFviJn-es&t=2s)
+- [How to Setup ESLint in 2026! (Beginner's Guide) - The Common Coder](https://www.youtube.com/watch?v=eieTlMwCwWU)
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@ Find and fix problems in your JavaScript code.
 
 ## Create Project
 
-initialize new node project
+Initialize a new Node project:
 
 ```sh
 mkdir node-project
@@ -47,7 +47,7 @@ npm install --save-dev eslint
 npm init @eslint/config@latest
 ```
 
-> Answer `Where des your code run?` with `node` to not lint `console.log` as error.
+> Answer `Where does your code run?` with `node` to not lint `console.log` as an error.
 
 ---
 
@@ -59,7 +59,7 @@ npx eslint
 
 ### Lint Script
 
-inside `package.json` add `lint` inside `scripts` block
+Inside `package.json`, add `lint` inside the `scripts` block:
 
 ```json
 {
@@ -69,7 +69,7 @@ inside `package.json` add `lint` inside `scripts` block
 }
 ```
 
-now you can use:
+Now you can use:
 
 ```sh
 npm run lint
@@ -79,7 +79,7 @@ npm run lint
 
 ## Configure Rules
 
-Inside `eslint.config.mjs` after the files {} block inside `defineConfig([])`
+Inside `eslint.config.mjs` after the `files {}` block inside `defineConfig([])`:
 
 [no-unused-vars options](https://eslint.org/docs/latest/rules/no-unused-vars#options)
 
@@ -103,7 +103,7 @@ Inside `eslint.config.mjs` after the files {} block inside `defineConfig([])`
 
 ### Arrow Body Function
 
-can be fixed with `--fix` flag
+Can be fixed with the `--fix` flag:
 
 ```sh
 npx eslint --fix
@@ -125,7 +125,7 @@ npx eslint --fix
 
 `'$' is not defined`
 
-change the following part from `eslint.config.mjs`:
+Change the following part from `eslint.config.mjs`:
 
 ```js
 {
@@ -148,5 +148,5 @@ to this:
 }
 ```
 
-- `...` (**spread operator**): copies all properties from one object into another,
+- `...` (`spread operator`): copies all properties from one object into another,
   merging them together

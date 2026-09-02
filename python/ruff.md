@@ -44,7 +44,7 @@ indent-style = "space"
 
 ## Command
 
-Format every files recursively:
+Format every file recursively:
 
 ```sh
 ruff format

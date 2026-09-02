@@ -29,7 +29,7 @@ yay -S fcitx5-im fcitx5-hangul fcitx5-configtool
 
 ## Environment Variables
 
-inside `.profile` or `.zprofile`:
+Inside `.profile` or `.zprofile`:
 
 ```sh
 export GLFW_IM_MODULE=fcitx
@@ -43,7 +43,7 @@ export XMODIFIERS=@im=fcitx
 
 ## Autostart
 
-Inside **Autostart** module of `~/.config/hyprland`.
+Inside the `Autostart` module of `~/.config/hyprland`.
 
 ```lua
 hl.on('hyprland.start', function()
@@ -66,6 +66,6 @@ Launch `fcitx5-configtool`.
 ### Global Options Tab
 
 - Set `Trigger Input Method` to **Right Alt (R_Alt)**
-- Disable `Show Input Method Information when switch input method`
+- Disable `Show Input Method Information when switch input method`.
 
 ![fcitx-config-global-options](../assets/fcitx-config-global-options.png)

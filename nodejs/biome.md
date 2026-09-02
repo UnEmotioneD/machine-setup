@@ -15,8 +15,8 @@ Faster linting and formatting tool chain.
 
 ## Install
 
-- `-D`: `--save-as-dev` - exclude from production
-- `-E`: `--save-exact` - **exact version** instead of range
+- `-D`: `--save-dev` - exclude from production
+- `-E`: `--save-exact` - exact version instead of a range
 
 ```sh
 npm i -D -E @biomejs/biome
@@ -26,7 +26,7 @@ npm i -D -E @biomejs/biome
 
 ## Init
 
-Creates `biome.json` file with defaults at project root.
+Creates a `biome.json` file with defaults at the project root.
 
 ```sh
 npx @biomejs/biome init

@@ -1,6 +1,6 @@
 # Walker
 
-A modern application launcher for wayland.
+A modern application launcher for Wayland.
 
 ## References
 
@@ -48,7 +48,7 @@ yay -S\
 
 ### Restart
 
-Restart `elephant` after installing providers
+Restart `elephant` after installing providers:
 
 ```sh
 pkill elephant
@@ -74,11 +74,11 @@ end)
 
 ## Launch
 
-By terminal commands or with hyprland keybinds.
+By terminal commands or with Hyprland keybinds.
 
 ### Module Name
 
-The module name is string after semi-colon
+The module name is the string after the semicolon.
 
 ```sh
 elephant listproviders
@@ -99,4 +99,4 @@ hl.bind(mainMod .. ' + V', hl.dsp.exec_cmd('walker -m clipboard'))
 hl.bind(mainMod .. ' + C', hl.dsp.exec_cmd('walker -m calc'))
 ```
 
-`-m` is alias of `--providers`
+`-m` is an alias of `--providers`.

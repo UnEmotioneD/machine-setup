@@ -1,6 +1,6 @@
 # Key Repeat Speed
 
-Key `repeat` and `delay` times shorter then that can be set from **Settings**.
+Key `repeat` and `delay` times shorter than can be set from `Settings`.
 
 ---
 

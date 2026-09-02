@@ -17,7 +17,7 @@ How to remove and recover the `recovery partition`.
 
 ## Preparation
 
-open `cmd prompt` with admin privilege
+Open `cmd` with admin privilege:
 
 ```powershell
 reagentc /disable
@@ -37,7 +37,7 @@ sel part 4
 detail part
 ```
 
-copy the value of `Type` and `Attrib`
+Copy the value of `Type` and `Attrib`.
 
 ---
 
@@ -50,18 +50,18 @@ copy the value of `Type` and `Attrib`
 del part override
 ```
 
-now you can expand the empty space next to `C:` partition
+Now you can expand the empty space next to the `C:` partition.
 
 ---
 
 ## Recover
 
-Create 1GB of partition from `Disk Manager`.
+Create a 1GB partition from Disk Management.
 
 > [!TIP]
-> Do not assign letter to skip the **Remove Partition Letter** step.
+> Do not assign a letter to skip the **Remove Partition Letter** step.
 
-From diskpart select the created partition.
+From `diskpart`, select the created partition.
 
 Then assign previously used `ID` and `Attributes` values:
 

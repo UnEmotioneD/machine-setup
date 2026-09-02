@@ -4,7 +4,7 @@ Stop programs from starting automatically.
 
 ---
 
-check if the program is under the `autostart` directory
+Check if the program is under the `autostart` directory.
 
 `nm-applet` for example:
 
@@ -12,7 +12,7 @@ check if the program is under the `autostart` directory
 ls /etc/xdg/autostart | grep nm-applet
 ```
 
-add `Hidden=true` to the `nm-applet.desktop` file
+Add `Hidden=true` to the `nm-applet.desktop` file:
 
 ```sh
 sudo sh -c 'echo "Hidden=true" >> /etc/xdg/autostart/nm-applet.desktop'

@@ -16,74 +16,63 @@ Settings for GDM environment.
 - display
   - resolution
   - refresh rate
-
 - power
-  - power mode: performance
-  - screen blank: never
-
+  - power mode: `performance`
+  - screen blank: `never`
 - ubuntu desktop
-  - position of new icons: top left
-  - auto-hide dock: on
-  - panel mode: off
-  - position on screen: bottom
+  - position of new icons: `top left`
+  - auto-hide dock: `on`
+  - panel mode: `off`
+  - position on screen: `bottom`
   - configure dock behavior
-    - include unmounted volume: uncheck
-
+    - include unmounted volume: disable
 - mouse & trackpad
   - 10cm from edge to edge horizontally
   - disable `Mouse Acceleration`
-
 - appearance
-  - style: dark
-
+  - style: `dark`
 - accessibility
   - typing
     - typing assist
       - repeat keys
-        - speed: fast
-        - delay: short
+        - speed: `fast`
+        - delay: `short`
 
 ---
 
 ## Korean Input
 
-From `gnome-terminal`
+From `gnome-terminal`:
 
 ```sh
 sudo apt install ibus-hangul
 ```
 
-Reboot for the right option to show up
+Reboot for the right option to show up.
 
 - settings
   - keyboard
     - add input source
-      - korean(hangul)
-
-- korean(hangul) 3-dot menu
+      - `korean(hangul)`
+- `korean(hangul)` 3-dot menu
   - preference
-    - hangul toggle key: right alt(remove other keys)
-      - remove english(us) from input source
+    - hangul toggle key: `right alt` (remove other keys)
+      - remove `english(us)` from input source
 
 ### Keyboard Shortcuts
 
-In debian/ubuntu windows key is called `super`
+In Debian/Ubuntu the Windows key is called `Super`.
 
-- terminal: super + enter
-- browser: super + b
-- search: alt + space
-
+- terminal: `Super + Enter`
+- browser: `Super + B`
+- search: `Alt + Space`
 - To disable
-  - hide window: super + h
-  - logout: super + l
+  - hide window: `Super + H`
+  - logout: `Super + L`
 
 ---
 
 ## Recommended Packages
-
-- git
-- curl
-- build-essential
 
 ```sh
 sudo apt install git curl build-essential
@@ -93,29 +82,29 @@ sudo apt install git curl build-essential
 
 ## Deb Packages
 
-- google chrome
-- visual studio code
-- slack
+- Google Chrome
+- Visual Studio Code
+- Slack
 
-Download files with `.deb` which is for debian/ubuntu
+Download files with `.deb`, which is for Debian/Ubuntu.
 
-cd into downloads directory from terminal
+`cd` into the downloads directory from the terminal:
 
 ```sh
 cd Downloads/
 ```
 
-Install with dpkg(debian package) command
+Install with the `dpkg` (Debian package) command:
 
 ```sh
 sudo dpkg -i {name of the .deb file}
 ```
 
-You can pass multiple file names as arguments for `dpkg` command
+You can pass multiple file names as arguments to the `dpkg` command.
 
-- to run ipynb file from vscode install `pip3` and `ipykernel`
-  - `ipykernel`: to run from locally from vscode
-  - `jupyter`: to run from venv
+- To run an `.ipynb` file from VS Code, install `pip3` and `ipykernel`.
+  - `ipykernel`: to run locally from VS Code
+  - `jupyter`: to run from a venv
 
 ```sh
 sudo apt install python3-pip python3-ipykernel

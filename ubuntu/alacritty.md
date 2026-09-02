@@ -1,6 +1,6 @@
 # Alacritty
 
-Install latest version of alacritty on Ubuntu.
+Install the latest version of Alacritty on Ubuntu.
 
 ---
 

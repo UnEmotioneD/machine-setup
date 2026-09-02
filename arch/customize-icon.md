@@ -18,8 +18,8 @@ cp /usr/share/applications/kitty.desktop ~/.local/share/applications
 
 ## Edit Icon Path
 
-inside the copied desktop file replace the value of `Icon` to point to your
-custom icon's path
+Inside the copied desktop file, replace the value of `Icon` to point to your
+custom icon's path.
 
 From this:
 

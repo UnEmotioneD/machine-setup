@@ -3,7 +3,7 @@
 From install media to normal storage USB.
 
 > [!WARNING]
-> `clean` command will permanently delete all data.
+> The `clean` command will permanently delete all data.
 
 ```powershell
 diskpart

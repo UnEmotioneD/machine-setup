@@ -22,7 +22,7 @@ Terminal Multiplexer.
 
 ### macOS
 
-BASH for compatibility with 3rd party plugins.
+`bash` for compatibility with 3rd party plugins.
 
 ```sh
 brew install bash tmux
@@ -78,7 +78,7 @@ Inside tmux session:
 
 ## Local Build
 
-Build tmux locally from archive file.
+Build `tmux` locally from an archive file.
 
 ### 1. Prerequisite
 
@@ -95,8 +95,8 @@ Download `tar.gz` from [github release](https://github.com/tmux/tmux/releases).
 Go to directory where the `tmux-x.x.tar.gz` is at unzip and move into it.
 
 - `-x`: Extract files from the archive.
-- `-z`: Decompress using gzip for .gz files.
-- `-f`: Specifies the file to operate on (next args is the archive name).
+- `-z`: Decompress using gzip for `.gz` files.
+- `-f`: Specifies the file to operate on (next arg is the archive name).
 
 ```sh
 tar -zxf tmux-3.6b.tar.gz

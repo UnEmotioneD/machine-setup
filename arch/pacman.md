@@ -1,6 +1,6 @@
 # Pacman
 
-How to use package manager for Arch.
+How to use the package manager for Arch.
 
 ## Table of Contents
 
@@ -90,9 +90,6 @@ sudo pacman -Rns $(pacman -Qtdq)
 
 ```sh
 pacman -Qi <pkg-name>
-
-# more cleaner way
-pacman -r <pkg-name>
 ```
 
 - Remove without dependency check.

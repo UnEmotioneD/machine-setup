@@ -45,8 +45,8 @@ sudo pacman -S chromium
 ## Settings
 
 - Appearance > Theme > `Dark`
-- Show tab groups: off
-- Show bookmarks bar: on
+- Show tab groups: `off`
+- Show bookmarks bar: `on`
 - Never translate Korean
 
 ---
@@ -65,10 +65,10 @@ sudo pacman -S chromium
 
 - Settings
   - Playback and performance
-    - Subtitles and Closed Captions: off
-    - Browsing: Video previews: off
+    - Subtitles and Closed Captions: `off`
+    - Browsing: Video previews: `off`
 
-Ambient mode: off
+Ambient mode: `off`
 
 ### Claude
 
@@ -98,16 +98,16 @@ Ambient mode: off
 
 ### Unhook
 
-- Hide Home Feed: off
-- Hide Video Side bar: off
-  - Hide Live Chat: on
-  - Hide Fundraiser: on
-- Hide Shorts: on
-- Hide Comments: on
-- Hide Mixes: on
-- Hide Explore, Trending: off
-- Disable Autoplay: off
-- Disable Annotations: off
+- Hide Home Feed: `off`
+- Hide Video Side bar: `off`
+  - Hide Live Chat: `on`
+  - Hide Fundraiser: `on`
+- Hide Shorts: `on`
+- Hide Comments: `on`
+- Hide Mixes: `on`
+- Hide Explore, Trending: `off`
+- Disable Autoplay: `off`
+- Disable Annotations: `off`
 
 ### Vimium
 
@@ -122,18 +122,18 @@ Ambient mode: off
 
 ### YouTube Auto HD + FPS
 
-- Extension is on: on
-- Use the same quality for all frame rates: on
-- Use enhanced bitrate when it's the highest quality: on
-- Use super resolution when available: on
-- Run on YouTube Music: off
+- Extension is on: `on`
+- Use the same quality for all frame rates: `on`
+- Use enhanced bitrate when it's the highest quality: `on`
+- Use super resolution when available: `on`
+- Run on YouTube Music: `off`
 
 ### YouTube Auto Liker
 
-- Enabled: on
-- Subscribed Only: on
-- Wait for Ads: off
-- Delay (in seconds): 10
+- Enabled: `on`
+- Subscribed Only: `on`
+- Wait for Ads: `off`
+- Delay (in seconds): `10`
 
 ---
 

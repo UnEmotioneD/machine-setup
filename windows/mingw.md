@@ -1,6 +1,6 @@
 # Minimalist GNU for Windows
 
-install g++ and mingw32-make to build and run cpp projects
+Install `g++` and `mingw32-make` to build and run C++ projects.
 
 ## Reference
 
@@ -22,7 +22,7 @@ download and install [MSYS2](https://www.msys2.org/)
 
 ### Toolchain
 
-from `MSYS2 UCRT64` terminal
+From the `MSYS2 UCRT64` terminal:
 
 ```sh
 pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
@@ -30,7 +30,7 @@ pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
 
 `toolchain` includes the following packages: [packages.msys2.org](https://packages.msys2.org/groups/mingw-w64-ucrt-x86_64-toolchain)
 
-check installations:
+Check installations:
 
 ```sh
 gcc --version # c compiler
@@ -42,7 +42,7 @@ mingw32-make --version # make for windows
 
 ## Add to PATH
 
-Add the following directory to the `Path` of **system environment variable**.
+Add the following directory to the `Path` of the **system environment variable**.
 
 ```sh
 C:\msys64\ucrt64\bin
@@ -52,11 +52,11 @@ C:\msys64\ucrt64\bin
 
 ## Build
 
-build with `make` command using `Makefile`
+Build with the `make` command using a `Makefile`.
 
-### MakeFile
+### Makefile
 
-inside `Makefile` change following commands from **BASH**:
+Inside `Makefile`, change the following commands from `bash`:
 
 ```Makefile
 @mkdir -p $(BUILD_DIR)
@@ -67,22 +67,22 @@ inside `Makefile` change following commands from **BASH**:
 to **powershell**:
 
 ```Makefile
-@if not exists $(BUILD_DIR) mkdir $(BUILD_DIR)
+@if not exist $(BUILD_DIR) mkdir $(BUILD_DIR)
 
 @if exist $(BUILD_DIR) rmdir /S /Q $(BUILD_DIR)
 ```
 
 > [!IMPORTANT]
-> Must use **Tabs** for indent in `makefile`.
+> Must use **tabs** for indent in a `Makefile`.
 
 ### BASH (MSYS2)
 
-**_Optionally_** to use msys bash terminal by default for current project on vscode.
+**Optionally** use the MSYS `bash` terminal by default for the current project in VS Code.
 
-1. From command prompt search **Select Default Profile** and choose `bash (MSYS2)`.
-2. Move settings `terminal.integrated.profiles.windows` and `terminal.integrated.defaultProfiles.windows`
-   from user settings to **.vscode/settings.json** to make it project specific.
-3. Install package to use on bash terminal:
+1. From the command palette, search `Select Default Profile` and choose `bash (MSYS2)`.
+2. Move `terminal.integrated.profiles.windows` and `terminal.integrated.defaultProfile.windows`
+   from user settings to `.vscode/settings.json` to make it project-specific.
+3. Install packages to use on the `bash` terminal:
 
 ```sh
 pacman -Syu gcc make

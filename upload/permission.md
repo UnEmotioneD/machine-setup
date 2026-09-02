@@ -37,7 +37,7 @@ sudo chmod 644 /usr/share/keyrings/wezterm-fury.gpg
 
 ## Check Privileges
 
-Do `ls -l` to see permission for each files:
+Do `ls -l` to see permission for each file:
 
 ```sh
 -rw-r--r--
@@ -51,7 +51,7 @@ Do `ls -l` to see permission for each files:
 
 ### First Character
 
-The very first character indicates files types.
+The very first character indicates the file type.
 
 - `-`: regular file
 - `d`: directory

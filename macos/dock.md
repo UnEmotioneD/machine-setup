@@ -18,7 +18,7 @@ killall Dock
 
 ### Reset Popout Speed
 
-Pass default values
+Pass default values:
 
 ```sh
 defaults delete com.apple.dock autohide-delay

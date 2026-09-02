@@ -18,21 +18,21 @@ sudo pacman -S bluez
 
 ## Enable Service
 
-check if bluetooth module is running:
+Check if the bluetooth module is running:
 
-- `btusb`: allow bluetooth hardware connected via usb
+- `btusb`: allow bluetooth hardware connected via USB
 
 ```sh
 lsmod | grep btusb
 ```
 
-start if not running:
+Start if not running:
 
 ```sh
 sudo modprobe btusb
 ```
 
-enable service:
+Enable the service:
 
 ```sh
 sudo systemctl enable --now bluetooth.service

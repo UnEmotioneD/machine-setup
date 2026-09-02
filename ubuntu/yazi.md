@@ -43,7 +43,7 @@ cd yazi
 cargo build --release --locked
 ```
 
-move `yazi` and `ya` files to `$PATH`
+Move `yazi` and `ya` files to `$PATH`:
 
 ```sh
 sudo mv target/release/yazi target/release/ya /usr/local/bin/
@@ -53,16 +53,16 @@ sudo mv target/release/yazi target/release/ya /usr/local/bin/
 
 ## Theme
 
-Add tokyonight theme with yazi package manager `ya`:
+Add the tokyonight theme with the Yazi package manager `ya`:
 
 ```sh
 ya pkg add BennyOe/tokyo-night
 ```
 
-This will create `flavors/` under yazi config directory,
-you only need `flavors.toml` and `tmtheme.xml` files
+This will create `flavors/` under the Yazi config directory.
+You only need `flavors.toml` and `tmtheme.xml` files.
 
-Under the `~/.config/yazi` add `theme.toml` file, inside:
+Under `~/.config/yazi`, add a `theme.toml` file, inside:
 
 ```toml
 [flavor]
@@ -75,19 +75,19 @@ dark = "tokyo-night"
 
 ## Update
 
-1. pull latest update
-2. update `cargo`
-3. build with `cargo`
-4. move `yazi` and `ya` to `$PATH`
+1. Pull the latest update.
+2. Update `cargo`.
+3. Build with `cargo`.
+4. Move `yazi` and `ya` to `$PATH`.
 
 ---
 
 ## Uninstall
 
-Remove the `yazi` and `ya` files under the `$PATH`
+Remove the `yazi` and `ya` files under `$PATH`:
 
 ```sh
 sudo rm /usr/local/bin/yazi /usr/local/bin/ya
 ```
 
-Then remove the cloned repo
+Then remove the cloned repo.

@@ -2,7 +2,7 @@
 
 ## 설정
 
-Neovim 으로 `~/.inputrc`를 생성하면서 편집:
+Neovim으로 `~/.inputrc`를 생성하면서 편집:
 
 ```sh
 nvim ~/.inputrc

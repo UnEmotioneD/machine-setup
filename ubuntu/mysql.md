@@ -115,7 +115,7 @@ Grant every privilege on a specific DB:
 GRANT ALL PRIVILEGES ON <db_name>.* TO '<user_name>'@'localhost';
 ```
 
-Apply Changes
+Apply changes:
 
 ```sql
 FLUSH PRIVILEGES;
@@ -132,15 +132,10 @@ Start MySQL with sudo:
 sudo mysql
 ```
 
-Change root's PW:
+At the `mysql>` prompt, change root's password and apply changes:
 
-```sh
+```sql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '<new_password>';
-```
-
-Make the changes take effect:
-
-```sh
 FLUSH PRIVILEGES;
 ```
 
@@ -164,7 +159,7 @@ drop user '<user_name>'@'localhost';
 
 ## MySQL Workbench
 
-Install .deb file from [mysql downloads](https://dev.mysql.com/downloads/workbench/).
+Install the `.deb` file from [MySQL downloads](https://dev.mysql.com/downloads/workbench/).
 
 - Select OS
 - Select version

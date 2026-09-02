@@ -6,7 +6,7 @@ Application launcher.
 
 ## Install
 
-`rofimoji`: nerdfonts and emojis
+- `rofimoji`: Nerd Fonts and emojis
 
 ```sh
 sudo apt install rofi rofi-calc rofimoji
@@ -16,7 +16,7 @@ sudo apt install rofi rofi-calc rofimoji
 
 ## Usage
 
-Configure to use the followings with keybinds from `~/.config/i3/config`
+Configure to use the following with keybinds from `~/.config/i3/config`.
 
 ### Minimal
 

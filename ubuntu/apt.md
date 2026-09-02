@@ -1,6 +1,6 @@
 # Advanced Package Tool
 
-Package manager for debian based linux distros.
+Package manager for Debian-based Linux distros.
 
 ## Table of Contents
 
@@ -17,7 +17,7 @@ Package manager for debian based linux distros.
 - Update local package index:
 
 ```sh
-sudo apt update <pkg-name>
+sudo apt update
 ```
 
 - Upgrade packages:

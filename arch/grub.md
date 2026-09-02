@@ -1,6 +1,6 @@
 # Grub
 
-Customize grub menu to have bigger text and just the items you need.
+Customize the GRUB menu to have bigger text and just the items you need.
 
 ## Table of Contents
 
@@ -15,14 +15,14 @@ Customize grub menu to have bigger text and just the items you need.
 
 ## Hide Unnecessary Items
 
-Location of grub menu entries: `/etc/grub.d/`
+Location of GRUB menu entries: `/etc/grub.d/`
 
 ```sh
 cd /etc/grub.d
 ls -a
 ```
 
-example outputs:
+Example outputs:
 
 ```sh
 00_header
@@ -41,32 +41,32 @@ sudo chmod -x <file-name>
 
 ## Reorder Items
 
-Change index from `30_` to `09_` to put it above `10_linux`
+Change index from `30_` to `09_` to put it above `10_linux`.
 
 ```sh
 sudo mv 30_os-prober 09_os-prober
 ```
 
 > [!NOTE]
-> `os-prober` is `Windows Boot Manager` in grub boot menu.
+> `os-prober` is `Windows Boot Manager` in the GRUB boot menu.
 
 ---
 
 ## Cleaner Menu
 
-Grub config file: `/etc/default/grub`
+GRUB config file: `/etc/default/grub`
 
 ```sh
 sudo nvim /etc/default/grub
 ```
 
-For cleaner menu add line:
+For a cleaner menu, add this line:
 
 ```conf
 GRUB_DISABLE_SUBMENU=y
 ```
 
-Uncomment following lines:
+Uncomment the following lines:
 
 ```conf
 GRUB_DISABLE_LINUX_UUID=true
@@ -78,7 +78,7 @@ GRUB_DISABLE_RECOVERY="true"
 
 ## Menu Resolution
 
-from grub menu press `c` to go into terminal
+From the GRUB menu, press `c` to go into the terminal.
 
 - Newer BIOS
 
@@ -92,24 +92,24 @@ videoinfo
 vbeinfo
 ```
 
-from the supported resolutions select one
+From the supported resolutions, select one.
 
 > [!TIP]
 > Lower resolutions have lower input delay and bigger texts.
 
-back into the grub config file `/etc/default/grub`
+Back into the GRUB config file `/etc/default/grub`.
 
-- from auto to desired option:
+- From auto to the desired option:
 
-```console
-GRUB_FGXMODE=640x480
+```conf
+GRUB_GFXMODE=640x480
 ```
 
 ---
 
 ## Reboot to Last OS
 
-Automatically have the last boot method selected on GRUB menu.
+Automatically have the last boot method selected on the GRUB menu.
 
 ```conf
 GRUB_DEFAULT=saved

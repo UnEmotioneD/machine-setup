@@ -1,6 +1,6 @@
 # Bluetooth
 
-From `gnome-desktop` if the bluetooth does not toggle on.
+From `gnome-desktop` if bluetooth does not toggle on.
 
 ---
 

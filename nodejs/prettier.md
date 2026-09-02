@@ -42,7 +42,7 @@ Inside `.prettierrc`:
 
 ### Command
 
-Recursively format every files. Follow `.prettierrc` if exists.
+Recursively format every file. Follow `.prettierrc` if it exists.
 
 ```sh
 npx prettier --write .

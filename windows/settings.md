@@ -18,7 +18,7 @@ Some Windows settings.
 - 더 많은 마우스 설정
   - 포인터 옵션
     - 포인터 속도 선택: 5번째
-    - 포인터 정확도 향샹: off
+    - 포인터 정확도 향샹: `off`
 
 ### 키보드
 
@@ -51,8 +51,8 @@ Some Windows settings.
 
 - 작업 표시줄 항목
   - 검색: 검색 아이콘 및 레이블
-  - 작업보기: off
-  - widget: off
+  - 작업보기: `off`
+  - widget: `off`
 
 - 작업 표시줄 동작
   - 작업 표시줄 맞춤: 왼쪽

@@ -13,8 +13,8 @@ Complex rules `Karabiner-elements`.
 
 ## Caps Lock
 
-- **ESC** on tap
-- **Ctrl** on hold
+- `Esc` on tap
+- `Ctrl` on hold
 
 ```json
 {
@@ -73,7 +73,7 @@ Complex rules `Karabiner-elements`.
 
 ## Right Command
 
-**Right command** to `F16` to use for switching input source.
+`Right Command` to `F16` to use for switching input source.
 
 `F16` because [F-16](https://en.wikipedia.org/wiki/General_Dynamics_F-16_Fighting_Falcon) is cool.
 

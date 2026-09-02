@@ -52,9 +52,9 @@ cd "$(bat --config-dir)/themes"
 
 ### Install Theme
 
-From the themes directory download a theme
+From the themes directory, download a theme.
 
-- `tokyonight_storm` theme for sublime
+- `tokyonight_storm` theme for Sublime
 
 ```sh
 curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/sublime/tokyonight_storm.tmTheme
@@ -64,7 +64,7 @@ curl -O https://raw.githubusercontent.com/folke/tokyonight.nvim/main/extras/subl
 
 ## Preparation
 
-Inside `.bashrc` or `.zshrc` set bat to use installed theme
+Inside `.bashrc` or `.zshrc`, set `bat` to use the installed theme:
 
 ```sh
 export BAT_THEME=tokyonight_storm
