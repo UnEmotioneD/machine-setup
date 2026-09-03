@@ -8,7 +8,7 @@ I use [Vim](https://www.vim.org/) by the way.
 - [Motions](#motions)
   - [Substitute](#substitute)
   - [Global](#global)
-  - [Refactoring](#refactoring)
+- [Refactoring](#refactoring)
 
 ---
 
@@ -132,9 +132,9 @@ Delete every line that does not contain the string `vim`:
 
 ---
 
-### Refactoring
+## Refactoring
 
-- [3 Levels of Vim Refactoring - typecraft](https://www.youtube.com/watch?v=oQB8lYUZtrY)
+[3 Levels of Vim Refactoring - typecraft](https://www.youtube.com/watch?v=oQB8lYUZtrY)
 
 ### Find RegEx from File Types
 
