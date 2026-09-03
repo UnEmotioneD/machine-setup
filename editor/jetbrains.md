@@ -13,6 +13,8 @@
   - [Smooth Scrolling](#smooth-scrolling)
   - [Sticky Lines](#sticky-lines)
   - [Palantir Java Format](#palantir-java-format)
+- [Keymap](#keymap)
+  - [Lookup](#lookup)
 
 ---
 
@@ -82,3 +84,17 @@ Settings > Editor > **General** > _Sticky Lines_ > `Show sticky lines while scro
 
 1. Install the `palantir-java-format` plugin.
 2. Settings > **Other Settings** > `Enable palantir-java-format Settings`
+
+---
+
+## Keymap
+
+### Lookup
+
+Same as auto suggestion or completion.
+
+1. Settings > **Keymap** > Search `Lookup`
+2. Remap `Choose Lookup Item Replace`, `Select Next Completion Option` and `Select Previous Completion Option` &rarr; `Ctrl` + `Y`, `J` and `K`
+
+> [!NOTE]
+> For some reason `Ctrl + Y` remap is not working.
