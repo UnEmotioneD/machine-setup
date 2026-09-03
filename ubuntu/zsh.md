@@ -20,7 +20,7 @@ chsh -s $(which zsh)
 
 ## Install Oh My ZSH
 
-[Oh My ZSH](https://ohmyz.sh/): A ZSH framework.
+[OMZ](https://ohmyz.sh/): A ZSH framework.
 
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -28,7 +28,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ---
 
-## Plugins
+## Install Plugins
 
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k): prompt theme
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions): fish like suggestions

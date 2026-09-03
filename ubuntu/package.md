@@ -23,8 +23,8 @@ sudo apt install build-essential curl git git-delta tree eza zoxide
 
 ## Deb Packages
 
-- Google Chrome
-- Visual Studio Code
+- [Google Chrome](https://www.google.com/chrome/)
+- [Visual Studio Code](https://code.visualstudio.com/thank-you?dv=linux64_deb)
 
 Download files with `.deb`, which is for Debian/Ubuntu.
 

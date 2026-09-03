@@ -28,8 +28,6 @@ Create configuration file:
 sudo touch /usr/share/X11/xorg.conf.d/20-intel.conf
 ```
 
-Open with sudo privilege.
-
 Add the following content:
 
 ```conf
@@ -41,7 +39,8 @@ Section "Device"
 EndSection
 ```
 
-Log out and back in for this to work.
+> [!NOTE]
+> Log out and back in for this to work.
 
 ---
 

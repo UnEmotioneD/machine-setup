@@ -45,8 +45,8 @@ Section "InputClass"
 EndSection
 ```
 
-- `1 finger tap` -> **left click**
-- `2 finger tap` -> **right click**
-- `3 finger tap` -> **middle click**
+- `1 finger tap` > **left click**
+- `2 finger tap` > **right click**
+- `3 finger tap` > **middle click**
 
 Reboot for changes to take effect.

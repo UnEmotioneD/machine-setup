@@ -1,6 +1,6 @@
 # Advanced Package Tool
 
-Package manager for Debian-based Linux distros.
+Package manager for debian based linux distributions.
 
 ## Table of Contents
 

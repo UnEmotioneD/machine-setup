@@ -1,4 +1,6 @@
-# MySQL
+# [MySQL](https://www.mysql.com/)
+
+Predecessor of [MariaDB](https://mariadb.org/).
 
 ## Table of Contents
 

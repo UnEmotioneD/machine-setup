@@ -6,12 +6,19 @@ System information fetch program.
 
 ## Install
 
-Add new PPA to use the latest version.
+Install latest version by adding PPA (Personal Package Archive).
 
 ```sh
+# add PPA
 sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+
 sudo apt update
+
+# install
 sudo apt install fastfetch
+
+# confirm installation
+fastfetch --version
 ```
 
 ---
@@ -19,6 +26,14 @@ sudo apt install fastfetch
 ## Uninstall
 
 ```sh
-sudo apt remove fastfetch
+# remove package and config
+sudo apt purge fastfetch
+
+# remove PPA
 sudo add-apt-repository --remove ppa:zhangsongcui3371/fastfetch
+
+sudo apt update
+
+# confirm uninstallation
+which fastfetch
 ```
