@@ -9,10 +9,12 @@
   - [Inlay Usage & Code Author](#inlay-usage--code-author)
   - [Fold One-line Methods](#fold-one-line-methods)
   - [Caret Blink](#caret-blink)
+  - [Open New Tab](#open-new-tab)
   - [Scroll Pass BOF](#scroll-pass-bof)
   - [Smooth Scrolling](#smooth-scrolling)
   - [Sticky Lines](#sticky-lines)
   - [Palantir Java Format](#palantir-java-format)
+  - [Open with Single Click](#open-with-single-click)
 - [Keymap](#keymap)
   - [Lookup](#lookup)
 
@@ -72,6 +74,10 @@ Settings > Editor > General > **Code Folding** > Fold by default: > _Java_ > `On
 
 Settings > Editor > General > **Appearance** > `Caret blinking (ms):`
 
+### Open New Tab
+
+Settings > Editor > General > **Editor Tabs** > _Tab Order_ > `Open new tabs at the end`
+
 ### Scroll Pass BOF
 
 Settings > Editor > **General** > _Virtual Space_ > `Show virtual space at the bottom of the file`
@@ -88,6 +94,13 @@ Settings > Editor > **General** > _Sticky Lines_ > `Show sticky lines while scro
 
 1. Install the `palantir-java-format` plugin.
 2. Settings > **Other Settings** > `Enable palantir-java-format Settings`
+
+### Open with Single Click
+
+Project window > 3 dot > Behavior > Open Files with Single Click, Open Directories with Single Click
+
+> [!TIP]
+> Try [Quick File Preview](https://plugins.jetbrains.com/plugin/12778-quick-file-preview) plugin for VSCode like behavior
 
 ---
 
