@@ -4,10 +4,21 @@ Edit images with [ImageMagick](https://github.com/ImageMagick/ImageMagick).
 
 ## Table of Contents
 
+- [Identify](#identify)
 - [Convert](#convert)
 - [Rotate](#rotate)
 - [Resize](#resize)
 - [Quality](#quality)
+
+---
+
+## Identify
+
+Get image size and properties:
+
+```sh
+magick identify input.png
+```
 
 ---
 
@@ -49,7 +60,7 @@ magick input.png -resize 512x512 input.png
 Force to exact size:
 
 ```sh
-magick input.png -resize 512x512 output.png
+magick input.png -resize 512x512! output.png
 ```
 
 Resize only if larger than the target:
